@@ -3,37 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
+    <title>Your Countdown Hub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 id="event-title">EVENT TITLE HERE</h1>
-        <div id="countdown">
-            <div class="time-block">
-                <span id="days">0</span>
-                <p>Days</p>
+
+    <header>
+        <div class="logo">RUNUP.LIVE</div>
+        <nav>
+            <a href="#">TV</a>
+            <a href="#">MOVIES</a>
+            <a href="#">GAMES</a>
+            <a href="#">MUSIC</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <input type="text" placeholder="eg. Grand Theft Auto VI">
+        </section>
+
+        <section class="trending-section">
+            <h2>TRENDING COUNTDOWNS</h2>
+            <div class="countdown-grid">
+
+                <!-- CARD 1: Wednesday -->
+                <a href="#" class="countdown-card" data-date="2025-09-03T12:00:00">
+                    <img src="https://image.tmdb.org/t/p/w780/9PFonBhy4cQy7Jz20NpMygczOkv.jpg" class="card-bg" alt="Wednesday Poster">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-tag game">TV</div>
+                        <h3>Wednesday Season 2</h3>
+                        <div class="card-timer">
+                            <div><span class="days">0</span><p>Days</p></div>
+                            <div><span class="hours">0</span><p>Hours</p></div>
+                            <div><span class="mins">0</span><p>Mins</p></div>
+                            <div><span class="secs">0</span><p>Secs</p></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- CARD 2: GTA VI -->
+                <a href="#" class="countdown-card" data-date="2025-10-01T09:00:00">
+                    <img src="https://media.rawg.io/media/games/253/2534a46636c84f61b988f34c2649b165.jpg" class="card-bg" alt="GTA 6 Poster">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-tag">GAME</div>
+                        <h3>Grand Theft Auto VI</h3>
+                        <div class="card-timer">
+                            <div><span class="days">0</span><p>Days</p></div>
+                            <div><span class="hours">0</span><p>Hours</p></div>
+                            <div><span class="mins">0</span><p>Mins</p></div>
+                            <div><span class="secs">0</span><p>Secs</p></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- CARD 3: Stranger Things -->
+                <a href="#" class="countdown-card" data-date="2025-12-25T17:00:00">
+                    <img src="https://image.tmdb.org/t/p/original/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" class="card-bg" alt="Stranger Things Poster">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-tag">TV</div>
+                        <h3>Stranger Things 5</h3>
+                        <div class="card-timer">
+                            <div><span class="days">0</span><p>Days</p></div>
+                            <div><span class="hours">0</span><p>Hours</p></div>
+                            <div><span class="mins">0</span><p>Mins</p></div>
+                            <div><span class="secs">0</span><p>Secs</p></div>
+                        </div>
+                    </div>
+                </a>
+
+                 <!-- Add more cards here by copying and pasting one of the blocks above -->
+
             </div>
-            <div class="time-block">
-                <span id="hours">0</span>
-                <p>Hours</p>
-            </div>
-            <div class="time-block">
-                <span id="minutes">0</span>
-                <p>Minutes</p>
-            </div>
-            <div class="time-block">
-                <span id="seconds">0</span>
-                <p>Seconds</p>
-            </div>
-        </div>
-        <div id="message" class="hidden">
-            <h2>The event is happening now!</h2>
-        </div>
-    </div>
+        </section>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

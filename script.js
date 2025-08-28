@@ -1,47 +1,46 @@
-// --- STEP 1: CUSTOMIZE YOUR EVENT ---
-// ------------------------------------
+// This function will run for every countdown card on the page
+document.addEventListener('DOMContentLoaded', () => {
 
-// Set the title of your event
-const eventTitle = "My Awesome Concert";
+    const countdownCards = document.querySelectorAll('.countdown-card');
 
-// Set the date of your event (Year, Month - 1, Day, Hour, Minute, Second)
-// Example: December 31, 2025 at 11:59 PM
-const eventDate = new Date(2025, 11, 31, 23, 59, 0);
+    countdownCards.forEach(card => {
+        // Get the target date from the card's 'data-date' attribute
+        const eventDateStr = card.dataset.date;
+        if (!eventDateStr) return; // Skip if no date is set
 
+        const eventDate = new Date(eventDateStr);
 
-// --- DO NOT EDIT BELOW THIS LINE ---
-// -----------------------------------
+        // Find the timer elements INSIDE this specific card
+        const daysEl = card.querySelector('.days');
+        const hoursEl = card.querySelector('.hours');
+        const minsEl = card.querySelector('.mins');
+        const secsEl = card.querySelector('.secs');
 
-document.getElementById('event-title').textContent = eventTitle;
-const countdownElement = document.getElementById('countdown');
-const messageElement = document.getElementById('message');
+        const updateCountdown = () => {
+            const now = new Date();
+            const diff = eventDate.getTime() - now.getTime();
 
-const daysEl = document.getElementById('days');
-const hoursEl = document.getElementById('hours');
-const minutesEl = document.getElementById('minutes');
-const secondsEl = document.getElementById('seconds');
+            if (diff <= 0) {
+                // You can add a message here, like "Event Started!"
+                card.querySelector('.card-timer').innerHTML = "<h4>RELEASED!</h4>";
+                clearInterval(timer);
+                return;
+            }
 
-function updateCountdown() {
-    const now = new Date();
-    const diff = eventDate.getTime() - now.getTime();
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    if (diff <= 0) {
-        countdownElement.classList.add('hidden');
-        messageElement.classList.remove('hidden');
-        clearInterval(timer);
-        return;
-    }
+            daysEl.textContent = days;
+            hoursEl.textContent = String(hours).padStart(2, '0');
+            minsEl.textContent = String(minutes).padStart(2, '0');
+            secsEl.textContent = String(seconds).padStart(2, '0');
+        }
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        // Run the countdown for this card every second
+        const timer = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Also run it immediately on page load
+    });
 
-    daysEl.textContent = days;
-    hoursEl.textContent = String(hours).padStart(2, '0');
-    minutesEl.textContent = String(minutes).padStart(2, '0');
-    secondsEl.textContent = String(seconds).padStart(2, '0');
-}
-
-const timer = setInterval(updateCountdown, 1000);
-updateCountdown();
+});

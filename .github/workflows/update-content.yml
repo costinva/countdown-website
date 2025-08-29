@@ -1,0 +1,52 @@
+# Name of our automated job
+name: Build and Deploy Website
+
+# This section defines when the job should run
+on:
+  # Option 1: Run it automatically on a schedule
+  schedule:
+    # This is a "cron job" expression that means "run at 00:00 UTC every day"
+    - cron: '0 0 * * *'
+  
+  # Option 2: Allow us to run it manually from GitHub's website
+  workflow_dispatch:
+
+# This section defines the actual steps the robot will take
+jobs:
+  build:
+    # Use a standard virtual computer (Ubuntu)
+    runs-on: ubuntu-latest
+
+    # The sequence of commands to run
+    steps:
+      # Step 1: Check out the code from our repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up the Node.js engine
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Use a stable version of Node.js
+          cache: 'npm' # Speed up the installation of tools
+
+      # Step 3: Install the tools (like node-fetch)
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run our build script to generate the new index.html
+      - name: Run build script
+        run: node build-script.js
+        env:
+          # This is how we securely give our script the API key
+          API_KEY: ${{ secrets.TMDB_API_KEY }}
+
+      # Step 5: Commit the newly generated index.html back to the repository
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add index.html
+          # Only commit if there are actual changes to the file
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automated daily content update"
+          git push

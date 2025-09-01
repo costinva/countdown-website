@@ -2455,15 +2455,70 @@
     ]
   },
   {
-    "id": 1293550,
+    "id": 1214028,
     "type": "movie",
-    "title": "Bandar",
-    "releaseDate": "2025-09-05",
-    "posterImage": "/w1lVddNdVcgmRV6FXHyCC7ArGU7.jpg",
+    "title": "Kangaroo",
+    "releaseDate": "2025-08-21",
+    "posterImage": "/sm0i07RG9NOwHbT7VmTJVgPyK85.jpg",
     "backdrops": [],
-    "overview": "TV star Samar's life spirals when his ex Gayatri accuses him of rape after he blocks contact with her. Despite his new relationship with Khushi, he faces arrest and encounters a corrupt justice system.",
+    "overview": "Ex TV personality, Chris Masterman, becomes stranded in an Outback town outside Alice Springs. There, he teams up with 12-year-old Indigenous girl Charlie. The pair form an unlikely friendship and work together to rescue and rehabilitate orphaned joeys in the remote but stunning Outback community - an endeavour that proves to be life-changing for them both.",
+    "score": 85,
+    "genres": [
+      "Comedy",
+      "Family"
+    ]
+  },
+  {
+    "id": 999075,
+    "type": "movie",
+    "title": "Left-Handed Girl",
+    "releaseDate": "2025-09-17",
+    "posterImage": "/pXlEThtgrTVtQEw1HQ9Qp8I1A3e.jpg",
+    "backdrops": [],
+    "overview": "A single mother and her two daughters return to Taipei after several years of living in the countryside to open a stand at a buzzing night market. Each in their own way, will have to adapt to this new environment to make ends meet and succeed in maintaining the family unity.  Three generations of family secrets begin to unravel after the youngest daughter who’s left-handed is told by her traditional grandfather to never use her “devil hand”.",
     "score": 0,
     "genres": [
+      "Drama"
+    ]
+  },
+  {
+    "id": 1221061,
+    "type": "movie",
+    "title": "Sound of Falling",
+    "releaseDate": "2025-08-28",
+    "posterImage": "/a4eidwbeIXquVHCQnD2jm7eDCGg.jpg",
+    "backdrops": [],
+    "overview": "Over the course of a century, as four girls from different time periods experience their youth on a German farm, their lives become intertwined until time seems to dissolve.",
+    "score": 85,
+    "genres": [
+      "Drama",
+      "History"
+    ]
+  },
+  {
+    "id": 1465549,
+    "type": "movie",
+    "title": "Bodyguard of Lies",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/lieTTypMoODThbgRcRu76VqVoXS.jpg",
+    "backdrops": [],
+    "overview": "Exposes the tangled web of deception spun by the U.S. government during its 20-year war in Afghanistan, revealing the campaign of lies and misinformation fed to the American public. Through shocking testimonies from government insiders, confidential documents, and private audio recordings of those at the highest levels of the military and elected leadership, this gripping documentary urges a reckoning with the wider implications of government deception on a global scale.",
+    "score": 0,
+    "genres": [
+      "Documentary"
+    ]
+  },
+  {
+    "id": 1315702,
+    "type": "movie",
+    "title": "The Residence",
+    "releaseDate": "2025-09-17",
+    "posterImage": "/bRx0YRptSuv7O9LiOP59cvA4rqB.jpg",
+    "backdrops": [],
+    "overview": "In the near future, Clarissa, a novelist with writer’s block, joins a prestigious, state-of-the-art artist residency where she’s assigned an AI assistant named Dalloway. The latter quickly becomes more than a simple assistant and turns into a true confidante for Clarissa. Unsettled by Dalloway’s increasing intrusion, Clarissa is warned by whistleblower Mathias, who informs her of the true motives behind the residency and its tech company funder. Clarissa begins to suspect that this seemingly perfect situation is in fact a meticulously crafted trap.",
+    "score": 0,
+    "genres": [
+      "Drama",
       "Thriller"
     ]
   },
@@ -2495,16 +2550,17 @@
     ]
   },
   {
-    "id": 1315706,
+    "id": 1466682,
     "type": "movie",
-    "title": "Sijjin 8",
-    "releaseDate": "2025-06-05",
-    "posterImage": "/b2sP8nhFRZXQKiUGrn6YI0irSdn.jpg",
+    "title": "Kaneko Fumiko",
+    "releaseDate": "2025-09-11",
+    "posterImage": "/9oCmZbfGLouGfAXCLFPSrS5Hy5u.jpg",
     "backdrops": [],
-    "overview": "A man and his family are tormented by malevolent supernatural forces after he brings his elderly mother into his home.",
-    "score": 40,
+    "overview": "",
+    "score": 0,
     "genres": [
-      "Horror"
+      "History",
+      "Drama"
     ]
   },
   {
@@ -2523,6 +2579,17 @@
     ]
   },
   {
+    "id": 1531028,
+    "type": "movie",
+    "title": "Worker",
+    "releaseDate": "2025-09-16",
+    "posterImage": "/9KVmSWAzmXI5FfytwvvpQQlf4Kt.jpg",
+    "backdrops": [],
+    "overview": "Details here",
+    "score": 0,
+    "genres": []
+  },
+  {
     "id": 1287322,
     "type": "movie",
     "title": "Christy",
@@ -2537,17 +2604,15 @@
     ]
   },
   {
-    "id": 1509612,
+    "id": 1523071,
     "type": "movie",
-    "title": "Last Homework",
-    "releaseDate": "2025-09-03",
-    "posterImage": "/xTFFF7TvHB6XQojLqe1kGgX4luw.jpg",
+    "title": "Over De Grens",
+    "releaseDate": "2025-08-28",
+    "posterImage": "/q8U0Ef6iZob6SmetTV654YnnX2k.jpg",
     "backdrops": [],
-    "overview": "Yeong-nam, an exam instructor, faces challenges after a student's death due to exam stress. He embarks on a journey to teach elementary school kids despite battling cancer, highlighting struggles and triumphs in education.",
+    "overview": "",
     "score": 0,
-    "genres": [
-      "Drama"
-    ]
+    "genres": []
   },
   {
     "id": 659956,
@@ -2560,6 +2625,19 @@
     "score": 62.5,
     "genres": [
       "Drama"
+    ]
+  },
+  {
+    "id": 1293550,
+    "type": "movie",
+    "title": "Bandar",
+    "releaseDate": "2025-09-05",
+    "posterImage": "/w1lVddNdVcgmRV6FXHyCC7ArGU7.jpg",
+    "backdrops": [],
+    "overview": "TV star Samar's life spirals when his ex Gayatri accuses him of rape after he blocks contact with her. Despite his new relationship with Khushi, he faces arrest and encounters a corrupt justice system.",
+    "score": 0,
+    "genres": [
+      "Thriller"
     ]
   },
   {
@@ -2577,6 +2655,19 @@
     ]
   },
   {
+    "id": 1526723,
+    "type": "movie",
+    "title": "Blood in the Shadows",
+    "releaseDate": "2025-09-04",
+    "posterImage": "/1G83PLr8PAkMPigpA2NJ6fJg4mJ.jpg",
+    "backdrops": [],
+    "overview": "Bart Owenson thought his stay at the Guardian rehabilitation was a fresh start - until he begins waking up with eerie bite marks and discovers the true horrors hidden within the facility's walls.",
+    "score": 0,
+    "genres": [
+      "Horror"
+    ]
+  },
+  {
     "id": 1451398,
     "type": "movie",
     "title": "Karada Sagashi THE LAST NIGHT",
@@ -2590,30 +2681,16 @@
     ]
   },
   {
-    "id": 1320420,
+    "id": 1480382,
     "type": "movie",
-    "title": "Honeymoon",
-    "releaseDate": "2025-09-11",
-    "posterImage": "/locIMjgnrSSCJoi0UtpOxFJIr6x.jpg",
+    "title": "The Voice of Hind Rajab",
+    "releaseDate": "2025-09-03",
+    "posterImage": "/yF4Ia2WkUKb7beTSnoq0EjtFkMd.jpg",
     "backdrops": [],
-    "overview": "February 23, 2022, a small town near Kyiv. Taras (35) and Olia (32) spend the first night in their new apartment. At dawn, they wake up from the explosions. They fail to leave the town on time, meanwhile, the Russian troops arrange headquarters in their building. The couple finds themselves trapped in their flat with no electricity, water, and mobile connection. For the next 5 days, Taras and Olia will explore the black abyss of real intimacy between two people and face crucial existential questions in mortal danger.",
+    "overview": "January 29, 2024. Red Crescent volunteers receive an emergency call. A 6-year old girl is trapped in a car under fire in Gaza, pleading for rescue. While trying to keep her on the line, they do everything they can to get an ambulance to her. Her name was Hind Rajab.",
     "score": 0,
     "genres": [
       "Drama"
-    ]
-  },
-  {
-    "id": 1521352,
-    "type": "movie",
-    "title": "Sai: Disaster",
-    "releaseDate": "2025-09-18",
-    "posterImage": "/inlkcbSoPHAfhH68r1tiPRYpTAH.jpg",
-    "backdrops": [],
-    "overview": "Four people lead ordinary lives in different places, their paths never crossing. A mysterious man appears in each story, always as someone else. One moment, a cram school instructor; the next, a truck driver, a barber - his identity constantly shifting. Then, death strikes. A detective pursues the truth, closing in on a revelation...",
-    "score": 0,
-    "genres": [
-      "Drama",
-      "Crime"
     ]
   },
   {
@@ -2656,17 +2733,6 @@
     "genres": [
       "Drama"
     ]
-  },
-  {
-    "id": 1523071,
-    "type": "movie",
-    "title": "Over De Grens",
-    "releaseDate": "2025-08-28",
-    "posterImage": "/q8U0Ef6iZob6SmetTV654YnnX2k.jpg",
-    "backdrops": [],
-    "overview": "",
-    "score": 0,
-    "genres": []
   },
   {
     "id": 1367947,
@@ -3048,6 +3114,19 @@
     ]
   },
   {
+    "id": 1315706,
+    "type": "movie",
+    "title": "Sijjin 8",
+    "releaseDate": "2025-06-05",
+    "posterImage": "/b2sP8nhFRZXQKiUGrn6YI0irSdn.jpg",
+    "backdrops": [],
+    "overview": "A man and his family are tormented by malevolent supernatural forces after he brings his elderly mother into his home.",
+    "score": 40,
+    "genres": [
+      "Horror"
+    ]
+  },
+  {
     "id": 1244112,
     "type": "movie",
     "title": "The Super Elfkins",
@@ -3159,6 +3238,19 @@
     "score": 0,
     "genres": [
       "Romance"
+    ]
+  },
+  {
+    "id": 1509612,
+    "type": "movie",
+    "title": "Last Homework",
+    "releaseDate": "2025-09-03",
+    "posterImage": "/xTFFF7TvHB6XQojLqe1kGgX4luw.jpg",
+    "backdrops": [],
+    "overview": "Yeong-nam, an exam instructor, faces challenges after a student's death due to exam stress. He embarks on a journey to teach elementary school kids despite battling cancer, highlighting struggles and triumphs in education.",
+    "score": 0,
+    "genres": [
+      "Drama"
     ]
   },
   {
@@ -3397,6 +3489,20 @@
     ]
   },
   {
+    "id": 1521352,
+    "type": "movie",
+    "title": "Sai: Disaster",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/inlkcbSoPHAfhH68r1tiPRYpTAH.jpg",
+    "backdrops": [],
+    "overview": "Four people lead ordinary lives in different places, their paths never crossing. A mysterious man appears in each story, always as someone else. One moment, a cram school instructor; the next, a truck driver, a barber - his identity constantly shifting. Then, death strikes. A detective pursues the truth, closing in on a revelation...",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Crime"
+    ]
+  },
+  {
     "id": 1213193,
     "type": "movie",
     "title": "Panopticon",
@@ -3629,6 +3735,19 @@
     "backdrops": [],
     "overview": "On the edge of the Gobi desert in Northwest China, Lang returns to his hometown after being released from jail. While working for the local dog patrol team to clear the town of stray dogs before the Olympic Games, he strikes up an unlikely connection with a black dog. These two lonely souls embark on a journey together.",
     "score": 72,
+    "genres": [
+      "Drama"
+    ]
+  },
+  {
+    "id": 1320420,
+    "type": "movie",
+    "title": "Honeymoon",
+    "releaseDate": "2025-09-11",
+    "posterImage": "/locIMjgnrSSCJoi0UtpOxFJIr6x.jpg",
+    "backdrops": [],
+    "overview": "February 23, 2022, a small town near Kyiv. Taras (35) and Olia (32) spend the first night in their new apartment. At dawn, they wake up from the explosions. They fail to leave the town on time, meanwhile, the Russian troops arrange headquarters in their building. The couple finds themselves trapped in their flat with no electricity, water, and mobile connection. For the next 5 days, Taras and Olia will explore the black abyss of real intimacy between two people and face crucial existential questions in mortal danger.",
+    "score": 0,
     "genres": [
       "Drama"
     ]

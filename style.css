@@ -145,3 +145,17 @@ nav a {
     text-transform: uppercase;
     margin: 5px 0 0 0;
 }
+/* --- Active Navigation Link Style --- */
+nav a.active {
+    color: #4d88ff; /* A bright blue to show it's selected */
+    text-decoration: underline;
+}
+
+/* --- Style for the "Launched" status text --- */
+.card-status h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: #a0a0a0; /* A slightly muted color */
+}

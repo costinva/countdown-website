@@ -6,325 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Countdown Hub</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">RUNUP.LIVE</div>
         <nav>
-            <a href="#">TV</a>
-            <a href="#">MOVIES</a>
-            <a href="#">GAMES</a>
-            <a href="#">MUSIC</a>
+            <a href="index.html" class="active">UPCOMING</a>
+            <a href="launched.html" >LAUNCHED</a>
         </nav>
     </header>
     <main>
         <section class="search-section">
-            <input type="text" placeholder="eg. The Matrix">
+            <input type="text" placeholder="Search for movies, games, or TV shows...">
         </section>
         <section class="trending-section">
-            <h2>TRENDING COUNTDOWNS</h2>
+            <h2>UPCOMING</h2>
             <div class="countdown-grid">
                 
-        <a href="#" class="countdown-card" data-date="2025-07-18T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg" class="card-bg" alt="Demon Slayer: Kimetsu no Yaiba Infinity Castle Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Demon Slayer: Kimetsu no Yaiba Infinity Castle</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-07-24T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/26oSPnq0ct59l07QOXZKyzsiRtN.jpg" class="card-bg" alt="The Bad Guys 2 Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>The Bad Guys 2</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-07-23T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/m52XidzKx94bKlToZfEXUnL3pdy.jpg" class="card-bg" alt="Together Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Together</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-06-06T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/q5pXRYTycaeW6dEgsCrd4mYPmxM.jpg" class="card-bg" alt="How to Train Your Dragon Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>How to Train Your Dragon</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-07-05T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/8o6lkhL32xQJeB52IIG1us5BVey.jpg" class="card-bg" alt="Smurfs Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Smurfs</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-08-16T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/wXeAsIkA7k9YVk0JEwPjjkqZwx8.jpg" class="card-bg" alt="The Shadow's Edge Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>The Shadow's Edge</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-08-06T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/vblVhVkDPpL7vGI7eBf89KuLNTs.jpg" class="card-bg" alt="Sketch Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Sketch</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-08-06T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/9wV65OmsjLAqBfDnYTkMPutXH8j.jpg" class="card-bg" alt="Freakier Friday Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Freakier Friday</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-09-03T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/7JzOmJ1fIU43I3gLHYsY8UzNzjG.jpg" class="card-bg" alt="The Conjuring: Last Rites Poster">
+        <a href="details.html?id=1038392" class="countdown-card" data-date="2025-09-03T12:00:00">
+            <img src="https://image.tmdb.org/t/p/w500/vufNNzDaMZMTBkzSDDV2PmLURjW.jpg" class="card-bg" alt="The Conjuring: Last Rites Poster">
             <div class="card-overlay"></div>
             <div class="card-content">
                 <div class="card-tag">MOVIE</div>
                 <h3>The Conjuring: Last Rites</h3>
                 <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
+               <div><span class="days">0</span><p>Days</p></div>
+               <div><span class="hours">0</span><p>Hours</p></div>
+               <div><span class="mins">0</span><p>Mins</p></div>
+               <div><span class="secs">0</span><p>Secs</p></div>
+           </div>
             </div>
         </a>
     
-        <a href="#" class="countdown-card" data-date="2025-06-12T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/eDo0pNruy0Qgj6BdTyHIR4cxHY8.jpg" class="card-bg" alt="Materialists Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Materialists</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-06-05T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/9tk3Si960hg4E49eMt81dS7Qe9Z.jpg" class="card-bg" alt="Dangerous Animals Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Dangerous Animals</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-05-15T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/3RokBWEkQqJRZEVP3DPwGm5MYh6.jpg" class="card-bg" alt="Guns Up Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Guns Up</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-07-16T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/kg7lrTWGKyzLnj0E7BXl52nro1N.jpg" class="card-bg" alt="Eddington Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Eddington</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-03-07T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/crX9rSg9EohybhkEe8iTQUCe55y.jpg" class="card-bg" alt="The Ugly Stepsister Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>The Ugly Stepsister</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="1972-03-14T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" class="card-bg" alt="The Godfather Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>The Godfather</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-07-31T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/nvqW8mOm818QDio3GKKmPLK8kXj.jpg" class="card-bg" alt="She Rides Shotgun Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>She Rides Shotgun</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-02-19T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/dyRzD90yGBRfRuWyRoGdPbqVJk2.jpg" class="card-bg" alt="September Says Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>September Says</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="1995-11-22T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg" class="card-bg" alt="Toy Story Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>Toy Story</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-08-27T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/98n5HnCJ5LnXKIMNP9SBfVNyxCE.jpg" class="card-bg" alt="The Roses Poster">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>The Roses</h3>
-                <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
-            </div>
-        </a>
-    
-        <a href="#" class="countdown-card" data-date="2025-09-19T12:00:00">
-            <img src="https://image.tmdb.org/t/p/w780/enkPbejfPmM8o2bgbhnLSX4fCAV.jpg" class="card-bg" alt="Thandakaaranyam Poster">
+        <a href="details.html?id=1091043" class="countdown-card" data-date="2025-09-19T12:00:00">
+            <img src="https://image.tmdb.org/t/p/w500/enkPbejfPmM8o2bgbhnLSX4fCAV.jpg" class="card-bg" alt="Thandakaaranyam Poster">
             <div class="card-overlay"></div>
             <div class="card-content">
                 <div class="card-tag">MOVIE</div>
                 <h3>Thandakaaranyam</h3>
                 <div class="card-timer">
-                    <div><span class="days">0</span><p>Days</p></div>
-                    <div><span class="hours">0</span><p>Hours</p></div>
-                    <div><span class="mins">0</span><p>Mins</p></div>
-                    <div><span class="secs">0</span><p>Secs</p></div>
-                </div>
+               <div><span class="days">0</span><p>Days</p></div>
+               <div><span class="hours">0</span><p>Hours</p></div>
+               <div><span class="mins">0</span><p>Mins</p></div>
+               <div><span class="secs">0</span><p>Secs</p></div>
+           </div>
             </div>
         </a>
     

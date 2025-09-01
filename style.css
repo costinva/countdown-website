@@ -239,103 +239,35 @@ header nav {
 main {
     padding: 0 40px; /* Standardize padding */
 }
-/* --- Details Page Styles --- */
-
-#details-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-}
-
-#details-backdrop::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(18, 18, 18, 0.85); /* Dark overlay */
-    backdrop-filter: blur(5px); /* Optional: blur effect */
-}
-
-#details-container {
+/* --- New Details Content Section Below Hero --- */
+#details-content-section {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 40px;
+    padding: 60px 40px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto; /* Center it */
+    background-color: #121212;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-top: 1px solid #333;
 }
 
+/* Reusing some old styles, with slight tweaks */
 .details-poster {
-    flex: 1 1 300px; /* Flex properties for responsive poster */
+    flex: 1 1 300px;
     margin-right: 40px;
 }
+.details-poster img { width: 100%; border-radius: 10px; }
+.details-info { flex: 2 1 600px; }
+.details-info h2 { font-size: 2.5rem; margin-top: 0; }
+.details-info h3 { font-size: 1.5rem; }
+.details-meta { margin-bottom: 20px; color: #ccc; }
+.details-meta span { margin-right: 15px; }
+.details-score { display: flex; align-items: center; margin-bottom: 30px; }
+.score-circle { width: 60px; height: 60px; border-radius: 50%; background-color: #081c22; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; border: 3px solid #21d07a; margin-right: 15px; }
+.details-info p { line-height: 1.6; color: #ddd; }
 
-.details-poster img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-
-.details-info {
-    flex: 2 1 600px; /* Takes up more space */
-}
-
-.details-info h1 {
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.details-meta {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #ccc;
-}
-
-.details-meta span {
-    margin-right: 15px;
-}
-
-.details-score {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.score-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #081c22;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    border: 3px solid #21d07a;
-    margin-right: 15px;
-}
-
-.details-info h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-}
-
-.details-info p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ddd;
+/* Utility class for hiding elements */
+.hidden {
+    display: none;
 }

@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- This div will hold the movie's backdrop image -->
-    <div id="details-backdrop"></div>
 
-    <header>
-        <div class="logo"><a href="index.html">RUNUP.LIVE</a></div>
-        <!-- Note: We can add the full nav back here later if we want -->
-    </header>
+    <!-- HERO SECTION: Backdrop slideshow and countdown -->
+    <section id="hero-section">
+        <div id="hero-backdrop"></div>
+        <div class="hero-content">
+            <h1 id="hero-title">Loading...</h1>
+            <div id="hero-countdown">
+                <div><span id="hero-days">0</span><p>Days</p></div>
+                <div><span id="hero-hours">0</span><p>Hours</p></div>
+                <div><span id="hero-mins">0</span><p>Mins</p></div>
+                <div><span id="hero-secs">0</span><p>Secs</p></div>
+            </div>
+            <div id="hero-status" class="hidden">
+                <h2>LAUNCHED</h2>
+            </div>
+        </div>
+    </section>
 
-    <main id="details-container">
-        <!-- This is where all the content will go -->
+    <!-- DETAILS CONTENT SECTION -->
+    <main id="details-content-section">
         <div class="details-poster">
             <img id="details-poster-img" src="" alt="Poster">
         </div>
         <div class="details-info">
-            <h1 id="details-title">Loading...</h1>
+            <h2 id="details-title">Loading...</h2>
             <div class="details-meta">
                 <span id="details-release-date"></span>
                 <span id="details-genres"></span>
@@ -31,12 +41,11 @@
                 <div id="details-score-circle" class="score-circle">0%</div>
                 <span>User Score</span>
             </div>
-            <h2>Overview</h2>
+            <h3>Overview</h3>
             <p id="details-overview">Loading overview...</p>
         </div>
     </main>
     
-    <!-- We link to our new JavaScript file -->
     <script src="details.js"></script>
 </body>
 </html>

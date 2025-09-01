@@ -156,7 +156,7 @@ function generateFinalHtml(itemList, mainCategory, subCategory) {
             ${cardsHtml}
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
     `;

@@ -3,120 +3,72 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #121212; /* Dark background */
+    background-color: #121212;
     color: #ffffff;
 }
 
-h2, h3 {
-    margin: 0;
-    padding: 0;
-}
+h2, h3 { margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* --- New Header & Navigation Styles --- */
+/* --- NEW Persistent Header Styles --- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 40px;
     background-color: #1a1a1a;
     border-bottom: 1px solid #333;
+    position: relative; /* Changed for details page */
+    z-index: 100;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.center-nav {
+.header-left, .header-right {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
-.center-nav a {
+.logo { font-size: 1.5rem; font-weight: 700; }
+.logo a { color: #fff; }
+
+.category-nav a {
+    font-weight: 700;
+    color: #aaa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.category-nav a:hover { background-color: #3a3a3a; color: #fff; }
+.category-nav a.active { background-color: #fff; color: #121212; }
+
+.main-nav a {
     font-size: 1rem;
     font-weight: 700;
     color: #888;
-    text-decoration: none;
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
 }
-
-.center-nav a:hover {
-    color: #fff;
-}
-
-.center-nav a.active {
-    color: #fff;
-    border-bottom-color: #4d88ff;
-}
-
-.filter-nav {
-    display: flex;
-    gap: 15px;
-}
-
-.filter-nav a {
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #fff;
-    background-color: #2a2a2a;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    transition: all 0.2s ease-in-out;
-}
-
-.filter-nav a:hover {
-    background-color: #3a3a3a;
-}
-
-.filter-nav a.active {
-    background-color: #4d88ff;
-    border-color: #4d88ff;
-}
-
-/* --- New Hero Search Section --- */
-.hero-search {
-    padding: 50px 40px;
-    background-color: #161616;
-    text-align: center;
-}
-
-.hero-search h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+.main-nav a:hover { color: #fff; }
+.main-nav a.active { color: #fff; border-bottom-color: #4d88ff; }
 
 .search-container input {
-    width: 100%;
-    max-width: 600px;
-    padding: 15px 20px;
-    border-radius: 30px; /* More rounded */
+    padding: 8px 15px;
+    border-radius: 20px;
     border: 1px solid #333;
     background-color: #2a2a2a;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
-/* --- Main Content Grid Area --- */
-main {
-    padding: 0; /* Remove old padding */
-}
-
-.grid-section {
+/* --- Main Grid Page Styles --- */
+.grid-main {
     padding: 40px;
 }
 
-.trending-section h2 {
-    /* This style is now handled by .hero-search h2 */
-    margin-bottom: 30px;
+.grid-title {
     font-size: 1.8rem;
+    margin-bottom: 30px;
 }
 
 .countdown-grid {
@@ -126,110 +78,21 @@ main {
 }
 
 /* --- Countdown Card Styling --- */
-.countdown-card {
-    position: relative;
-    height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-}
-
-.countdown-card:hover {
-    transform: scale(1.03);
-}
-
-.card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 80%);
-    z-index: 2;
-}
-
-.card-content {
-    position: relative;
-    z-index: 3;
-}
-
-.card-tag {
-    background-color: rgba(90, 40, 255, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.card-timer {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.card-timer span {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.card-timer p {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    margin: 5px 0 0 0;
-}
-
-.card-status h4 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    color: #a0a0a0;
-}
-
-/* --- Details Page Header --- */
-.details-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 40px;
-    z-index: 10;
-    box-sizing: border-box;
-}
-
-.details-header .logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+.countdown-card { position: relative; height: 400px; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; box-sizing: border-box; transition: transform 0.3s ease; }
+.countdown-card:hover { transform: scale(1.03); }
+.card-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 80%); z-index: 2; }
+.card-content { position: relative; z-index: 3; }
+.card-tag { background-color: rgba(90, 40, 255, 0.8); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+.card-content h3 { font-size: 1.5rem; margin-bottom: 15px; }
+.card-timer { display: flex; justify-content: space-between; text-align: center; }
+.card-timer span { font-size: 2.5rem; font-weight: 700; line-height: 1; }
+.card-timer p { font-size: 0.7rem; text-transform: uppercase; margin: 5px 0 0 0; }
+.card-status h4 { font-size: 2.5rem; font-weight: 700; line-height: 1; text-align: center; color: #a0a0a0; }
 
 /* --- Hero Details Page Styles --- */
 #hero-section {
-    height: 100vh;
+    height: 70vh; /* Reduced height to account for header */
     position: relative;
     display: flex;
     justify-content: center;
@@ -237,85 +100,20 @@ main {
     text-align: center;
     color: #fff;
 }
-
-#hero-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    transition: opacity 1.5s ease-in-out;
-}
-
-#hero-backdrop::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-#hero-title {
-    font-size: clamp(2rem, 6vw, 4rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-#hero-countdown {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    text-align: center;
-}
-
-#hero-countdown span {
-    font-size: clamp(3rem, 10vw, 7rem);
-    font-weight: 900;
-    line-height: 1;
-    display: block;
-}
-
-#hero-countdown p {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-    text-transform: uppercase;
-    margin-top: 5px;
-}
-
-#hero-status h2 {
-    font-size: clamp(3rem, 10vw, 7rem);
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.8);
-}
+#hero-backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; z-index: 1; transition: opacity 1.5s ease-in-out; }
+#hero-backdrop::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
+.hero-content { position: relative; z-index: 2; }
+#hero-title { font-size: clamp(2rem, 6vw, 4rem); font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+#hero-countdown { display: flex; justify-content: center; gap: 40px; text-align: center; }
+#hero-countdown span { font-size: clamp(3rem, 10vw, 7rem); font-weight: 900; line-height: 1; display: block; }
+#hero-countdown p { font-size: clamp(0.8rem, 2vw, 1.2rem); text-transform: uppercase; margin-top: 5px; }
+#hero-status h2 { font-size: clamp(3rem, 10vw, 7rem); font-weight: 900; color: rgba(255, 255, 255, 0.8); }
+#hero-backdrop.fallback-blur { filter: blur(10px); transform: scale(1.1); }
 
 /* --- Details Content Section Below Hero --- */
-#details-content-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 60px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #121212;
-    color: #fff;
-    border-top: 1px solid #333;
-}
-
-.details-poster {
-    flex: 1 1 300px;
-    margin-right: 40px;
-}
-.details-poster img { width: 100%; border-radius: 10px; }
+#details-content-section { display: flex; flex-wrap: wrap; align-items: flex-start; padding: 60px 40px; max-width: 1200px; margin: 0 auto; color: #fff; }
+.details-poster { flex: 1 1 300px; margin-right: 40px; margin-top: -100px; position: relative; z-index: 5; }
+.details-poster img { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 .details-info { flex: 2 1 600px; }
 .details-info h2 { font-size: 2.5rem; margin-top: 0; }
 .details-info h3 { font-size: 1.5rem; }
@@ -325,13 +123,5 @@ main {
 .score-circle { width: 60px; height: 60px; border-radius: 50%; background-color: #081c22; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; font-weight: 700; border: 3px solid #21d07a; margin-right: 15px; }
 .details-info p { line-height: 1.6; color: #ddd; }
 
-/* Utility class for hiding elements */
-.hidden {
-    display: none;
-}
-
-/* --- Fallback Backdrop Style --- */
-#hero-backdrop.fallback-blur {
-    filter: blur(10px);
-    transform: scale(1.1);
-}
+/* Utility class */
+.hidden { display: none; }

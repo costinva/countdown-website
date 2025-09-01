@@ -8,7 +8,6 @@ const TOTAL_PAGES_TO_FETCH = 15;
 
 // --- API HELPER FUNCTION ---
 async function fetchAllPages(baseUrl, totalPages) {
-    // ... (This function is the same as the previous version)
     const allResults = [];
     for (let page = 1; page <= totalPages; page++) {
         try {
@@ -49,7 +48,6 @@ async function buildWebsite() {
         const allMediaDetailed = [];
         for (const item of uniqueMedia.values()) {
             const type = item.title ? 'movie' : 'tv';
-            // CRUCIAL CHANGE: We add "&append_to_response=images" to get the backdrops
             const detailUrl = `https://api.themoviedb.org/3/${type}/${item.id}?api_key=${API_KEY}&language=en-US&append_to_response=images`;
             const detailResponse = await fetch(detailUrl);
             const detailData = await detailResponse.json();
@@ -61,11 +59,10 @@ async function buildWebsite() {
                 title: detailData.title || detailData.name,
                 releaseDate: detailData.release_date || detailData.first_air_date,
                 posterImage: detailData.poster_path,
-                // We now save an array of all available backdrop images
                 backdrops: detailData.images.backdrops.map(img => img.file_path),
                 overview: detailData.overview,
                 score: detailData.vote_average * 10,
-                genres: detailData.genres.map(g => g.name) // Get genre names
+                genres: detailData.genres.map(g => g.name)
             });
             await new Promise(resolve => setTimeout(resolve, 50)); 
         }
@@ -96,9 +93,8 @@ async function buildWebsite() {
 }
 
 
-// --- HELPER FUNCTIONS (These remain unchanged from the previous version) ---
-// ... (The generateCardHtml and generateFinalHtml functions are the same as before)
-// ... I'm hiding them for brevity, but make sure they are still in your file.
+// --- HELPER FUNCTIONS ---
+
 function generateCardHtml(item) {
     const posterUrl = `https://image.tmdb.org/t/p/w500${item.posterImage}`;
     const isLaunched = new Date(item.releaseDate) < new Date();
@@ -106,31 +102,24 @@ function generateCardHtml(item) {
     const tagType = item.type.toUpperCase();
     return `<a href="details.html?id=${item.type}-${item.id}" class="countdown-card" data-date="${item.releaseDate}T12:00:00"><img src="${posterUrl}" class="card-bg" alt="${item.title} Poster"><div class="card-overlay"></div><div class="card-content"><div class="card-tag">${tagType}</div><h3>${item.title}</h3>${timerOrStatusHtml}</div></a>`;
 }
+
 function generateFinalHtml(itemList, mainCategory, subCategory) {
     let cardsHtml = '';
     itemList.forEach(item => {
         cardsHtml += generateCardHtml(item);
     });
 
-    // New logic for active links based on the new design
     const moviesActive = subCategory === 'movies' ? 'class="active"' : '';
-    const tvActive = sub-category === 'tv' ? 'class="active"' : '';
+    const tvActive = subCategory === 'tv' ? 'class="active"' : '';
     const gamesActive = subCategory === 'games' ? 'class="active"' : '';
-
-    // Determine the page title
-    let pageTitle = '';
-    if (mainCategory === 'upcoming') {
-        pageTitle = `Upcoming ${subCategory}`;
-    } else {
-        pageTitle = `Launched ${subCategory}`;
-    }
-    // Capitalize the first letter of each word
-    pageTitle = pageTitle.replace(/\b\w/g, l => l.toUpperCase());
-
-    // Determine which main nav link is active
     const upcomingActive = mainCategory === 'upcoming' ? 'class="active"' : '';
     const launchedActive = mainCategory === 'launched' ? 'class="active"' : '';
 
+    const pageTitle = `${mainCategory.toUpperCase()} ${subCategory.toUpperCase()}`;
+
+    const moviesLink = mainCategory === 'upcoming' ? 'index.html' : 'launched-movies.html';
+    const tvLink = mainCategory === 'upcoming' ? 'upcoming-tv.html' : 'launched-tv.html';
+    
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -143,32 +132,37 @@ function generateFinalHtml(itemList, mainCategory, subCategory) {
 </head>
 <body>
     <header>
-        <div class="logo">RUNUP.LIVE</div>
-        <nav class="center-nav">
-            <a href="index.html" ${upcomingActive}>UPCOMING</a>
-            <a href="launched-movies.html" ${launchedActive}>LAUNCHED</a>
-        </nav>
-        <nav class="filter-nav">
-            <a href="${mainCategory === 'upcoming' ? 'index.html' : 'launched-movies.html'}" ${moviesActive}>MOVIES</a>
-            <a href="${mainCategory === 'upcoming' ? 'upcoming-tv.html' : 'launched-tv.html'}" ${tvActive}>TV</a>
-            <a href="#" ${gamesActive}>GAMES</a>
-        </nav>
-    </header>
-    <main>
-        <section class="hero-search">
-            <h2>${pageTitle} Countdowns</h2>
+        <div class="header-left">
+            <div class="logo">RUNUP.LIVE</div>
+            <nav class="category-nav">
+                <a href="${moviesLink}" ${moviesActive}>MOVIES</a>
+                <a href="${tvLink}" ${tvActive}>TV</a>
+                <a href="#" ${gamesActive}>GAMES</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <nav class="main-nav">
+                <a href="index.html" ${upcomingActive}>UPCOMING</a>
+                <a href="launched-movies.html" ${launchedActive}>LAUNCHED</a>
+            </nav>
             <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search for a title...">
+                <input type="text" id="search-input" placeholder="Search...">
             </div>
-        </section>
-        <section class="grid-section">
-            <div class="countdown-grid">
-                ${cardsHtml}
-            </div>
-        </section>
+        </div>
+    </header>
+    <main class="grid-main">
+        <h2 class="grid-title">${pageTitle}</h2>
+        <div class="countdown-grid">
+            ${cardsHtml}
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
 </html>
     `;
 }
+
+// --- RUN THE ROBOT ---
+(async () => {
+    await buildWebsite();
+})();

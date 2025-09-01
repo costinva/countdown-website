@@ -1,1 +1,40 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Your Countdown Hub</title><link rel="stylesheet" href="style.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></head><body><header><div class="logo">RUNUP.LIVE</div><nav class="main-nav"><a href="index.html" class="active">UPCOMING</a><a href="launched-movies.html" >LAUNCHED</a></nav></header><main><div class="sub-nav-container"><nav class="sub-nav"><a href="index.html" >MOVIES</a><a href="upcoming-tv.html" class="active">TV</a><a href="#">GAMES</a></nav><div class="search-container"><input type="text" placeholder="Search..."></div></div><section class="trending-section"><h2>UPCOMING TV</h2><div class="countdown-grid"><a href="details.html?id=tv-247043" class="countdown-card" data-date="2025-09-18T12:00:00"><img src="https://image.tmdb.org/t/p/w500/3Lyy9lbQuEE6RpWep2K1ozcjxjt.jpg" class="card-bg" alt="The Ba***ds of Bollywood Poster"><div class="card-overlay"></div><div class="card-content"><div class="card-tag">TV</div><h3>The Ba***ds of Bollywood</h3><div class="card-timer"><div><span class="days">0</span><p>Days</p></div><div><span class="hours">0</span><p>Hours</p></div><div><span class="mins">0</span><p>Mins</p></div><div><span class="secs">0</span><p>Secs</p></div></div></div></a></div></section></main><script src="script.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Countdown Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">RUNUP.LIVE</div>
+            <nav class="category-nav">
+                <a href="index.html" >MOVIES</a>
+                <a href="upcoming-tv.html" class="active">TV</a>
+                <a href="#" >GAMES</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <nav class="main-nav">
+                <a href="index.html" class="active">UPCOMING</a>
+                <a href="launched-movies.html" >LAUNCHED</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <main class="grid-main">
+        <h2 class="grid-title">UPCOMING TV</h2>
+        <div class="countdown-grid">
+            <a href="details.html?id=tv-247043" class="countdown-card" data-date="2025-09-18T12:00:00"><img src="https://image.tmdb.org/t/p/w500/3Lyy9lbQuEE6RpWep2K1ozcjxjt.jpg" class="card-bg" alt="The Ba***ds of Bollywood Poster"><div class="card-overlay"></div><div class="card-content"><div class="card-tag">TV</div><h3>The Ba***ds of Bollywood</h3><div class="card-timer"><div><span class="days">0</span><p>Days</p></div><div><span class="hours">0</span><p>Hours</p></div><div><span class="mins">0</span><p>Mins</p></div><div><span class="secs">0</span><p>Secs</p></div></div></div></a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+    

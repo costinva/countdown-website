@@ -291,7 +291,7 @@
     "posterImage": "/kg7lrTWGKyzLnj0E7BXl52nro1N.jpg",
     "backdrops": [],
     "overview": "In May of 2020, a standoff between a small-town sheriff and mayor sparks a powder keg as neighbor is pitted against neighbor in Eddington, New Mexico.",
-    "score": 64.65,
+    "score": 64.53,
     "genres": [
       "Western",
       "Comedy",
@@ -1450,19 +1450,16 @@
     ]
   },
   {
-    "id": 1107216,
+    "id": 1534198,
     "type": "movie",
-    "title": "Pets on a Train",
-    "releaseDate": "2025-07-02",
-    "posterImage": "/qWWxVqz34pr7TPuCv2Poq4ZnGnK.jpg",
+    "title": "Kanya",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/n0QLxuwbutsUbmU4TtqPn1hMqS1.jpg",
     "backdrops": [],
-    "overview": "When a train unexpectedly starts up, taking only pets with it, the animals discover that Hans, a badger with a grudge is behind it all. While the crash seems inevitable, the animals can count on Falcon, a roguish Raccoon who will do anything to save them.",
-    "score": 87,
+    "overview": "Two sisters Sudipa and Sukanya are reunited after 10 years due to their father's illness. The reunion takes a shocking turn when Sudipa discovers her younger sister, Sukanya, is now married to her ex-husband, Surojit.",
+    "score": 0,
     "genres": [
-      "Animation",
-      "Comedy",
-      "Adventure",
-      "Thriller"
+      "Drama"
     ]
   },
   {
@@ -1481,6 +1478,61 @@
     ]
   },
   {
+    "id": 1127674,
+    "type": "movie",
+    "title": "The Forbidden City",
+    "releaseDate": "2025-03-08",
+    "posterImage": "/pOFKztoqEyvEYldr1dNxy2M1Oo5.jpg",
+    "backdrops": [],
+    "overview": "In the suburbs of Rome two very different souls intersect. One is the son of a restaurant owner who disappeared with his lover. The other is a young mysterious woman who has arrived from China in search of her missing sister.",
+    "score": 71.46,
+    "genres": [
+      "Action",
+      "Romance",
+      "Drama"
+    ]
+  },
+  {
+    "id": 574452,
+    "type": "movie",
+    "title": "Waltzing with Brando",
+    "releaseDate": "2025-09-19",
+    "posterImage": "/iCMOHK9k8MIm95xCCKFwdIZkNc6.jpg",
+    "backdrops": [],
+    "overview": "The story of how Marlon Brando plucked Bernard Judge, an obscure but idealistic Los Angeles architect from his stable existence and convinced him that he should build the world’s first ecologically perfect retreat on a tiny and uninhabitable Tahitian island.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Comedy"
+    ]
+  },
+  {
+    "id": 1531026,
+    "type": "movie",
+    "title": "L: Lakad",
+    "releaseDate": "2025-09-05",
+    "posterImage": "/sjVNJaJn6fqmGnBDEmBcNxs5NaK.jpg",
+    "backdrops": [],
+    "overview": "Sexy VMX stars Vern Kaye and Paula Santos star in a story about a man, desperate to reclaim his fiancée’s engagement ring by selling their bed that is soon to be drenched in sweat and desire, for lovers hungry for sizzling and sometimes forbidden sex.",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ]
+  },
+  {
+    "id": 1265344,
+    "type": "movie",
+    "title": "Swiped",
+    "releaseDate": "2025-09-09",
+    "posterImage": "/znxBfe14cefxx5Lu1tgNzggJagt.jpg",
+    "backdrops": [],
+    "overview": "Whitney Wolfe uses extraordinary grit and ingenuity to break into the male-dominated tech industry.",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ]
+  },
+  {
     "id": 25538,
     "type": "movie",
     "title": "Yi Yi",
@@ -1494,17 +1546,17 @@
     ]
   },
   {
-    "id": 1102493,
+    "id": 1339435,
     "type": "movie",
-    "title": "Small Things Like These",
-    "releaseDate": "2024-11-01",
-    "posterImage": "/rdcO38cbWFg002nXg5QYtk7Tz4L.jpg",
+    "title": "At the Place of Ghosts",
+    "releaseDate": "2025-09-06",
+    "posterImage": "/q3jbcvDpMOCuxXgngdgvJTl8ilV.jpg",
     "backdrops": [],
-    "overview": "In 1985, while working as a coal merchant to support his family, Bill Furlong discovers disturbing secrets kept by the local convent and uncovers truths of his own; forcing him to confront his past and the complicit silence of a small Irish town controlled by the Catholic Church.",
-    "score": 67.38000000000001,
+    "overview": "Siblings Mise'l and Antle, who were close as children, but trauma from their upbringing has caused them to drift apart as adults. When they are both haunted by a malevolent spirit of bones and rot, the siblings are forced to reunite.",
+    "score": 0,
     "genres": [
-      "Drama",
-      "History"
+      "Fantasy",
+      "Thriller"
     ]
   },
   {
@@ -1522,17 +1574,17 @@
     ]
   },
   {
-    "id": 1448036,
+    "id": 1421990,
     "type": "movie",
-    "title": "Беги",
-    "releaseDate": "2025-09-11",
-    "posterImage": "/9izeomxAKTGmZuEbDXjxdeEI0q5.jpg",
+    "title": "The Baltimorons",
+    "releaseDate": "2025-08-10",
+    "posterImage": "/yZWcrfj3mFf9LGItIFwa7DSkedz.jpg",
     "backdrops": [],
-    "overview": "A burglar-safecracker Sasha breaks into a house where he witnesses a crime: the owner of the house, Chernov, has killed his wife. Chernov begins to pursue the escaped witness. Meanwhile, Sasha has to make it to his son's party, because the future of his marriage, which he is trying to save with all his might, depends on it.",
-    "score": 0,
+    "overview": "After cracking a tooth on Christmas Eve, newly sober Cliff embarks on an unexpected May/December adventure through Baltimore with Didi, his emergency dentist.",
+    "score": 100,
     "genres": [
       "Comedy",
-      "Crime"
+      "Drama"
     ]
   },
   {
@@ -1568,30 +1620,32 @@
     ]
   },
   {
-    "id": 574452,
+    "id": 1529279,
     "type": "movie",
-    "title": "Waltzing with Brando",
-    "releaseDate": "2025-09-19",
-    "posterImage": "/iCMOHK9k8MIm95xCCKFwdIZkNc6.jpg",
+    "title": "The Girl Who Survived: The Alina Thompson Story",
+    "releaseDate": "2025-09-20",
+    "posterImage": null,
     "backdrops": [],
-    "overview": "The story of how Marlon Brando plucked Bernard Judge, an obscure but idealistic Los Angeles architect from his stable existence and convinced him that he should build the world’s first ecologically perfect retreat on a tiny and uninhabitable Tahitian island.",
+    "overview": "15-year-old Alina Thompson, an aspiring model in 1980s Los Angeles, pulls a fast one on her parents and sneaks away to an amateur photo casting call, where she meets photographer William Bradford. Unbeknownst to Alina, William is a serial killer, and she may be next.",
     "score": 0,
     "genres": [
+      "Crime",
       "Drama",
-      "Comedy"
+      "TV Movie"
     ]
   },
   {
-    "id": 1303613,
+    "id": 1523345,
     "type": "movie",
-    "title": "Deaf",
-    "releaseDate": "2025-04-04",
-    "posterImage": "/ykB9bwUHT1AV04KjYPLhfgMwYdD.jpg",
+    "title": "Against All Odds",
+    "releaseDate": "2025-09-03",
+    "posterImage": "/vRB4nmb7h8HB82XKIWf79q75V6u.jpg",
     "backdrops": [],
-    "overview": "Angela's deafness raises concerns during her pregnancy regarding connecting with her daughter. Post-delivery, partner Héctor supports her as she learns to mother in a society lacking adequate accommodations for the hearing-impaired.",
-    "score": 78.13,
+    "overview": "",
+    "score": 0,
     "genres": [
-      "Drama"
+      "Drama",
+      "War"
     ]
   },
   {
@@ -1609,18 +1663,17 @@
     ]
   },
   {
-    "id": 1422294,
+    "id": 1141970,
     "type": "movie",
-    "title": "Jalan Pulang",
-    "releaseDate": "2025-06-19",
-    "posterImage": "/8cCA4pKow6wxuwbpSAgIC2K7AGg.jpg",
+    "title": "Morte Cucina",
+    "releaseDate": "2025-09-19",
+    "posterImage": "/1CdRrEcwaFEXMNyhlwRkMSaSpG3.jpg",
     "backdrops": [],
-    "overview": "After her husband's mysterious death, Lastini believes a dark entity is possessing her daughter, Arum. With only five days before Arum's leap-year birthday, Lastini and her two other children journey across Java to seek help from spiritual healers. As the demon's grip tightens, they race against time to save Arum and find their way back home.",
-    "score": 59,
+    "overview": "Sao, a talented cook, accidentally meets the man who took advantage of her in the past. She sets her revenge plan in motion using her cooking skill to achieve a rather unexpected result…",
+    "score": 0,
     "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
+      "Thriller",
+      "Drama"
     ]
   },
   {
@@ -1653,20 +1706,6 @@
     ]
   },
   {
-    "id": 1249926,
-    "type": "movie",
-    "title": "Ghaati",
-    "releaseDate": "2025-09-04",
-    "posterImage": "/d0thFjveYHvUjvnAhY5fjmnp5fM.jpg",
-    "backdrops": [],
-    "overview": "Follows the story of an empowered woman who gets entangled with weed trade due to circumstances.",
-    "score": 0,
-    "genres": [
-      "Drama",
-      "Crime"
-    ]
-  },
-  {
     "id": 1006724,
     "type": "movie",
     "title": "Dead Talents Society",
@@ -1696,21 +1735,6 @@
     ]
   },
   {
-    "id": 1280282,
-    "type": "movie",
-    "title": "Gabby's Dollhouse: The Movie",
-    "releaseDate": "2025-09-20",
-    "posterImage": "/baT5AdvxLGuTNXzetLbZbWdDqiS.jpg",
-    "backdrops": [],
-    "overview": "Gabby heads out on a road trip with her Grandma Gigi to the urban wonderland of Cat Francisco. But when Gabby's dollhouse, her most prized possession, ends up in the hands of an eccentric cat lady named Vera, Gabby sets off on an adventure through the real world to get the Gabby Cats back together and save the dollhouse before it's too late.",
-    "score": 0,
-    "genres": [
-      "Family",
-      "Comedy",
-      "Adventure"
-    ]
-  },
-  {
     "id": 1078012,
     "type": "movie",
     "title": "Boonie Bears: Guardian Code",
@@ -1725,6 +1749,64 @@
       "Science Fiction",
       "Family",
       "Adventure"
+    ]
+  },
+  {
+    "id": 1102493,
+    "type": "movie",
+    "title": "Small Things Like These",
+    "releaseDate": "2024-11-01",
+    "posterImage": "/rdcO38cbWFg002nXg5QYtk7Tz4L.jpg",
+    "backdrops": [],
+    "overview": "In 1985, while working as a coal merchant to support his family, Bill Furlong discovers disturbing secrets kept by the local convent and uncovers truths of his own; forcing him to confront his past and the complicit silence of a small Irish town controlled by the Catholic Church.",
+    "score": 67.38000000000001,
+    "genres": [
+      "Drama",
+      "History"
+    ]
+  },
+  {
+    "id": 1303613,
+    "type": "movie",
+    "title": "Deaf",
+    "releaseDate": "2025-04-04",
+    "posterImage": "/ykB9bwUHT1AV04KjYPLhfgMwYdD.jpg",
+    "backdrops": [],
+    "overview": "Angela's deafness raises concerns during her pregnancy regarding connecting with her daughter. Post-delivery, partner Héctor supports her as she learns to mother in a society lacking adequate accommodations for the hearing-impaired.",
+    "score": 78.13,
+    "genres": [
+      "Drama"
+    ]
+  },
+  {
+    "id": 1422294,
+    "type": "movie",
+    "title": "Jalan Pulang",
+    "releaseDate": "2025-06-19",
+    "posterImage": "/8cCA4pKow6wxuwbpSAgIC2K7AGg.jpg",
+    "backdrops": [],
+    "overview": "After her husband's mysterious death, Lastini believes a dark entity is possessing her daughter, Arum. With only five days before Arum's leap-year birthday, Lastini and her two other children journey across Java to seek help from spiritual healers. As the demon's grip tightens, they race against time to save Arum and find their way back home.",
+    "score": 59,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ]
+  },
+  {
+    "id": 1107216,
+    "type": "movie",
+    "title": "Pets on a Train",
+    "releaseDate": "2025-07-02",
+    "posterImage": "/qWWxVqz34pr7TPuCv2Poq4ZnGnK.jpg",
+    "backdrops": [],
+    "overview": "When a train unexpectedly starts up, taking only pets with it, the animals discover that Hans, a badger with a grudge is behind it all. While the crash seems inevitable, the animals can count on Falcon, a roguish Raccoon who will do anything to save them.",
+    "score": 87,
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Adventure",
+      "Thriller"
     ]
   },
   {
@@ -1844,6 +1926,35 @@
     "genres": [
       "Animation",
       "Family",
+      "Adventure"
+    ]
+  },
+  {
+    "id": 1249926,
+    "type": "movie",
+    "title": "Ghaati",
+    "releaseDate": "2025-09-04",
+    "posterImage": "/d0thFjveYHvUjvnAhY5fjmnp5fM.jpg",
+    "backdrops": [],
+    "overview": "Follows the story of an empowered woman who gets entangled with weed trade due to circumstances.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Crime"
+    ]
+  },
+  {
+    "id": 1280282,
+    "type": "movie",
+    "title": "Gabby's Dollhouse: The Movie",
+    "releaseDate": "2025-09-20",
+    "posterImage": "/baT5AdvxLGuTNXzetLbZbWdDqiS.jpg",
+    "backdrops": [],
+    "overview": "Gabby heads out on a road trip with her Grandma Gigi to the urban wonderland of Cat Francisco. But when Gabby's dollhouse, her most prized possession, ends up in the hands of an eccentric cat lady named Vera, Gabby sets off on an adventure through the real world to get the Gabby Cats back together and save the dollhouse before it's too late.",
+    "score": 0,
+    "genres": [
+      "Family",
+      "Comedy",
       "Adventure"
     ]
   },
@@ -2026,6 +2137,20 @@
       "Drama",
       "Romance",
       "Music"
+    ]
+  },
+  {
+    "id": 1448036,
+    "type": "movie",
+    "title": "Беги",
+    "releaseDate": "2025-09-11",
+    "posterImage": "/9izeomxAKTGmZuEbDXjxdeEI0q5.jpg",
+    "backdrops": [],
+    "overview": "A burglar-safecracker Sasha breaks into a house where he witnesses a crime: the owner of the house, Chernov, has killed his wife. Chernov begins to pursue the escaped witness. Meanwhile, Sasha has to make it to his son's party, because the future of his marriage, which he is trying to save with all his might, depends on it.",
+    "score": 0,
+    "genres": [
+      "Comedy",
+      "Crime"
     ]
   },
   {
@@ -4137,7 +4262,7 @@
     "posterImage": "/yueXS3q8BtoWekcHOATFHicLl3e.jpg",
     "backdrops": [],
     "overview": "When the mysterious deep space research vessel USCSS Maginot crash-lands on Earth, Wendy and a ragtag group of tactical soldiers make a fateful discovery that puts them face-to-face with the planet's greatest threat.",
-    "score": 77.24000000000001,
+    "score": 77.23,
     "genres": [
       "Sci-Fi & Fantasy",
       "Drama"
@@ -4932,7 +5057,7 @@
     "posterImage": "/6q66Psq2cDrCsoz8cGDVa6gFmMm.jpg",
     "backdrops": [],
     "overview": "A group of heroes, each embodying one of the 12 zodiac signs, battles to defend the Korean Peninsula from malevolent spirits.",
-    "score": 93,
+    "score": 87.5,
     "genres": [
       "Sci-Fi & Fantasy",
       "Action & Adventure",
@@ -5016,7 +5141,7 @@
     "posterImage": "/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg",
     "backdrops": [],
     "overview": "The everyday lives of office employees in the Scranton, Pennsylvania branch of the fictional Dunder Mifflin Paper Company.",
-    "score": 86,
+    "score": 85.79,
     "genres": [
       "Comedy"
     ]
@@ -5625,7 +5750,7 @@
     "posterImage": "/abeH7n5pcuQcwYcTxG6DTZvXLP1.jpg",
     "backdrops": [],
     "overview": "Two mob families clash in a war that threatens to topple empires and lives.",
-    "score": 84.67,
+    "score": 85,
     "genres": [
       "Crime",
       "Drama"
@@ -6362,7 +6487,7 @@
     "posterImage": "/fDI15gTVbtW5Sbv5QenqecRxWKJ.jpg",
     "backdrops": [],
     "overview": "Thanks to his police officer father's efforts, Shawn Spencer spent his childhood developing a keen eye for detail (and a lasting dislike of his dad). Years later, Shawn's frequent tips to the police lead to him being falsely accused of a crime he solved.\n\nNow, Shawn has no choice but to use his abilities to perpetuate his cover story: psychic crime-solving powers, all the while dragging his best friend, his dad, and the police along for the ride.",
-    "score": 79,
+    "score": 78.97,
     "genres": [
       "Comedy",
       "Drama",
@@ -6392,7 +6517,7 @@
     "posterImage": "/nN6mZZxJBPZXBjLxnjgpnoRvswk.jpg",
     "backdrops": [],
     "overview": "A young, rookie lawyer with a strong sense of justice joins a top law firm — navigating the complex legal world under a cold, demanding mentor.",
-    "score": 90,
+    "score": 90.58999999999999,
     "genres": [
       "Drama"
     ]
@@ -6566,7 +6691,7 @@
     "posterImage": "/pPHpeI2X1qEd1CS1SeyrdhZ4qnT.jpg",
     "backdrops": [],
     "overview": "Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives. When a mysterious colleague appears outside of work, it begins a journey to discover the truth about their jobs.",
-    "score": 84.03999999999999,
+    "score": 84.02,
     "genres": [
       "Drama",
       "Mystery",
@@ -6581,7 +6706,7 @@
     "posterImage": "/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg",
     "backdrops": [],
     "overview": "Physicists Leonard and Sheldon find their nerd-centric social circle with pals Howard and Raj expanding when aspiring actress Penny moves in next door.",
-    "score": 79.13,
+    "score": 79.12,
     "genres": [
       "Comedy"
     ]
@@ -7834,7 +7959,7 @@
     "posterImage": "/mIKfKo2uDk3itzAPYIcSeYr4KtF.jpg",
     "backdrops": [],
     "overview": "In a high-tech future, a rogue security robot secretly gains free will. To stay hidden, it reluctantly joins a new mission protecting scientists on a dangerous planet...even though it just wants to binge soap operas.",
-    "score": 73.59,
+    "score": 73.54,
     "genres": [
       "Comedy",
       "Drama",

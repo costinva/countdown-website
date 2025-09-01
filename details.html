@@ -9,6 +9,27 @@
 </head>
 <body>
 
+    <!-- This is the NEW persistent header -->
+    <header>
+        <div class="header-left">
+            <div class="logo"><a href="index.html">RUNUP.LIVE</a></div>
+            <nav class="category-nav">
+                <a href="index.html">MOVIES</a>
+                <a href="upcoming-tv.html">TV</a>
+                <a href="#">GAMES</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <nav class="main-nav">
+                <a href="index.html">UPCOMING</a>
+                <a href="launched-movies.html">LAUNCHED</a>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+
     <!-- HERO SECTION: Backdrop slideshow and countdown -->
     <section id="hero-section">
         <div id="hero-backdrop"></div>
@@ -25,11 +46,6 @@
             </div>
         </div>
     </section>
-
-    <!-- This header is now separate, for a potential "back" button or logo -->
-    <header class="details-header">
-        <div class="logo"><a href="index.html">RUNUP.LIVE</a></div>
-    </header>
 
     <!-- DETAILS CONTENT SECTION -->
     <main id="details-content-section">
@@ -51,7 +67,6 @@
         </div>
     </main>
     
-    <!-- We link to our new JavaScript file -->
     <script src="details.js" defer></script>
 </body>
 </html>

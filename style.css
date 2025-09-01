@@ -159,3 +159,183 @@ nav a.active {
     text-align: center;
     color: #a0a0a0; /* A slightly muted color */
 }
+/* --- New Navigation Styles --- */
+.main-nav {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.main-nav a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #888;
+    padding-bottom: 15px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+.main-nav a.active {
+    color: #fff;
+    border-bottom-color: #4d88ff;
+}
+
+.sub-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+    margin-bottom: 30px;
+}
+
+.sub-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.sub-nav a {
+    font-weight: 700;
+    color: #aaa;
+    background-color: #2a2a2a;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.sub-nav a:hover {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+
+.sub-nav a.active {
+    background-color: #fff;
+    color: #121212;
+}
+
+.search-container input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Override old header styles */
+header {
+    padding: 20px 40px 0 40px; /* Remove bottom padding */
+}
+header nav {
+    border-bottom: none; /* remove old border if any */
+}
+
+/* Adjusting main content area */
+main {
+    padding: 0 40px; /* Standardize padding */
+}
+/* --- Details Page Styles --- */
+
+#details-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+#details-backdrop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.85); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Optional: blur effect */
+}
+
+#details-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.details-poster {
+    flex: 1 1 300px; /* Flex properties for responsive poster */
+    margin-right: 40px;
+}
+
+.details-poster img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.details-info {
+    flex: 2 1 600px; /* Takes up more space */
+}
+
+.details-info h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.details-meta {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.details-meta span {
+    margin-right: 15px;
+}
+
+.details-score {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.score-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #081c22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 3px solid #21d07a;
+    margin-right: 15px;
+}
+
+.details-info h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.details-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}

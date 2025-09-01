@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- This div will hold the movie's backdrop image -->
+    <div id="details-backdrop"></div>
+
+    <header>
+        <div class="logo"><a href="index.html">RUNUP.LIVE</a></div>
+        <!-- Note: We can add the full nav back here later if we want -->
+    </header>
+
+    <main id="details-container">
+        <!-- This is where all the content will go -->
+        <div class="details-poster">
+            <img id="details-poster-img" src="" alt="Poster">
+        </div>
+        <div class="details-info">
+            <h1 id="details-title">Loading...</h1>
+            <div class="details-meta">
+                <span id="details-release-date"></span>
+                <span id="details-genres"></span>
+            </div>
+            <div class="details-score">
+                <div id="details-score-circle" class="score-circle">0%</div>
+                <span>User Score</span>
+            </div>
+            <h2>Overview</h2>
+            <p id="details-overview">Loading overview...</p>
+        </div>
+    </main>
+    
+    <!-- We link to our new JavaScript file -->
+    <script src="details.js"></script>
+</body>
+</html>

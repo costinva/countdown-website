@@ -4,72 +4,93 @@ const fs = require('fs');
 
 // --- CONFIGURATION ---
 const API_KEY = 'cd88fa201e01c6623c7d9fb32223f4fc'; // Remember to use your secret key
+const TOTAL_PAGES_TO_FETCH = 15; // Each page has 20 items. 15 pages = ~300 movies. Increase for more.
 
-// We'll fetch from two different API endpoints to get a good mix of movies
-const UPCOMING_API_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`;
-const POPULAR_API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+// --- API HELPER FUNCTION ---
+// This new function is the core of our upgrade. It fetches multiple pages from an API endpoint.
+async function fetchAllPages(baseUrl, totalPages) {
+    const allResults = [];
+    for (let page = 1; page <= totalPages; page++) {
+        try {
+            console.log(`Fetching page ${page} from ${baseUrl.split('?')[0]}...`);
+            const response = await fetch(`${baseUrl}&page=${page}`);
+            const data = await response.json();
+            if (data.results) {
+                allResults.push(...data.results);
+            }
+            // A small delay to be respectful of the API rate limits
+            await new Promise(resolve => setTimeout(resolve, 100));
+        } catch (error) {
+            console.error(`Error fetching page ${page}:`, error);
+        }
+    }
+    return allResults;
+}
 
 // --- MAIN FUNCTION ---
 async function buildWebsite() {
-    console.log("Robot is waking up... Fetching movie lists...");
+    console.log("Robot is waking up... Fetching all media (this may take a minute)...");
 
     try {
-        // 1. Fetch both lists of movies and combine them
-        const upcomingResponse = await fetch(UPCOMING_API_URL);
-        const upcomingData = await upcomingResponse.json();
-
-        const popularResponse = await fetch(POPULAR_API_URL);
-        const popularData = await popularResponse.json();
+        // 1. Fetch all data from TMDB using our new helper function
+        const upcomingMovies = await fetchAllPages(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US`, TOTAL_PAGES_TO_FETCH);
+        const popularMovies = await fetchAllPages(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US`, 5); // Fetch fewer popular movies
+        const popularTv = await fetchAllPages(`https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&language=en-US`, TOTAL_PAGES_TO_FETCH);
         
-        // Combine lists and remove duplicates
-        const allMoviesBasic = new Map();
-        [...upcomingData.results, ...popularData.results].forEach(movie => {
-            allMoviesBasic.set(movie.id, movie);
+        // 2. Combine lists, remove duplicates, and normalize data
+        const allMedia = new Map();
+
+        // Process movies
+        [...upcomingMovies, ...popularMovies].forEach(item => {
+            allMedia.set(`movie-${item.id}`, {
+                id: item.id,
+                type: 'movie',
+                title: item.title,
+                releaseDate: item.release_date,
+                posterImage: item.poster_path,
+                backdropImage: item.backdrop_path,
+                overview: item.overview,
+                score: item.vote_average * 10
+            });
+        });
+
+        // Process TV shows
+        popularTv.forEach(item => {
+            allMedia.set(`tv-${item.id}`, {
+                id: item.id,
+                type: 'tv',
+                title: item.name,
+                releaseDate: item.first_air_date,
+                posterImage: item.poster_path,
+                backdropImage: item.backdrop_path,
+                overview: item.overview,
+                score: item.vote_average * 10
+            });
         });
         
-        console.log(`Found ${allMoviesBasic.size} unique movies to process.`);
-        
-        // 2. Fetch detailed information for EVERY movie
-        console.log("Now fetching detailed information for each movie...");
-        const allMoviesDetailed = [];
-        for (const basicMovie of allMoviesBasic.values()) {
-            const detailUrl = `https://api.themoviedb.org/3/movie/${basicMovie.id}?api_key=${API_KEY}&language=en-US`;
-            const detailResponse = await fetch(detailUrl);
-            const detailData = await detailResponse.json();
-            allMoviesDetailed.push(detailData);
-            // A small delay to be respectful of the API rate limits
-            await new Promise(resolve => setTimeout(resolve, 50)); 
-        }
-        
-        console.log("Successfully fetched all detailed movie data.");
+        const allMediaArray = Array.from(allMedia.values());
+        console.log(`Processed ${allMediaArray.length} unique media items.`);
 
-        // 3. Save all this rich data to our "database" file
-        fs.writeFileSync('search-data.json', JSON.stringify(allMoviesDetailed, null, 2));
-        console.log("Successfully created search-data.json file!");
+        // 3. Save the master database file
+        fs.writeFileSync('database.json', JSON.stringify(allMediaArray, null, 2));
+        console.log("Successfully created master database.json file!");
 
-        // 4. Sort movies into upcoming and launched
-        const upcomingMovies = [];
-        const launchedMovies = [];
+        // 4. Filter data for each page (This logic is now automatic thanks to the dates)
         const today = new Date();
-
-        allMoviesDetailed.forEach(movie => {
-            const releaseDate = new Date(movie.release_date);
-            if (releaseDate > today) {
-                upcomingMovies.push(movie);
-            } else {
-                launchedMovies.push(movie);
-            }
-        });
+        const finalUpcomingMovies = allMediaArray.filter(item => item.type === 'movie' && new Date(item.releaseDate) > today);
+        const finalUpcomingTv = allMediaArray.filter(item => item.type === 'tv' && new Date(item.releaseDate) > today);
         
-        // 5. Build the HTML files
-        const upcomingHtml = generateFinalHtml(upcomingMovies, 'UPCOMING', false);
-        fs.writeFileSync('index.html', upcomingHtml);
-        console.log("Successfully built index.html with upcoming movies.");
+        const finalLaunchedMovies = allMediaArray.filter(item => item.type === 'movie' && new Date(item.releaseDate) <= today);
+        const finalLaunchedTv = allMediaArray.filter(item => item.type === 'tv' && new Date(item.releaseDate) <= today);
 
-        const launchedHtml = generateFinalHtml(launchedMovies, 'LAUNCHED', true);
-        fs.writeFileSync('launched.html', launchedHtml);
-        console.log("Successfully built launched.html with launched movies.");
+        // 5. Build all the HTML pages
+        fs.writeFileSync('index.html', generateFinalHtml(finalUpcomingMovies, 'upcoming', 'movies'));
+        fs.writeFileSync('upcoming-tv.html', generateFinalHtml(finalUpcomingTv, 'upcoming', 'tv'));
+        
+        fs.writeFileSync('launched-movies.html', generateFinalHtml(finalLaunchedMovies, 'launched', 'movies'));
+        fs.writeFileSync('launched-tv.html', generateFinalHtml(finalLaunchedTv, 'launched', 'tv'));
 
+        console.log("Successfully built all 4 pages.");
         console.log("Robot's job is done.");
 
     } catch (error) {
@@ -77,13 +98,12 @@ async function buildWebsite() {
     }
 }
 
+// --- HELPER FUNCTIONS (These remain unchanged from the previous version) ---
 
-// --- HELPER FUNCTIONS ---
-
-function generateCardHtml(movie) {
-    const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-    const releaseDate = movie.release_date;
-    const isLaunched = new Date(releaseDate) < new Date();
+function generateCardHtml(item) {
+    // ... (This function is the same as the previous version)
+    const posterUrl = `https://image.tmdb.org/t/p/w500${item.posterImage}`;
+    const isLaunched = new Date(item.releaseDate) < new Date();
 
     const timerOrStatusHtml = isLaunched
         ? `<div class="card-status"><h4>Launched</h4></div>`
@@ -94,29 +114,46 @@ function generateCardHtml(movie) {
                <div><span class="secs">0</span><p>Secs</p></div>
            </div>`;
 
-    // CRUCIAL CHANGE: The link now points to details.html with the movie's ID
+    const tagType = item.type.toUpperCase();
+
     return `
-        <a href="details.html?id=${movie.id}" class="countdown-card" data-date="${releaseDate}T12:00:00">
-            <img src="${posterUrl}" class="card-bg" alt="${movie.title} Poster">
+        <a href="details.html?id=${item.type}-${item.id}" class="countdown-card" data-date="${item.releaseDate}T12:00:00">
+            <img src="${posterUrl}" class="card-bg" alt="${item.title} Poster">
             <div class="card-overlay"></div>
             <div class="card-content">
-                <div class="card-tag">MOVIE</div>
-                <h3>${movie.title}</h3>
+                <div class="card-tag">${tagType}</div>
+                <h3>${item.title}</h3>
                 ${timerOrStatusHtml}
             </div>
         </a>
     `;
 }
 
-function generateFinalHtml(movieList, pageTitle, isLaunchedPage) {
-    // Generate the HTML for all the cards in the provided list
+function generateFinalHtml(itemList, mainCategory, subCategory) {
+    // ... (This function is the same as the previous version)
     let cardsHtml = '';
-    movieList.forEach(movie => {
-        cardsHtml += generateCardHtml(movie);
+    itemList.forEach(item => {
+        cardsHtml += generateCardHtml(item);
     });
 
-    const indexActiveClass = !isLaunchedPage ? 'class="active"' : '';
-    const launchedActiveClass = isLaunchedPage ? 'class="active"' : '';
+    const upcomingActive = mainCategory === 'upcoming' ? 'class="active"' : '';
+    const launchedActive = mainCategory === 'launched' ? 'class="active"' : '';
+    const moviesActive = subCategory === 'movies' ? 'class="active"' : '';
+    const tvActive = subCategory === 'tv' ? 'class="active"' : '';
+
+    const upcomingSubNav = `
+        <a href="index.html" ${moviesActive}>MOVIES</a>
+        <a href="upcoming-tv.html" ${tvActive}>TV</a>
+        <a href="#">GAMES</a> <!-- Placeholder -->
+    `;
+    const launchedSubNav = `
+        <a href="launched-movies.html" ${moviesActive}>MOVIES</a>
+        <a href="launched-tv.html" ${tvActive}>TV</a>
+        <a href="#">GAMES</a> <!-- Placeholder -->
+    `;
+    
+    const subNavHtml = mainCategory === 'upcoming' ? upcomingSubNav : launchedSubNav;
+    const pageTitle = `${mainCategory.toUpperCase()} ${subCategory.toUpperCase()}`;
 
     return `
 <!DOCTYPE html>
@@ -131,15 +168,20 @@ function generateFinalHtml(movieList, pageTitle, isLaunchedPage) {
 <body>
     <header>
         <div class="logo">RUNUP.LIVE</div>
-        <nav>
-            <a href="index.html" ${indexActiveClass}>UPCOMING</a>
-            <a href="launched.html" ${launchedActiveClass}>LAUNCHED</a>
+        <nav class="main-nav">
+            <a href="index.html" ${upcomingActive}>UPCOMING</a>
+            <a href="launched-movies.html" ${launchedActive}>LAUNCHED</a>
         </nav>
     </header>
     <main>
-        <section class="search-section">
-            <input type="text" placeholder="Search for movies, games, or TV shows...">
-        </section>
+        <div class="sub-nav-container">
+            <nav class="sub-nav">
+                ${subNavHtml}
+            </nav>
+            <div class="search-container">
+                 <input type="text" placeholder="Search...">
+            </div>
+        </div>
         <section class="trending-section">
             <h2>${pageTitle}</h2>
             <div class="countdown-grid">

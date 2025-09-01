@@ -17,17 +17,34 @@ a {
     color: inherit;
 }
 
-main {
-    padding: 20px;
+/* --- Main Navigation Styles --- */
+header {
+    padding: 20px 40px 0 40px; /* Remove bottom padding */
 }
 
-/* --- Header & Navigation --- */
-header {
+.main-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #1a1a1a;
+    gap: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+.main-nav a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #888;
+    padding-bottom: 15px;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+.main-nav a.active {
+    color: #fff;
+    border-bottom-color: #4d88ff;
 }
 
 .logo {
@@ -35,31 +52,56 @@ header {
     font-weight: 700;
 }
 
-nav a {
-    margin-left: 20px;
+/* --- Sub Navigation & Search --- */
+.sub-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+    margin-bottom: 30px;
+}
+
+.sub-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.sub-nav a {
     font-weight: 700;
+    color: #aaa;
+    background-color: #2a2a2a;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-/* --- Search Section --- */
-.search-section {
-    padding: 40px 20px;
-    text-align: center;
+.sub-nav a:hover {
+    background-color: #3a3a3a;
+    color: #fff;
 }
 
-.search-section input {
-    width: 100%;
-    max-width: 600px;
-    padding: 15px;
+.sub-nav a.active {
+    background-color: #fff;
+    color: #121212;
+}
+
+.search-container input {
+    padding: 8px 15px;
+    border-radius: 20px;
     border: 1px solid #333;
-    border-radius: 5px;
     background-color: #2a2a2a;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
-/* --- Trending Section & Grid --- */
+/* --- Main Content Grid --- */
+main {
+    padding: 0 40px;
+}
+
 .trending-section h2 {
-    text-align: center;
+    /* text-align: center; */ /* We can remove this for the new layout */
     margin-bottom: 30px;
     font-size: 1.8rem;
 }
@@ -145,114 +187,120 @@ nav a {
     text-transform: uppercase;
     margin: 5px 0 0 0;
 }
-/* --- Active Navigation Link Style --- */
-nav a.active {
-    color: #4d88ff; /* A bright blue to show it's selected */
-    text-decoration: underline;
-}
 
-/* --- Style for the "Launched" status text --- */
 .card-status h4 {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    color: #a0a0a0; /* A slightly muted color */
-}
-/* --- New Navigation Styles --- */
-.main-nav {
-    display: flex;
-    gap: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 15px;
+    color: #a0a0a0;
 }
 
-.main-nav a {
-    font-size: 1.2rem;
+/* --- Details Page Header --- */
+.details-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.details-header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #888;
-    padding-bottom: 15px;
-    border-bottom: 3px solid transparent;
-    transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
-    color: #fff;
-}
 
-.main-nav a.active {
-    color: #fff;
-    border-bottom-color: #4d88ff;
-}
-
-.sub-nav-container {
+/* --- New Hero Details Page Styles --- */
+#hero-section {
+    height: 100vh;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #222;
-    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
 }
 
-.sub-nav {
+#hero-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+#hero-backdrop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+#hero-title {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- THIS IS THE CORRECTED HERO COUNTDOWN STYLE --- */
+#hero-countdown {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px; /* Adds space between the blocks */
+    text-align: center;
 }
 
-.sub-nav a {
-    font-weight: 700;
-    color: #aaa;
-    background-color: #2a2a2a;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+#hero-countdown span {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    display: block; /* Ensures it takes its own line */
 }
 
-.sub-nav a:hover {
-    background-color: #3a3a3a;
-    color: #fff;
+#hero-countdown p {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    text-transform: uppercase;
+    margin-top: 5px; /* Adds a little space above the text */
 }
 
-.sub-nav a.active {
-    background-color: #fff;
-    color: #121212;
+#hero-status h2 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.search-container input {
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid #333;
-    background-color: #2a2a2a;
-    color: #fff;
-    font-size: 0.9rem;
-}
 
-/* Override old header styles */
-header {
-    padding: 20px 40px 0 40px; /* Remove bottom padding */
-}
-header nav {
-    border-bottom: none; /* remove old border if any */
-}
-
-/* Adjusting main content area */
-main {
-    padding: 0 40px; /* Standardize padding */
-}
-/* --- New Details Content Section Below Hero --- */
+/* --- Details Content Section Below Hero --- */
 #details-content-section {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 60px 40px;
     max-width: 1200px;
-    margin: 0 auto; /* Center it */
+    margin: 0 auto;
     background-color: #121212;
     color: #fff;
     border-top: 1px solid #333;
 }
 
-/* Reusing some old styles, with slight tweaks */
 .details-poster {
     flex: 1 1 300px;
     margin-right: 40px;
@@ -270,4 +318,11 @@ main {
 /* Utility class for hiding elements */
 .hidden {
     display: none;
+}
+/* --- Fallback Backdrop Style --- */
+#hero-backdrop.fallback-blur {
+    /* This applies a blur effect to the background image */
+    filter: blur(10px);
+    /* This scales the image up slightly to hide the blurry edges */
+    transform: scale(1.1);
 }

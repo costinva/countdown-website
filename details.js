@@ -22,18 +22,16 @@ window.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // --- 2. START THE BACKDROP SLIDESHOW ---
-        startBackdropSlideshow(item.backdrops);
+        // --- 2. START THE BACKDROP SLIDESHOW (with new fallback logic) ---
+        startBackdropSlideshow(item.backdrops, item.posterImage);
 
         // --- 3. POPULATE THE HERO SECTION ---
         document.getElementById('hero-title').textContent = item.title;
         const releaseDate = new Date(item.releaseDate + "T12:00:00");
 
         if (releaseDate > new Date()) {
-            // If it's upcoming, start the countdown
             startCountdown(releaseDate);
         } else {
-            // If it's launched, show the status
             document.getElementById('hero-countdown').classList.add('hidden');
             document.getElementById('hero-status').classList.remove('hidden');
         }
@@ -47,7 +45,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('details-genres').textContent = item.genres.join(', ');
         document.getElementById('details-overview').textContent = item.overview;
         
-        const score = Math.round(item.score);
+        const score = Math.round(item.score || 0); // Use 0 as a default if score is missing
         const scoreCircle = document.getElementById('details-score-circle');
         scoreCircle.textContent = `${score}%`;
         if (score >= 70) scoreCircle.style.borderColor = '#21d07a';
@@ -63,28 +61,35 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 // --- HELPER FUNCTIONS ---
 
-function startBackdropSlideshow(backdrops) {
-    if (!backdrops || backdrops.length === 0) return; // Don't start if no images
-
+function startBackdropSlideshow(backdrops, posterImage) {
     const backdropElement = document.getElementById('hero-backdrop');
-    let currentBackdropIndex = 0;
+    
+    // Check if we have a valid list of backdrops
+    if (backdrops && backdrops.length > 0) {
+        // --- SLIDESHOW LOGIC ---
+        let currentBackdropIndex = 0;
+        const changeBackdrop = () => {
+            const backdropUrl = `https://image.tmdb.org/t/p/original${backdrops[currentBackdropIndex]}`;
+            backdropElement.style.backgroundImage = `url('${backdropUrl}')`;
+            currentBackdropIndex = (currentBackdropIndex + 1) % backdrops.length;
+        };
+        changeBackdrop();
+        setInterval(changeBackdrop, 7000);
 
-    // Function to change the image
-    const changeBackdrop = () => {
-        // Set the new image
-        const backdropUrl = `https://image.tmdb.org/t/p/original${backdrops[currentBackdropIndex]}`;
-        backdropElement.style.backgroundImage = `url('${backdropUrl}')`;
-        
-        // Move to the next image index, looping back to 0 if at the end
-        currentBackdropIndex = (currentBackdropIndex + 1) % backdrops.length;
-    };
-
-    changeBackdrop(); // Set the first image immediately
-    setInterval(changeBackdrop, 7000); // Change image every 7 seconds
+    } else if (posterImage) {
+        // --- FALLBACK LOGIC ---
+        // If no backdrops, use the poster as a blurred background
+        console.log("No backdrops found. Using poster as fallback.");
+        const posterUrl = `https://image.tmdb.org/t/p/original${posterImage}`;
+        backdropElement.style.backgroundImage = `url('${posterUrl}')`;
+        // We will add a new CSS class to apply the blur effect
+        backdropElement.classList.add('fallback-blur');
+    }
 }
 
 
 function startCountdown(eventDate) {
+    // ... (This function is the same as the previous version)
     const daysEl = document.getElementById('hero-days');
     const hoursEl = document.getElementById('hero-hours');
     const minsEl = document.getElementById('hero-mins');
@@ -94,7 +99,6 @@ function startCountdown(eventDate) {
         const diff = eventDate.getTime() - new Date().getTime();
         if (diff <= 0) {
             clearInterval(timer);
-            // Optionally, hide countdown and show status
             document.getElementById('hero-countdown').classList.add('hidden');
             document.getElementById('hero-status').classList.remove('hidden');
             return;

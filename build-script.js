@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 
 // --- CONFIGURATION ---
-const API_KEY = 'YOUR_SECRET_API_KEY_GOES_HERE'; // Remember to use your secret key
+const API_KEY = 'cd88fa201e01c6623c7d9fb32223f4fc'; // Remember to use your secret key
 const TOTAL_PAGES_TO_FETCH = 15; 
 
 // --- API HELPER FUNCTION ---

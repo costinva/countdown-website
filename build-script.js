@@ -108,16 +108,67 @@ function generateCardHtml(item) {
 }
 function generateFinalHtml(itemList, mainCategory, subCategory) {
     let cardsHtml = '';
-    itemList.forEach(item => { cardsHtml += generateCardHtml(item); });
+    itemList.forEach(item => {
+        cardsHtml += generateCardHtml(item);
+    });
+
+    // New logic for active links based on the new design
+    const moviesActive = subCategory === 'movies' ? 'class="active"' : '';
+    const tvActive = sub-category === 'tv' ? 'class="active"' : '';
+    const gamesActive = subCategory === 'games' ? 'class="active"' : '';
+
+    // Determine the page title
+    let pageTitle = '';
+    if (mainCategory === 'upcoming') {
+        pageTitle = `Upcoming ${subCategory}`;
+    } else {
+        pageTitle = `Launched ${subCategory}`;
+    }
+    // Capitalize the first letter of each word
+    pageTitle = pageTitle.replace(/\b\w/g, l => l.toUpperCase());
+
+    // Determine which main nav link is active
     const upcomingActive = mainCategory === 'upcoming' ? 'class="active"' : '';
     const launchedActive = mainCategory === 'launched' ? 'class="active"' : '';
-    const moviesActive = subCategory === 'movies' ? 'class="active"' : '';
-    const tvActive = subCategory === 'tv' ? 'class="active"' : '';
-    const upcomingSubNav = `<a href="index.html" ${moviesActive}>MOVIES</a><a href="upcoming-tv.html" ${tvActive}>TV</a><a href="#">GAMES</a>`;
-    const launchedSubNav = `<a href="launched-movies.html" ${moviesActive}>MOVIES</a><a href="launched-tv.html" ${tvActive}>TV</a><a href="#">GAMES</a>`;
-    const subNavHtml = mainCategory === 'upcoming' ? upcomingSubNav : launchedSubNav;
-    const pageTitle = `${mainCategory.toUpperCase()} ${subCategory.toUpperCase()}`;
-    return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Your Countdown Hub</title><link rel="stylesheet" href="style.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></head><body><header><div class="logo">RUNUP.LIVE</div><nav class="main-nav"><a href="index.html" ${upcomingActive}>UPCOMING</a><a href="launched-movies.html" ${launchedActive}>LAUNCHED</a></nav></header><main><div class="sub-nav-container"><nav class="sub-nav">${subNavHtml}</nav><div class="search-container"><input type="text" placeholder="Search..."></div></div><section class="trending-section"><h2>${pageTitle}</h2><div class="countdown-grid">${cardsHtml}</div></section></main><script src="script.js"></script></body></html>`;
+
+    return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Countdown Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">RUNUP.LIVE</div>
+        <nav class="center-nav">
+            <a href="index.html" ${upcomingActive}>UPCOMING</a>
+            <a href="launched-movies.html" ${launchedActive}>LAUNCHED</a>
+        </nav>
+        <nav class="filter-nav">
+            <a href="${mainCategory === 'upcoming' ? 'index.html' : 'launched-movies.html'}" ${moviesActive}>MOVIES</a>
+            <a href="${mainCategory === 'upcoming' ? 'upcoming-tv.html' : 'launched-tv.html'}" ${tvActive}>TV</a>
+            <a href="#" ${gamesActive}>GAMES</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-search">
+            <h2>${pageTitle} Countdowns</h2>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for a title...">
+            </div>
+        </section>
+        <section class="grid-section">
+            <div class="countdown-grid">
+                ${cardsHtml}
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+    `;
 }
-// --- RUN THE ROBOT ---
-buildWebsite();

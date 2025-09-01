@@ -17,34 +17,14 @@ a {
     color: inherit;
 }
 
-/* --- Main Navigation Styles --- */
+/* --- New Header & Navigation Styles --- */
 header {
-    padding: 20px 40px 0 40px; /* Remove bottom padding */
-}
-
-.main-nav {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1a1a1a;
     border-bottom: 1px solid #333;
-    padding-bottom: 15px;
-}
-
-.main-nav a {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #888;
-    padding-bottom: 15px;
-    border-bottom: 3px solid transparent;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: #fff;
-}
-
-.main-nav a.active {
-    color: #fff;
-    border-bottom-color: #4d88ff;
 }
 
 .logo {
@@ -52,56 +32,89 @@ header {
     font-weight: 700;
 }
 
-/* --- Sub Navigation & Search --- */
-.sub-nav-container {
+.center-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #222;
-    margin-bottom: 30px;
+    gap: 30px;
 }
 
-.sub-nav {
-    display: flex;
-    gap: 20px;
-}
-
-.sub-nav a {
+.center-nav a {
+    font-size: 1rem;
     font-weight: 700;
-    color: #aaa;
-    background-color: #2a2a2a;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    color: #888;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
 }
 
-.sub-nav a:hover {
-    background-color: #3a3a3a;
+.center-nav a:hover {
     color: #fff;
 }
 
-.sub-nav a.active {
-    background-color: #fff;
-    color: #121212;
+.center-nav a.active {
+    color: #fff;
+    border-bottom-color: #4d88ff;
+}
+
+.filter-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-nav a {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #2a2a2a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter-nav a:hover {
+    background-color: #3a3a3a;
+}
+
+.filter-nav a.active {
+    background-color: #4d88ff;
+    border-color: #4d88ff;
+}
+
+/* --- New Hero Search Section --- */
+.hero-search {
+    padding: 50px 40px;
+    background-color: #161616;
+    text-align: center;
+}
+
+.hero-search h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .search-container input {
-    padding: 8px 15px;
-    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    border-radius: 30px; /* More rounded */
     border: 1px solid #333;
     background-color: #2a2a2a;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* --- Main Content Grid --- */
+/* --- Main Content Grid Area --- */
 main {
-    padding: 0 40px;
+    padding: 0; /* Remove old padding */
+}
+
+.grid-section {
+    padding: 40px;
 }
 
 .trending-section h2 {
-    /* text-align: center; */ /* We can remove this for the new layout */
+    /* This style is now handled by .hero-search h2 */
     margin-bottom: 30px;
     font-size: 1.8rem;
 }
@@ -214,8 +227,7 @@ main {
     font-weight: 700;
 }
 
-
-/* --- New Hero Details Page Styles --- */
+/* --- Hero Details Page Styles --- */
 #hero-section {
     height: 100vh;
     position: relative;
@@ -260,11 +272,10 @@ main {
     letter-spacing: 2px;
 }
 
-/* --- THIS IS THE CORRECTED HERO COUNTDOWN STYLE --- */
 #hero-countdown {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Adds space between the blocks */
+    gap: 40px;
     text-align: center;
 }
 
@@ -272,13 +283,13 @@ main {
     font-size: clamp(3rem, 10vw, 7rem);
     font-weight: 900;
     line-height: 1;
-    display: block; /* Ensures it takes its own line */
+    display: block;
 }
 
 #hero-countdown p {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
     text-transform: uppercase;
-    margin-top: 5px; /* Adds a little space above the text */
+    margin-top: 5px;
 }
 
 #hero-status h2 {
@@ -286,7 +297,6 @@ main {
     font-weight: 900;
     color: rgba(255, 255, 255, 0.8);
 }
-
 
 /* --- Details Content Section Below Hero --- */
 #details-content-section {
@@ -319,10 +329,9 @@ main {
 .hidden {
     display: none;
 }
+
 /* --- Fallback Backdrop Style --- */
 #hero-backdrop.fallback-blur {
-    /* This applies a blur effect to the background image */
     filter: blur(10px);
-    /* This scales the image up slightly to hide the blurry edges */
     transform: scale(1.1);
 }

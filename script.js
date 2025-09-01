@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- MAIN GRID COUNTDOWN LOGIC ---
-    // First, check if the countdown grid exists on this page
     const countdownGrid = document.querySelector('.countdown-grid');
     if (countdownGrid) {
         const countdownCards = document.querySelectorAll('.countdown-card');
@@ -12,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!eventDateStr) return;
 
             const eventDate = new Date(eventDateStr);
+
+            // NEW SAFETY CHECK: If the date is invalid, skip this card.
+            if (isNaN(eventDate.getTime())) {
+                return; 
+            }
+
             const timerElements = {
                 days: card.querySelector('.days'),
                 hours: card.querySelector('.hours'),
@@ -19,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 secs: card.querySelector('.secs')
             };
             
-            // Skip cards that don't have a timer (e.g., launched cards)
             if (!timerElements.days) return;
 
             const updateCountdown = () => {
@@ -27,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const diff = eventDate.getTime() - now.getTime();
 
                 if (diff <= 0) {
-                    // This case is handled by the build script, but as a fallback:
                     card.querySelector('.card-timer').innerHTML = "<h4>Launched</h4>";
                     clearInterval(timer);
                     return;
@@ -48,21 +51,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // We will add the search code here in our next step.
 
 });
-```This new code first checks if a `.countdown-grid` element exists. If it doesn't (like on our `details.html` page), it simply does nothing, preventing any errors.
-
-**Step 2: Fix the Details Page Layout and Score**
-
-It looks like I made a mistake in the HTML and CSS for the details page. Let's fix it so the hero section appears correctly.
-
-**Action:** Go to your `details.html` file and make this one small but critical change. We need to **move the `<main>` tag** so it is outside the hero section.
-
-**Current `details.html` (Incorrect):**
-```html
-...
-<section id="hero-section">
-    ... hero content ...
-    <main id="details-content-section">  <!-- WRONG: Main is inside the hero -->
-        ... details content ...
-    </main>
-</section>
-...

@@ -43,7 +43,7 @@ async function buildWebsite() {
         
         console.log(`Found ${uniqueMedia.size} unique items to process.`);
         
-        // 2. Fetch detailed information for EVERY item, now including all images
+        // 2. Fetch detailed information for EVERY item
         console.log("Now fetching detailed information and image galleries...");
         const allMediaDetailed = [];
         for (const item of uniqueMedia.values()) {
@@ -52,7 +52,6 @@ async function buildWebsite() {
             const detailResponse = await fetch(detailUrl);
             const detailData = await detailResponse.json();
             
-            // Normalize the data into our own clean format
             allMediaDetailed.push({
                 id: detailData.id,
                 type: type,
@@ -74,9 +73,14 @@ async function buildWebsite() {
         console.log("Successfully created master database.json file!");
 
         // 4. Filter data for each page
+        console.log("Filtering and sorting media...");
         const today = new Date();
-        const upcoming = allMediaDetailed.filter(item => new Date(item.releaseDate) > today);
-        const launched = allMediaDetailed.filter(item => new Date(item.releaseDate) <= today);
+        
+        // CRUCIAL FIX: First, filter out any items that don't have a valid releaseDate.
+        const allValidMedia = allMediaDetailed.filter(item => item.releaseDate);
+
+        const upcoming = allValidMedia.filter(item => new Date(item.releaseDate) > today);
+        const launched = allValidMedia.filter(item => new Date(item.releaseDate) <= today);
 
         // 5. Build all the HTML pages
         fs.writeFileSync('index.html', generateFinalHtml(upcoming.filter(i => i.type === 'movie'), 'upcoming', 'movies'));

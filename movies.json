@@ -7,7 +7,7 @@
     "posterImage": "/8XfIKOPmuCZLh5ooK13SPKeybWF.jpg",
     "backdrops": [],
     "overview": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.",
-    "score": 79,
+    "score": 70.31,
     "genres": [
       "Horror"
     ],
@@ -22,7 +22,7 @@
     "posterImage": "/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
     "backdrops": [],
     "overview": "The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro, Nezuko, and the Hashira face terrifying Upper Rank demons in a desperate fight as the final battle against Muzan Kibutsuji begins.",
-    "score": 72,
+    "score": 73.37,
     "genres": [
       "Animation",
       "Action",
@@ -40,10 +40,27 @@
     "posterImage": "/6MJxjNxjgAtuBEOVYtuF4yUYXZC.jpg",
     "backdrops": [],
     "overview": "With a move to the countryside already testing the limits of a couple's relationship, a supernatural encounter begins an extreme transformation of their love, their lives, and their flesh.",
-    "score": 72,
+    "score": 71.42999999999999,
     "genres": [
       "Horror",
       "Romance"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 13494,
+    "type": "movie",
+    "title": "Red Sonja",
+    "releaseDate": "2025-07-31",
+    "posterImage": "/l10eghFN1nQmWwMSt91MlLvZZFA.jpg",
+    "backdrops": [],
+    "overview": "A young girl rises from the ashes of tragedy to become the most feared warrior woman of all time: the She-Devil with a Sword.",
+    "score": 58,
+    "genres": [
+      "Adventure",
+      "Action",
+      "Fantasy"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -53,10 +70,10 @@
     "type": "movie",
     "title": "The Bad Guys 2",
     "releaseDate": "2025-07-24",
-    "posterImage": "/5DJbIWxIotQYUnRrRGhSxjxmvye.jpg",
+    "posterImage": "/26oSPnq0ct59l07QOXZKyzsiRtN.jpg",
     "backdrops": [],
     "overview": "The now-reformed Bad Guys are trying (very, very hard) to be good, but instead find themselves hijacked into a high-stakes, globe-trotting heist, masterminded by a new team of criminals they never saw coming: The Bad Girls.",
-    "score": 78.03,
+    "score": 78,
     "genres": [
       "Animation",
       "Family",
@@ -110,11 +127,27 @@
     "posterImage": "/8o6lkhL32xQJeB52IIG1us5BVey.jpg",
     "backdrops": [],
     "overview": "When Papa Smurf is mysteriously taken by evil wizards, Razamel and Gargamel, Smurfette leads the Smurfs on a mission into the real world to save him. With the help of new friends, the Smurfs must discover what defines their destiny to save the universe.",
-    "score": 61.09,
+    "score": 60.72,
     "genres": [
       "Animation",
       "Family",
       "Fantasy"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 758923,
+    "type": "movie",
+    "title": "Baaghi 4",
+    "releaseDate": "2025-09-05",
+    "posterImage": "/u2YEFW5o2Y7RAw2K4hSA4TEXF3Q.jpg",
+    "backdrops": [],
+    "overview": "After waking up from a coma, a grieving man sets out to uncover the truth about his missing girlfriend.",
+    "score": 0,
+    "genres": [
+      "Action",
+      "Thriller"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -127,28 +160,12 @@
     "posterImage": "/sxiDj3dTgZuCPkx30Jvyq8K9QUV.jpg",
     "backdrops": [],
     "overview": "When a young girl’s sketchbook falls into a strange pond, her drawings come to life—chaotic, real, and on the loose. As the town descends into chaos, her family must reunite and stop the monsters they never meant to unleash.",
-    "score": 73.06,
+    "score": 73,
     "genres": [
       "Adventure",
       "Fantasy",
       "Comedy",
       "Family"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1285965,
-    "type": "movie",
-    "title": "Dangerous Animals",
-    "releaseDate": "2025-06-05",
-    "posterImage": "/9tk3Si960hg4E49eMt81dS7Qe9Z.jpg",
-    "backdrops": [],
-    "overview": "A savvy and free-spirited surfer is abducted by a shark-obsessed serial killer. Held captive on his boat, she must figure out how to escape before he carries out a ritualistic feeding to the sharks below.",
-    "score": 64.68,
-    "genres": [
-      "Horror",
-      "Thriller"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -161,7 +178,7 @@
     "posterImage": "/crX9rSg9EohybhkEe8iTQUCe55y.jpg",
     "backdrops": [],
     "overview": "In a fairy-tale kingdom where beauty is a brutal business, Elvira battles to compete with her incredibly beautiful stepsister, and she will go to any length to catch the prince’s eye.",
-    "score": 71.98,
+    "score": 72.07,
     "genres": [
       "Horror",
       "Comedy",
@@ -179,11 +196,27 @@
     "posterImage": "/juUIOcOQ0ip9qw3ecH9IBEQklEp.jpg",
     "backdrops": [],
     "overview": "The story of 15th century Prince Vladimir who curses God following the death of his beloved wife and is turned into a vampire. Later, in 19th century London, he discovers his wife’s doppelgänger and dooms himself by pursuing her.",
-    "score": 63.57,
+    "score": 65,
     "genres": [
       "Horror",
       "Fantasy",
       "Romance"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1285965,
+    "type": "movie",
+    "title": "Dangerous Animals",
+    "releaseDate": "2025-06-05",
+    "posterImage": "/oQJ1PKLIE2gF5cr3xwjLCvv4jcU.jpg",
+    "backdrops": [],
+    "overview": "A savvy and free-spirited surfer is abducted by a shark-obsessed serial killer. Held captive on his boat, she must figure out how to escape before he carries out a ritualistic feeding to the sharks below.",
+    "score": 64.69,
+    "genres": [
+      "Horror",
+      "Thriller"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -204,6 +237,23 @@
     "systemRequirements": null
   },
   {
+    "id": 1020822,
+    "type": "movie",
+    "title": "Animale",
+    "releaseDate": "2024-09-20",
+    "posterImage": "/htOG0XTgTLTSIraMvc468XZsUKP.jpg",
+    "backdrops": [],
+    "overview": "Camargue, France - Nejma trains hard to win the local bullfighting competition. When she is mauled after a celebration, she starts to notice disturbing changes. News of a rogue bull on the loose terrifies the community, killing young men.",
+    "score": 68,
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Horror"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
     "id": 862,
     "type": "movie",
     "title": "Toy Story",
@@ -211,11 +261,28 @@
     "posterImage": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
     "backdrops": [],
     "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
-    "score": 80,
+    "score": 79.7,
     "genres": [
       "Animation",
       "Adventure",
       "Family",
+      "Comedy"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1245993,
+    "type": "movie",
+    "title": "Caught Stealing",
+    "releaseDate": "2025-08-26",
+    "posterImage": "/cvda8s5J8YaHjTyEyXQpvD6f3iV.jpg",
+    "backdrops": [],
+    "overview": "Burned-out ex-baseball player Hank Thompson unexpectedly finds himself embroiled in a dangerous struggle for survival amidst the criminal underbelly of 1990s New York City, forced to navigate a treacherous underworld he never imagined.",
+    "score": 69.73,
+    "genres": [
+      "Crime",
+      "Thriller",
       "Comedy"
     ],
     "screenshots": [],
@@ -238,35 +305,18 @@
     "systemRequirements": null
   },
   {
-    "id": 1245993,
+    "id": 1181540,
     "type": "movie",
-    "title": "Caught Stealing",
-    "releaseDate": "2025-08-26",
-    "posterImage": "/cvda8s5J8YaHjTyEyXQpvD6f3iV.jpg",
+    "title": "Guns Up",
+    "releaseDate": "2025-05-15",
+    "posterImage": "/3RokBWEkQqJRZEVP3DPwGm5MYh6.jpg",
     "backdrops": [],
-    "overview": "Burned-out ex-baseball player Hank Thompson unexpectedly finds himself embroiled in a dangerous struggle for survival amidst the criminal underbelly of 1990s New York City, forced to navigate a treacherous underworld he never imagined.",
-    "score": 69.9,
+    "overview": "When a job goes horribly wrong, an ex-cop and family man who moonlights as a mob henchman has one night to get his family out of the city.",
+    "score": 69,
     "genres": [
-      "Crime",
-      "Thriller",
-      "Comedy"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1020822,
-    "type": "movie",
-    "title": "Animale",
-    "releaseDate": "2024-09-20",
-    "posterImage": "/htOG0XTgTLTSIraMvc468XZsUKP.jpg",
-    "backdrops": [],
-    "overview": "Camargue, France - Nejma trains hard to win the local bullfighting competition. When she is mauled after a celebration, she starts to notice disturbing changes. News of a rogue bull on the loose terrifies the community, killing young men.",
-    "score": 68.06,
-    "genres": [
-      "Fantasy",
-      "Drama",
-      "Horror"
+      "Action",
+      "Comedy",
+      "Crime"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -279,7 +329,7 @@
     "posterImage": "/lxM6kqilAdpdhqUl2biYp5frUxE.jpg",
     "backdrops": [],
     "overview": "When the seaside community of Amity finds itself under attack by a dangerous great white shark, the town's chief of police, a young marine biologist, and a grizzled hunter embark on a desperate quest to destroy the beast before it strikes again.",
-    "score": 76.76,
+    "score": 77,
     "genres": [
       "Horror",
       "Thriller",
@@ -289,39 +339,6 @@
     "systemRequirements": null
   },
   {
-    "id": 1267905,
-    "type": "movie",
-    "title": "The Roses",
-    "releaseDate": "2025-08-27",
-    "posterImage": "/bKKzcjfICVNGss5CFW66Txv6anW.jpg",
-    "backdrops": [],
-    "overview": "Life seems easy for picture-perfect couple Ivy and Theo: successful careers, a loving marriage, great kids. But beneath the façade of their supposed ideal life, a storm is brewing – as Theo's career nosedives while Ivy's own ambitions take off, a tinderbox of fierce competition and hidden resentment ignites.",
-    "score": 71.09,
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1181540,
-    "type": "movie",
-    "title": "Guns Up",
-    "releaseDate": "2025-05-15",
-    "posterImage": "/3RokBWEkQqJRZEVP3DPwGm5MYh6.jpg",
-    "backdrops": [],
-    "overview": "When a job goes horribly wrong, an ex-cop and family man who moonlights as a mob henchman has one night to get his family out of the city.",
-    "score": 68.15,
-    "genres": [
-      "Action",
-      "Comedy",
-      "Crime"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
     "id": 557,
     "type": "movie",
     "title": "Spider-Man",
@@ -329,23 +346,7 @@
     "posterImage": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
     "backdrops": [],
     "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
-    "score": 73.15,
-    "genres": [
-      "Action",
-      "Science Fiction"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 557,
-    "type": "movie",
-    "title": "Spider-Man",
-    "releaseDate": "2002-05-01",
-    "posterImage": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
-    "backdrops": [],
-    "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
-    "score": 73.15,
+    "score": 73.16,
     "genres": [
       "Action",
       "Science Fiction"
@@ -361,7 +362,7 @@
     "posterImage": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
     "backdrops": [],
     "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
-    "score": 76,
+    "score": 76.12,
     "genres": [
       "Science Fiction",
       "Adventure",
@@ -378,7 +379,7 @@
     "posterImage": "/gNHBxTTip88FbY2EUwvk5mww0nI.jpg",
     "backdrops": [],
     "overview": "A man gets lost in an underground passage. He follows the \"guide\" through the passage, but one after another, strange things happen to him. Is this space real? Or an illusion? Will the man be able to escape the passage?",
-    "score": 65,
+    "score": 60,
     "genres": [
       "Horror",
       "Mystery",
@@ -394,8 +395,8 @@
     "releaseDate": "2025-09-10",
     "posterImage": "/wobVTa99eW0ht6c1rNNzLkazPtR.jpg",
     "backdrops": [],
-    "overview": "Every year, fifty teenage boys meet for an event known throughout the country as \"The Long Walk.\" Among this year's chosen crop is \"Maine's Own,\" Ray Garraty. He knows the rules: that warnings are issued if you fall under speed, stumble, sit down. That after three warnings- you get your ticket. And what happens then serves as a chilling reminder that there can be only one winner in the Walk. The one that survives.",
-    "score": 0,
+    "overview": "Every year, fifty teenage boys meet for an event known throughout the country as \"The Long Walk.\" Among this year's chosen crop is \"Maine's Own,\" Ray Garraty. He knows the rules: that warnings are issued if you fall under speed, stumble, sit down. That after three warnings - you get your ticket. And what happens then serves as a chilling reminder that there can be only one winner in the Walk. The one that survives.",
+    "score": 66,
     "genres": [
       "Horror",
       "Science Fiction"
@@ -411,7 +412,7 @@
     "posterImage": "/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
     "backdrops": [],
     "overview": "A queen sends the powerful and feared sorceress Gray Alys to the ghostly wilderness of the Lost Lands in search of a magical power, where she and her guide, the drifter Boyce, must outwit and outfight both man and demon.",
-    "score": 64.47,
+    "score": 64.46,
     "genres": [
       "Action",
       "Fantasy",
@@ -424,11 +425,11 @@
     "id": 556574,
     "type": "movie",
     "title": "Hamilton",
-    "releaseDate": "2025-09-05",
+    "releaseDate": "2020-07-03",
     "posterImage": "/h1B7tW0t399VDjAcWJh8m87469b.jpg",
     "backdrops": [],
     "overview": "Presenting the tale of American founding father Alexander Hamilton, this filmed version of the original Broadway smash hit is the story of America then, told by America now.",
-    "score": 10,
+    "score": 81,
     "genres": [
       "History",
       "Drama"
@@ -444,7 +445,7 @@
     "posterImage": "/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
     "backdrops": [],
     "overview": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
-    "score": 64.42999999999999,
+    "score": 64.44,
     "genres": [
       "Action",
       "Adventure",
@@ -477,10 +478,10 @@
     "type": "movie",
     "title": "Eddington",
     "releaseDate": "2025-07-16",
-    "posterImage": "/kg7lrTWGKyzLnj0E7BXl52nro1N.jpg",
+    "posterImage": "/4GIqZUgPZ146BhibsPHMHef2nXX.jpg",
     "backdrops": [],
     "overview": "In May of 2020, a standoff between a small-town sheriff and mayor sparks a powder keg as neighbor is pitted against neighbor in Eddington, New Mexico.",
-    "score": 64,
+    "score": 64.36,
     "genres": [
       "Western",
       "Comedy",
@@ -497,7 +498,7 @@
     "posterImage": "/nVwu3mN7hr1yF467pGct3yQFM41.jpg",
     "backdrops": [],
     "overview": "A curious group of friends sneak into an abandoned spinach canning factory to film a documentary on the legend of the \"Sailor Man,\" who is said to haunt the factory and local docks.",
-    "score": 59.76,
+    "score": 58.81999999999999,
     "genres": [
       "Horror"
     ],
@@ -529,7 +530,7 @@
     "posterImage": "/u2jxeYLXTYfu0bqJmnLGIgZswib.jpg",
     "backdrops": [],
     "overview": "Wealthy businessman Zsa-zsa Korda appoints his only daughter, a nun, as sole heir to his estate. As Korda embarks on a new enterprise, they soon become the target of scheming tycoons, foreign terrorists, and determined assassins.",
-    "score": 67.22,
+    "score": 67,
     "genres": [
       "Comedy",
       "Adventure"
@@ -545,7 +546,7 @@
     "posterImage": "/oumprkO9bThExP8NwxBIBnvBu2v.jpg",
     "backdrops": [],
     "overview": "In this extraordinary story of an ordinary man, Charles 'Chuck' Krantz experiences the wonder of love, the heartbreak of loss, and the multitudes contained in all of us.",
-    "score": 73,
+    "score": 73.24,
     "genres": [
       "Fantasy",
       "Drama"
@@ -578,7 +579,7 @@
     "posterImage": "/q719jXXEzOoYaps6babgKnONONX.jpg",
     "backdrops": [],
     "overview": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.",
-    "score": 84.81,
+    "score": 84.80000000000001,
     "genres": [
       "Animation",
       "Romance",
@@ -627,7 +628,7 @@
     "type": "movie",
     "title": "Downton Abbey: The Grand Finale",
     "releaseDate": "2025-09-10",
-    "posterImage": "/jscBtL4ST97B0ZTNyKHHTjQZc9F.jpg",
+    "posterImage": "/jqIoQwfFaBZDJUIvjFwJTWlmRfO.jpg",
     "backdrops": [],
     "overview": "When Mary finds herself at the center of a public scandal and the family faces financial strife, the entire household grapples with the threat of social disgrace. The Crawleys must embrace change as the staff prepares for a new chapter with the next generation leading Downton Abbey into the future.",
     "score": 0,
@@ -647,7 +648,7 @@
     "posterImage": "/fJm3kmd9NLZWypMas7g34oNFgbk.jpg",
     "backdrops": [],
     "overview": "Honey O'Donahue, a small-town private investigator, delves into a series of strange deaths tied to a mysterious church.",
-    "score": 53,
+    "score": 55,
     "genres": [
       "Comedy",
       "Crime"
@@ -658,12 +659,12 @@
   {
     "id": 338969,
     "type": "movie",
-    "title": "The Toxic Avenger",
-    "releaseDate": "2025-08-04",
+    "title": "The Toxic Avenger Unrated",
+    "releaseDate": "2025-08-28",
     "posterImage": "/uEqiAF3jtlyXL4fd1NEgJUlGolZ.jpg",
     "backdrops": [],
-    "overview": "A horrible toxic accident transforms downtrodden janitor Winston Gooze into a new evolution of hero: The Toxic Avenger. Now wielding a glowing mop with super-human strength, he must race against time to save his son and stop a ruthless and power-hungry tyrant bent on harnessing toxic superpowers to strengthen his polluted empire.",
-    "score": 61.92,
+    "overview": "A horrible toxic accident transforms terminally ill janitor Winston Gooze into a new evolution of hero: The Toxic Avenger. Now wielding a glowing mop with superhuman strength, he must race against time to save his son and stop a ruthless, power-hungry tyrant bent on harnessing toxic superpowers to strengthen his polluted empire.",
+    "score": 60,
     "genres": [
       "Action",
       "Comedy",
@@ -675,12 +676,12 @@
   {
     "id": 338969,
     "type": "movie",
-    "title": "The Toxic Avenger",
-    "releaseDate": "2025-08-04",
+    "title": "The Toxic Avenger Unrated",
+    "releaseDate": "2025-08-28",
     "posterImage": "/uEqiAF3jtlyXL4fd1NEgJUlGolZ.jpg",
     "backdrops": [],
-    "overview": "A horrible toxic accident transforms downtrodden janitor Winston Gooze into a new evolution of hero: The Toxic Avenger. Now wielding a glowing mop with super-human strength, he must race against time to save his son and stop a ruthless and power-hungry tyrant bent on harnessing toxic superpowers to strengthen his polluted empire.",
-    "score": 61.92,
+    "overview": "A horrible toxic accident transforms terminally ill janitor Winston Gooze into a new evolution of hero: The Toxic Avenger. Now wielding a glowing mop with superhuman strength, he must race against time to save his son and stop a ruthless, power-hungry tyrant bent on harnessing toxic superpowers to strengthen his polluted empire.",
+    "score": 60,
     "genres": [
       "Action",
       "Comedy",
@@ -711,10 +712,10 @@
     "type": "movie",
     "title": "Light of the World",
     "releaseDate": "2025-09-04",
-    "posterImage": "/lngk84juVGt3BuxcNEwP74JmX7b.jpg",
+    "posterImage": "/3vUqo90FCIHXPiXnQJEeqzg5EDV.jpg",
     "backdrops": [],
     "overview": "It's 30 AD and everyone is expectantly awaiting the coming Messiah. While Jesus isn't exactly what they imagined, there is something special about this man. Soon, John, James, Andrew, Peter, and others begin to follow Jesus on an unexpected adventure. This beautifully animated story of Jesus is told through the eyes of his beloved young friend, the Apostle John.",
-    "score": 0,
+    "score": 100,
     "genres": [
       "Animation",
       "Fantasy",
@@ -729,7 +730,7 @@
     "type": "movie",
     "title": "Left-Handed Girl",
     "releaseDate": "2025-09-17",
-    "posterImage": "/pXlEThtgrTVtQEw1HQ9Qp8I1A3e.jpg",
+    "posterImage": "/hfuxIKRCNsecLmoDdO0HJ1YUvv1.jpg",
     "backdrops": [],
     "overview": "A single mother and her two daughters return to Taipei after several years of living in the countryside to open a stand at a buzzing night market. Each in their own way, will have to adapt to this new environment to make ends meet and succeed in maintaining the family unity.  Three generations of family secrets begin to unravel after the youngest daughter who’s left-handed is told by her traditional grandfather to never use her “devil hand”.",
     "score": 0,
@@ -747,7 +748,7 @@
     "posterImage": "/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg",
     "backdrops": [],
     "overview": "Two melancholic Hong Kong policemen fall in love: one with a mysterious underworld figure, the other with a beautiful and ethereal server at a late-night restaurant.",
-    "score": 79.71000000000001,
+    "score": 80,
     "genres": [
       "Drama",
       "Comedy",
@@ -764,7 +765,7 @@
     "posterImage": "/hS4GYkYpN1rfl4GIxyc02sCyfAj.jpg",
     "backdrops": [],
     "overview": "Teenager Owen is just trying to make it through life in the suburbs when his classmate Maddy introduces him to a mysterious TV show — a vision of a supernatural world beneath their own. In the pale glow of the television, Owen’s view of reality begins to crack.",
-    "score": 60.72,
+    "score": 61,
     "genres": [
       "Drama",
       "Horror"
@@ -780,7 +781,7 @@
     "posterImage": "/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg",
     "backdrops": [],
     "overview": "Encouraged by her managers, rising pop star Mima takes on a recurring role on a popular TV show, when suddenly her handlers and collaborators begin turning up murdered.",
-    "score": 83.05,
+    "score": 83,
     "genres": [
       "Animation",
       "Thriller"
@@ -799,8 +800,7 @@
     "score": 0,
     "genres": [
       "Horror",
-      "Mystery",
-      "Thriller"
+      "Mystery"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -830,7 +830,7 @@
     "posterImage": "/aGuvNAaaZuWXYQQ6N2v7DeuP6mB.jpg",
     "backdrops": [],
     "overview": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood. A certain anger begins to brew in his best friend Harry Osborn as well...",
-    "score": 72.95,
+    "score": 72.96000000000001,
     "genres": [
       "Action",
       "Adventure",
@@ -847,7 +847,7 @@
     "posterImage": "/lFFDrFLXywFhy6khHes1LCFVMsL.jpg",
     "backdrops": [],
     "overview": "An ex-special forces operative seeks revenge against a cult leader who has corrupted his former comrades, the Shinjas. This leader, known as The Bokushi, promises veterans a purpose and protection, but is revealed to be a destructive influence. The ex-soldier, Nash Cavanaugh, joins forces with military operative Emmanuel Ashburn to infiltrate the Bokushi's fortress and expose his reign of terror",
-    "score": 47,
+    "score": 47.47,
     "genres": [
       "Action",
       "Thriller"
@@ -860,7 +860,7 @@
     "type": "movie",
     "title": "A Big Bold Beautiful Journey",
     "releaseDate": "2025-09-17",
-    "posterImage": "/x05mRCIorN9UyLUI9kS14M8QPmO.jpg",
+    "posterImage": "/dYm4Ah0UAgBHkYEPZIhuhkzl6ue.jpg",
     "backdrops": [],
     "overview": "Sarah and David are single strangers who meet at a mutual friend’s wedding and soon, through a surprising twist of fate, find themselves on a funny, fantastical, sweeping adventure together where they get to re-live important moments from their respective pasts, illuminating how they got to where they are in the present... and possibly getting a chance to alter their futures.",
     "score": 0,
@@ -880,7 +880,7 @@
     "posterImage": "/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg",
     "backdrops": [],
     "overview": "Shaun lives a supremely uneventful life, which revolves around his girlfriend, his mother, and, above all, his local pub. This gentle routine is threatened when the dead return to life and make strenuous attempts to snack on ordinary Londoners.",
-    "score": 75.37,
+    "score": 75.36,
     "genres": [
       "Horror",
       "Comedy"
@@ -896,7 +896,7 @@
     "posterImage": "/kjWsMh72V6d8KRLV4EOoSJLT1H7.jpg",
     "backdrops": [],
     "overview": "A petty criminal fakes insanity to serve his sentence in a mental ward rather than prison. He soon finds himself as a leader to the other patients—and an enemy to the cruel, domineering nurse who runs the ward.",
-    "score": 84.13,
+    "score": 84.12,
     "genres": [
       "Drama"
     ],
@@ -910,7 +910,7 @@
     "releaseDate": "2025-09-12",
     "posterImage": "/rCwhCTq7ztgTKTP6u25eWfTvUBo.jpg",
     "backdrops": [],
-    "overview": "Details here",
+    "overview": "Marco is a tricycle driver who is not only fast on the road, but also with women - having multiple partners at the same time. But when he meets the mysterious Lucy, will Marco finally tame his wild desires?",
     "score": 0,
     "genres": [
       "Drama"
@@ -945,7 +945,7 @@
     "posterImage": "/c6CrUZypAsBCaRWX0M3RVRDbhNS.jpg",
     "backdrops": [],
     "overview": "In the years before the Second World War, a tomboyish postulant at an Austrian abbey is hired as a governess in the home of a widowed naval captain with seven children, and brings a new love of life and music into the home.",
-    "score": 77.24000000000001,
+    "score": 77,
     "genres": [
       "Drama",
       "Family",
@@ -963,7 +963,7 @@
     "posterImage": "/iq1QtN1H8AVEBfl1SgNAqhMgTbQ.jpg",
     "backdrops": [],
     "overview": "Something bad happened to Agnes. But life goes on… for everyone around her, at least.",
-    "score": 67.27000000000001,
+    "score": 67,
     "genres": [
       "Drama",
       "Comedy"
@@ -979,7 +979,7 @@
     "posterImage": "/1wl6eAHbIDSz61tGwYTOKlSRvZb.jpg",
     "backdrops": [],
     "overview": "As police inspector Yamato Kansuke pursues a certain man in the snowy mountains of Nagano, a shadow suddenly appears in his field of vision. While he's distracted, a rifle bullet fired by someone grazes his left eye and causes an avalanche accompanied by a roar. Ten months later, Kansuke, having miraculously survived the avalanche, receives a report that a researcher at the Nobeyama National Astronomical Observatory has been attacked.",
-    "score": 73.81,
+    "score": 74,
     "genres": [
       "Animation",
       "Action",
@@ -994,10 +994,10 @@
     "type": "movie",
     "title": "Afterburn",
     "releaseDate": "2025-08-20",
-    "posterImage": "/qxFQtCwGaLczFR2cS9Iv0vIXsIm.jpg",
+    "posterImage": "/o56GXr0H888NJjN3E6auc04MWTC.jpg",
     "backdrops": [],
     "overview": "Set against the backdrop of a postapocalyptic Earth whose Eastern Hemisphere was destroyed by a massive solar flare, leaving what life remains mutated from radiation and fallout. The story revolves around a group of treasure hunters who extract such objects as the Mona Lisa, the Rosetta Stone and the Crown Jewels while facing rival hunters, mutants and pirates.",
-    "score": 72.5,
+    "score": 70,
     "genres": [
       "Science Fiction",
       "Action",
@@ -1014,7 +1014,7 @@
     "posterImage": "/aRWeT2UIkaWolqQ6fYeHOB1D6vA.jpg",
     "backdrops": [],
     "overview": "Desperate to save her sister, Abby takes a dangerous job in the remote Georgian wilderness. Stranded in the mountains after her helicopter crashes, she finds hope through John, a mysterious helper radioing from nearby. As he guides her through the harsh conditions, Abby struggles to survive, and her grip on reality falters until she is faced with an impossible choice.",
-    "score": 58.39,
+    "score": 59.14,
     "genres": [
       "Science Fiction",
       "Drama",
@@ -1031,7 +1031,7 @@
     "posterImage": "/rOTXYy5ScOHdaC2YMQowVwQex5s.jpg",
     "backdrops": [],
     "overview": "Da-kyung, a horror YouTuber desperate for views, uploads a video about the eerie urban legends surrounding Gwanglim Station - the site of the highest number of missing person cases in the country. The video goes viral overnight. Despite everyone's warnings, Da-kyung's thirst for views only grows stronger. But as she digs deeper, she uncovers a shocking secret behind the station…",
-    "score": 65.56,
+    "score": 65,
     "genres": [
       "Horror"
     ],
@@ -1109,7 +1109,7 @@
     "posterImage": "/lwrANgpPEBmYZ59oExpCiuv34Ou.jpg",
     "backdrops": [],
     "overview": "A group of civilians hiding in the Lucky Photo Studio to escape the Nanjing Massacre are forced to assist a Japanese military photographer in developing film to survive each day. By chance, they develop evidence exposing the Japanese army's massacre. Initially focused only on surviving the horrors, they ultimately decide to preserve these damning negatives as proof of the unfolding atrocities.",
-    "score": 85.24,
+    "score": 85,
     "genres": [
       "Drama",
       "War",
@@ -1153,10 +1153,10 @@
     "type": "movie",
     "title": "Splitsville",
     "releaseDate": "2025-08-21",
-    "posterImage": "/gxCv6kUdywxYzIXX6xYcmX5APUV.jpg",
+    "posterImage": "/cX6MVLl99pMDUmM3XKPFN4UKB8j.jpg",
     "backdrops": [],
     "overview": "When his wife Ashley asks for a divorce, Carey runs to his friends for support, only to learn that the secret to their happiness is an open marriage; that is, until Carey crosses the line and throws all of their relationships into chaos.",
-    "score": 60,
+    "score": 61.11,
     "genres": [
       "Comedy",
       "Drama"
@@ -1172,7 +1172,7 @@
     "posterImage": "/bPCxkrCEGJmaYfvdXj0x3mCLbGr.jpg",
     "backdrops": [],
     "overview": "When Jessica moves back into her childhood home with her family, her youngest stepdaughter Alice develops an eerie attachment to a stuffed bear named Chauncey she finds in the basement. Alice starts playing games with Chauncey that begin playful and become increasingly sinister. As Alice’s behavior becomes more and more concerning, Jessica intervenes only to realize Chauncey is much more than the stuffed toy bear she believed him to be.",
-    "score": 59.65,
+    "score": 60,
     "genres": [
       "Horror",
       "Mystery"
@@ -1204,7 +1204,7 @@
     "posterImage": "/hSFdyWptoDHuXlFZGzIrfVell4Q.jpg",
     "backdrops": [],
     "overview": "After a successful robbery leaves famed thief Lupin the Third and his partner Jigen with nothing but a large amount of expertly crafted counterfeit bills, he decides to track down the forgers responsible—and steal any other treasures he may find in the Castle of Cagliostro, including the 'damsel in distress' he finds imprisoned there.",
-    "score": 75.09,
+    "score": 75,
     "genres": [
       "Animation",
       "Adventure",
@@ -1239,7 +1239,7 @@
     "posterImage": "/79euHUJJtfgeGU63ef38KtNjXEn.jpg",
     "backdrops": [],
     "overview": "An odyssey through time and memory, centered on a place in New Jersey where—from wilderness, and then, later, from a home—love, loss, struggle, hope and legacy play out between couples and families over generations.",
-    "score": 66.31,
+    "score": 66.18,
     "genres": [
       "Drama"
     ],
@@ -1254,7 +1254,7 @@
     "posterImage": "/dRUB7sDcedqatDfyuRqyQulmW97.jpg",
     "backdrops": [],
     "overview": "In an underwater city, a young girl takes care of a large egg she holds carefully in her arms – a treasure that she believes is an angel's egg. One day, a boy with a gun arrives in search of a bird he saw in his dream and, at first, it seems as if feelings of sympathy are developing between the two.",
-    "score": 78,
+    "score": 77.64999999999999,
     "genres": [
       "Animation",
       "Fantasy",
@@ -1335,7 +1335,7 @@
     "posterImage": "/3AOTXNXAPkLzX08Lma4tfUfUiga.jpg",
     "backdrops": [],
     "overview": "Connor is a kind and unassuming young man, who, along with his long-time crush Olivia, engages in a threesome with a sweet, alluring stranger named Jenny. This encounter sparks a relationship between Connor and Olivia, leading them to plan a life together. However, their romance faces challenges when Jenny reappears, thrusting all three into a difficult journey toward true accountability and adulthood.",
-    "score": 40,
+    "score": 43,
     "genres": [
       "Comedy",
       "Romance",
@@ -1352,7 +1352,7 @@
     "posterImage": "/dRUB7sDcedqatDfyuRqyQulmW97.jpg",
     "backdrops": [],
     "overview": "In an underwater city, a young girl takes care of a large egg she holds carefully in her arms – a treasure that she believes is an angel's egg. One day, a boy with a gun arrives in search of a bird he saw in his dream and, at first, it seems as if feelings of sympathy are developing between the two.",
-    "score": 78,
+    "score": 77.64999999999999,
     "genres": [
       "Animation",
       "Fantasy",
@@ -1365,13 +1365,14 @@
     "id": 1245347,
     "type": "movie",
     "title": "Twinless",
-    "releaseDate": "2025-09-05",
+    "releaseDate": "2025-09-04",
     "posterImage": "/dVZLrtQruAHf8zuEjFMS5d78qoT.jpg",
     "backdrops": [],
     "overview": "Two young men meet in a twin bereavement support group and form an unlikely bromance.",
     "score": 80,
     "genres": [
-      "Comedy"
+      "Comedy",
+      "Drama"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -1433,7 +1434,7 @@
     "posterImage": "/hSFdyWptoDHuXlFZGzIrfVell4Q.jpg",
     "backdrops": [],
     "overview": "After a successful robbery leaves famed thief Lupin the Third and his partner Jigen with nothing but a large amount of expertly crafted counterfeit bills, he decides to track down the forgers responsible—and steal any other treasures he may find in the Castle of Cagliostro, including the 'damsel in distress' he finds imprisoned there.",
-    "score": 75.09,
+    "score": 75,
     "genres": [
       "Animation",
       "Adventure",
@@ -1518,7 +1519,7 @@
     "releaseDate": "2025-09-25",
     "posterImage": "/r2E1RJf3Mz7tF4t4IyaouT1nFFq.jpg",
     "backdrops": [],
-    "overview": "On the final day of their cross country road trip, a couple's vehicle breaks down, forcing them to take refuge in a remote Airbnb. As night falls, three masked strangers terrorize them until dawn.",
+    "overview": "When they learn that one of their victims, Maya, is still alive, they return to finish what they’ve started.",
     "score": 0,
     "genres": [
       "Horror",
@@ -1539,7 +1540,8 @@
     "genres": [
       "Family",
       "Comedy",
-      "Adventure"
+      "Adventure",
+      "Animation"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -1612,7 +1614,7 @@
     "posterImage": "/pOFKztoqEyvEYldr1dNxy2M1Oo5.jpg",
     "backdrops": [],
     "overview": "In the suburbs of Rome two very different souls intersect. One is the son of a restaurant owner who disappeared with his lover. The other is a young mysterious woman who has arrived from China in search of her missing sister.",
-    "score": 71.39999999999999,
+    "score": 71.41,
     "genres": [
       "Action",
       "Romance",
@@ -1654,31 +1656,18 @@
     "systemRequirements": null
   },
   {
-    "id": 1189794,
+    "id": 1046758,
     "type": "movie",
-    "title": "Good Game",
-    "releaseDate": "2025-08-30",
-    "posterImage": "/ak1oOGozQBCv06RWotGFWXcUA9W.jpg",
+    "title": "Sew Torn",
+    "releaseDate": "2025-09-11",
+    "posterImage": "/6N3bJq0VInPhifYml7cZ0TjRrXb.jpg",
     "backdrops": [],
-    "overview": "Tai is the middle-aged owner of an Internet cafe, but unfortunately, it’s not doing so well. It’s mostly empty, especially because, as his landlord points out, kids play games on their phones nowadays. He decides to participate in the Hong Kong One Shot Esports tournament and hopefully win the grand-prize money to save his business. To qualify, he needs to be part of a team, so he recruits Solo, a recently fired esports player facing a decline in his career; Fay, who started working at Tai’s Internet cafe after not lasting long at her previous jobs; and former movie star Octo, who plays games with his elderly wife to help her exercise her brain and fight the degeneration process. Together, they call themselves Happy Hour, and they’ll combine their strengths in gaming to win this fierce competition. It ain’t over till it’s game over!",
-    "score": 0,
+    "overview": "A seamstress gets tangled in her own thread after stealing a briefcase from a drug deal gone bad. In an escalating game of cat and mouse, her different choices lead to drastically different outcomes along the way.",
+    "score": 100,
     "genres": [
-      "Family"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1476453,
-    "type": "movie",
-    "title": "Kirot",
-    "releaseDate": "2025-09-30",
-    "posterImage": "/l1vVrAs2dtxiSYnD1f5G8iFc6UH.jpg",
-    "backdrops": [],
-    "overview": "Details here",
-    "score": 0,
-    "genres": [
-      "Drama"
+      "Thriller",
+      "Comedy",
+      "Crime"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -1699,49 +1688,59 @@
     "systemRequirements": null
   },
   {
-    "id": 1218925,
+    "id": 1491388,
     "type": "movie",
-    "title": "Chainsaw Man - The Movie: Reze Arc",
+    "title": "Relative Danger",
     "releaseDate": "2025-09-19",
-    "posterImage": "/mxgDa8Tdkaa3YzuQY9wu4VTtky1.jpg",
+    "posterImage": "/3H6lRuI7rUh1mQ89MAfTZkuuaU1.jpg",
     "backdrops": [],
-    "overview": "In a brutal war between devils, hunters, and secret enemies, a mysterious girl named Reze has stepped into Denji's world, and he faces his deadliest battle yet, fueled by love in a world where survival knows no rules.",
+    "overview": "After her sister is brutally attacked, Angie must fight to protect her niece from dark family secrets and a killer determined to claim her.",
     "score": 0,
     "genres": [
-      "Animation",
-      "Action",
-      "Fantasy"
+      "Thriller",
+      "TV Movie"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1418569,
+    "id": 1476453,
     "type": "movie",
-    "title": "Holding Liat",
+    "title": "Kirot",
+    "releaseDate": "2025-09-30",
+    "posterImage": "/l1vVrAs2dtxiSYnD1f5G8iFc6UH.jpg",
+    "backdrops": [],
+    "overview": "Details here",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1187431,
+    "type": "movie",
+    "title": "Where to Land",
     "releaseDate": "2025-09-12",
-    "posterImage": "/eqLXeHTCCepLaYSMwOcBpex5FJI.jpg",
+    "posterImage": "/3hm4j6mQVUdYPPp9mdZT1dO3GB.jpg",
     "backdrops": [],
-    "overview": "After Liat Beinin Atzili is kidnapped on October 7th, her Israeli-American family faces their own conflicting perspectives to fight for her release and the future of the places they call home.",
+    "overview": "Joseph Fulton, a famous director, wants to work at a cemetery. Meanwhile, he has his last will and testament drawn up. His girlfriend thinks he's dying. Rumor spreads and soon everyone he knows gathers to say their last farewells.",
     "score": 0,
-    "genres": [
-      "Documentary"
-    ],
+    "genres": [],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1127674,
+    "id": 1534198,
     "type": "movie",
-    "title": "The Forbidden City",
-    "releaseDate": "2025-03-08",
-    "posterImage": "/pOFKztoqEyvEYldr1dNxy2M1Oo5.jpg",
+    "title": "Kanya",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/n0QLxuwbutsUbmU4TtqPn1hMqS1.jpg",
     "backdrops": [],
-    "overview": "In the suburbs of Rome two very different souls intersect. One is the son of a restaurant owner who disappeared with his lover. The other is a young mysterious woman who has arrived from China in search of her missing sister.",
-    "score": 71.39999999999999,
+    "overview": "Two sisters Sudipa and Sukanya are reunited after 10 years due to their father's illness. The reunion takes a shocking turn when Sudipa discovers her younger sister, Sukanya, is now married to her ex-husband, Surojit.",
+    "score": 0,
     "genres": [
-      "Action",
-      "Romance",
       "Drama"
     ],
     "screenshots": [],
@@ -1755,13 +1754,187 @@
     "posterImage": "/s2lB1kaYCdGSnZX5meQCiOR6HfX.jpg",
     "backdrops": [],
     "overview": "Porky and Daffy, the classic animated odd couple, turn into unlikely heroes when their antics at the local bubble gum factory uncover a secret alien mind control plot. Against all odds, the two are determined to save their town (and the world!)...that is if they don't drive each other crazy in the process.",
-    "score": 77,
+    "score": 76.86,
     "genres": [
       "Animation",
       "Family",
       "Comedy",
       "Adventure",
       "Science Fiction"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 891584,
+    "type": "movie",
+    "title": "The History of Sound",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/q3ouZG12PCP87aP7ZnirkdUf7qn.jpg",
+    "backdrops": [],
+    "overview": "Two young music students, Lionel and David, attending the Boston Conservatory in 1917, bond over their shared love of folk music. They reconnect a few years later, embarking on a song collecting trip in the backwaters of Maine.",
+    "score": 10,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Music"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1159939,
+    "type": "movie",
+    "title": "The Partisan",
+    "releaseDate": "2025-09-30",
+    "posterImage": null,
+    "backdrops": [],
+    "overview": "A Polish spy who works for the British during the Second World War. After a betrayal, she is compromised in Warsaw and finds herself in a murky world of treachery.",
+    "score": 0,
+    "genres": [
+      "History",
+      "War",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 941109,
+    "type": "movie",
+    "title": "Play Dirty",
+    "releaseDate": "2025-09-30",
+    "posterImage": "/ovZ0zq0NwRghtWI1oLaM0lWuoEw.jpg",
+    "backdrops": [],
+    "overview": "Expert thief Parker gets a shot at a major heist, but to pull it off he and his team must outsmart a South American dictator, the New York mob, and the world's richest man.",
+    "score": 0,
+    "genres": [
+      "Crime"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 14069,
+    "type": "movie",
+    "title": "The Girl Who Leapt Through Time",
+    "releaseDate": "2006-07-15",
+    "posterImage": "/xHnlWM8BmqY419YUccYy2KC5Jqo.jpg",
+    "backdrops": [],
+    "overview": "When 17-year-old Makoto Konno gains the ability to, quite literally, 'leap' backwards through time, she immediately sets about improving her grades and preventing personal mishaps. However, she soon realises that changing the past isn't as simple as it seems, and eventually, will have to rely on her new powers to shape the future of herself and her friends.",
+    "score": 77.84,
+    "genres": [
+      "Fantasy",
+      "Animation",
+      "Drama",
+      "Science Fiction"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1236470,
+    "type": "movie",
+    "title": "The Lost Bus",
+    "releaseDate": "2025-09-19",
+    "posterImage": "/zpygCOYY1DPBkeUsrrznLRN5js5.jpg",
+    "backdrops": [],
+    "overview": "A determined father risks everything to rescue a dedicated teacher and her students from a raging wildfire.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1175662,
+    "type": "movie",
+    "title": "The Mystery of Emma Thorn",
+    "releaseDate": "2025-09-27",
+    "posterImage": "/eTQAbHGNAZ6p7zyzqmZRns49x5V.jpg",
+    "backdrops": [],
+    "overview": "A woman's unusual disappearance leaves her distraught husband and son--and a sympathetic police detective--to try to unravel how and why.",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 940139,
+    "type": "movie",
+    "title": "Here",
+    "releaseDate": "2024-10-30",
+    "posterImage": "/79euHUJJtfgeGU63ef38KtNjXEn.jpg",
+    "backdrops": [],
+    "overview": "An odyssey through time and memory, centered on a place in New Jersey where—from wilderness, and then, later, from a home—love, loss, struggle, hope and legacy play out between couples and families over generations.",
+    "score": 66.18,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1380651,
+    "type": "movie",
+    "title": "All in Favor",
+    "releaseDate": "2025-06-12",
+    "posterImage": "/6TM7w0swuyY2o8q98yhbdbhtpiG.jpg",
+    "backdrops": [],
+    "overview": "At a downtown Madrid building, an ordinary meeting of neighbors commune to vote on a change of elevator. However, the event escalates into a full-blown conflict after the unexpected announcement that a new, mentally ill tenant will rent an apartment.",
+    "score": 65.17999999999999,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 25538,
+    "type": "movie",
+    "title": "Yi Yi",
+    "releaseDate": "2000-09-20",
+    "posterImage": "/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
+    "backdrops": [],
+    "overview": "Each member of a family in Taipei asks hard questions about life's meaning as they live through everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.",
+    "score": 79.15,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1537123,
+    "type": "movie",
+    "title": "Me Too",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/xwubH8xYFHBDuTVmXriLfVyJUnP.jpg",
+    "backdrops": [],
+    "overview": "",
+    "score": 0,
+    "genres": [
+      "Crime"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1428213,
+    "type": "movie",
+    "title": "Kontrabida Academy",
+    "releaseDate": "2025-09-11",
+    "posterImage": "/uiW2ff73RZzPABKtnjW5wmt43CU.jpg",
+    "backdrops": [],
+    "overview": "When a mysterious TV transports her to a school for on-screen villains, a restaurant worker finds new purpose—a way to get back at her enemies.",
+    "score": 0,
+    "genres": [
+      "Comedy"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -1784,53 +1957,6 @@
     "systemRequirements": null
   },
   {
-    "id": 941109,
-    "type": "movie",
-    "title": "Play Dirty",
-    "releaseDate": "2025-09-30",
-    "posterImage": "/ovZ0zq0NwRghtWI1oLaM0lWuoEw.jpg",
-    "backdrops": [],
-    "overview": "Expert thief Parker gets a shot at a major heist, but to pull it off he and his team must outsmart a South American dictator, the New York mob, and the world's richest man.",
-    "score": 0,
-    "genres": [
-      "Crime"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1175662,
-    "type": "movie",
-    "title": "The Mystery of Emma Thorn",
-    "releaseDate": "2025-09-27",
-    "posterImage": "/eTQAbHGNAZ6p7zyzqmZRns49x5V.jpg",
-    "backdrops": [],
-    "overview": "A woman's unusual disappearance leaves her distraught husband and son--and a sympathetic police detective--to try to unravel how and why.",
-    "score": 0,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1121483,
-    "type": "movie",
-    "title": "The Art Of Abuse",
-    "releaseDate": "2025-10-01",
-    "posterImage": "/knFma0tgomVP4QWTtJSQh7arzQB.jpg",
-    "backdrops": [],
-    "overview": "To some art is simply a painting, a sketch, perhaps a photograph - but to others, art is pain. That kind of art can't be framed, it has to be captured in a different way. At least that's what a villain would think.",
-    "score": 0,
-    "genres": [
-      "Drama",
-      "Thriller",
-      "Crime"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
     "id": 1323880,
     "type": "movie",
     "title": "Idli Kadai",
@@ -1841,134 +1967,6 @@
     "score": 0,
     "genres": [
       "Action",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1046758,
-    "type": "movie",
-    "title": "Sew Torn",
-    "releaseDate": "2025-09-11",
-    "posterImage": "/6N3bJq0VInPhifYml7cZ0TjRrXb.jpg",
-    "backdrops": [],
-    "overview": "A seamstress gets tangled in her own thread after stealing a briefcase from a drug deal gone bad. In an escalating game of cat and mouse, her different choices lead to drastically different outcomes along the way.",
-    "score": 0,
-    "genres": [
-      "Thriller",
-      "Comedy",
-      "Crime"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1525484,
-    "type": "movie",
-    "title": "Ek Chatur Naar",
-    "releaseDate": "2025-09-12",
-    "posterImage": "/apMb2Oz9uvqA19dawmeglKM7THX.jpg",
-    "backdrops": [],
-    "overview": "Abhishek Verma, a fund consultant, gets trapped in a web of lies, deception and blackmail after a good-for-nothing but cunning woman, failing to make ends meet, gets her hands on his phone, which lets slip more than anyone should know, forcing him to comply.",
-    "score": 0,
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Crime"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1006724,
-    "type": "movie",
-    "title": "Dead Talents Society",
-    "releaseDate": "2024-08-07",
-    "posterImage": "/yDcc3OWNEtzjDtJly1OyZShtTMV.jpg",
-    "backdrops": [],
-    "overview": "When ghosts must compete to survive in the underworld by haunting the living, one unassuming young woman needs help creating a lasting performance while under the tutelage of a passionate agent and a washed-up diva.",
-    "score": 70.43,
-    "genres": [
-      "Horror",
-      "Comedy"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1428213,
-    "type": "movie",
-    "title": "Kontrabida Academy",
-    "releaseDate": "2025-09-11",
-    "posterImage": "/uiW2ff73RZzPABKtnjW5wmt43CU.jpg",
-    "backdrops": [],
-    "overview": "When a mysterious TV transports her to a school for on-screen villains, a restaurant worker finds new purpose—a way to get back at her enemies.",
-    "score": 0,
-    "genres": [
-      "Comedy"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1390615,
-    "type": "movie",
-    "title": "Raktabeej 2",
-    "releaseDate": "2025-09-26",
-    "posterImage": "/7lZPnEkiWlzFk3H55Y0KhhGiK8n.jpg",
-    "backdrops": [],
-    "overview": "Sequel to the 2023 Indian action drama, Raktabeej.",
-    "score": 0,
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller",
-      "Action"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1380651,
-    "type": "movie",
-    "title": "All in Favor",
-    "releaseDate": "2025-06-12",
-    "posterImage": "/6TM7w0swuyY2o8q98yhbdbhtpiG.jpg",
-    "backdrops": [],
-    "overview": "At a downtown Madrid building, an ordinary meeting of neighbors commune to vote on a change of elevator. However, the event escalates into a full-blown conflict after the unexpected announcement that a new, mentally ill tenant will rent an apartment.",
-    "score": 62.92,
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1273274,
-    "type": "movie",
-    "title": "Haal",
-    "releaseDate": "2025-09-12",
-    "posterImage": "/xmDQj0clWvkPiuvsl9LEwkrFjIA.jpg",
-    "backdrops": [],
-    "overview": "",
-    "score": 0,
-    "genres": [],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1306816,
-    "type": "movie",
-    "title": "My Daughter is a Zombie",
-    "releaseDate": "2025-07-30",
-    "posterImage": "/fuQizwk80Vm02FmCUTd8LPhHHrm.jpg",
-    "backdrops": [],
-    "overview": "Jung-hwan, a professional wild animal trainer, spends his days bickering and playing with his teenage daughter, Soo-ah, who is passionate about dancing. Then one day, Soo-ah gets infected by a zombie virus that sweeps across the world. To protect her, Jung-hwan takes Soo-ah to Eunbong-ri, a seaside village where his mother, Bam-soon, lives. In a society determined to root out the infected, Jung-hwan notices that Soo-ah still seems to understand words, responds to her favorite songs and dances, and even flinches when scolded by Grandma Bam-soon's back scratching stick. Refusing to give up on his daughter, Jung-hwan calls on his years of animal training experience and begins the top-secret mission of training his zombie daughter…",
-    "score": 70,
-    "genres": [
-      "Comedy",
       "Drama"
     ],
     "screenshots": [],
@@ -2078,7 +2076,7 @@
     "releaseDate": "2025-09-24",
     "posterImage": "/oiGk0fQEoVK7Kj4yFeP0iNeQCn3.jpg",
     "backdrops": [],
-    "overview": "On the day of the 10th year anniversary of him leaving his home country and facing a recent loss, a young man begins to have a painful physical transformation as he longs for a life of freedom.",
+    "overview": "Struggling with a deep loss and feeling disconnected from his home country while abroad, a young man begins to have a body transformation as he longs for a life of freedom.",
     "score": 0,
     "genres": [
       "Horror"
@@ -2109,7 +2107,7 @@
     "posterImage": "/yDcc3OWNEtzjDtJly1OyZShtTMV.jpg",
     "backdrops": [],
     "overview": "When ghosts must compete to survive in the underworld by haunting the living, one unassuming young woman needs help creating a lasting performance while under the tutelage of a passionate agent and a washed-up diva.",
-    "score": 70.43,
+    "score": 70,
     "genres": [
       "Horror",
       "Comedy"
@@ -2189,7 +2187,7 @@
     "posterImage": "/uk8M5TJTfeuo3fUoFf68TqtdgwX.jpg",
     "backdrops": [],
     "overview": "1575 Algiers, Miguel de Cervantes, a wounded 28-year-old Spanish Navy soldier, is held prisoner by Ottoman corsairs. Faced with a ticking clock, a cruel death awaits him should his fellow countrymen fail to pay his ransom soon; but within the confines of his cell, Cervantes discovers a surprising refuge - the art of storytelling. Crafted from resilience and hope, his stories enthral his fellow captives and capture the attention of Hasan, the enigmatic and feared Bey of Algiers. With a secret affinity ignited between captor and captive, suspicions rise amidst growing tensions in the city; Cervantes, driven by an unwavering sense of optimism, devises a daring plan for freedom.",
-    "score": 0,
+    "score": 60,
     "genres": [
       "Drama",
       "History"
@@ -2287,10 +2285,10 @@
     "posterImage": "/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg",
     "backdrops": [],
     "overview": "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
-    "score": 73.59,
+    "score": 74,
     "genres": [
-      "Horror",
-      "Fantasy"
+      "Science Fiction",
+      "Horror"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -2321,7 +2319,7 @@
     "posterImage": "/uk8M5TJTfeuo3fUoFf68TqtdgwX.jpg",
     "backdrops": [],
     "overview": "1575 Algiers, Miguel de Cervantes, a wounded 28-year-old Spanish Navy soldier, is held prisoner by Ottoman corsairs. Faced with a ticking clock, a cruel death awaits him should his fellow countrymen fail to pay his ransom soon; but within the confines of his cell, Cervantes discovers a surprising refuge - the art of storytelling. Crafted from resilience and hope, his stories enthral his fellow captives and capture the attention of Hasan, the enigmatic and feared Bey of Algiers. With a secret affinity ignited between captor and captive, suspicions rise amidst growing tensions in the city; Cervantes, driven by an unwavering sense of optimism, devises a daring plan for freedom.",
-    "score": 0,
+    "score": 60,
     "genres": [
       "Drama",
       "History"
@@ -2384,10 +2382,10 @@
     "posterImage": "/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg",
     "backdrops": [],
     "overview": "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
-    "score": 73.59,
+    "score": 74,
     "genres": [
-      "Horror",
-      "Fantasy"
+      "Science Fiction",
+      "Horror"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -2432,7 +2430,7 @@
     "posterImage": "/eSpCTFaSqQ9D52bw85zAMseM7hW.jpg",
     "backdrops": [],
     "overview": "Behind one of the best-selling jazz records of all time, Keith Jarrett’s 1975 Köln Concert, how it almost didn’t happen, and how one formidable German teenager, Vera Brandes, breaks every boundary to set the conditions for the creation of a masterpiece. Vera, still in high school when she started producing and promoting music concerts in Cologne, puts everything on the line to put on this show. But Vera believes in the power of music, and she’s never seen anyone play like Keith Jarrett before.",
-    "score": 78,
+    "score": 79,
     "genres": [
       "Drama",
       "History",
@@ -2596,7 +2594,7 @@
     "posterImage": "/ykB9bwUHT1AV04KjYPLhfgMwYdD.jpg",
     "backdrops": [],
     "overview": "Angela's deafness raises concerns during her pregnancy regarding connecting with her daughter. Post-delivery, partner Héctor supports her as she learns to mother in a society lacking adequate accommodations for the hearing-impaired.",
-    "score": 78.13,
+    "score": 79.41,
     "genres": [
       "Drama"
     ],
@@ -2611,7 +2609,7 @@
     "posterImage": "/nEqDYZtw9GlzmwvmflY6b2mfwd7.jpg",
     "backdrops": [],
     "overview": "More than 60,000 of Ernest Cole’s 35mm film negatives were inexplicably discovered in a bank vault in Stockholm, Sweden. Most considered these forever lost, especially the thousands of pictures he shot in the U.S. Told through Cole’s own writings, the stories of those closest to him, and the lens of his uncompromising work, the film is a reintroduction of a pivotal Black artist to a new generation and will unravel the mystery of his missing negatives.",
-    "score": 76.92,
+    "score": 77,
     "genres": [
       "Documentary"
     ],
@@ -2670,10 +2668,10 @@
     "type": "movie",
     "title": "Jump!",
     "releaseDate": "2023-09-01",
-    "posterImage": "/gBTYlxo4kzqHbv5ffeGTJHW9F3q.jpg",
+    "posterImage": "/r0Vi8FA4o5fxVG76WQF3WxKmgjR.jpg",
     "backdrops": [],
     "overview": "Oscar and Teo (13 and 11 years old) are two brothers, very different from each other, who will have to face the loss of their mother, a scientist obsessed with wormholes.",
-    "score": 70.64,
+    "score": 71,
     "genres": [
       "Comedy",
       "Family",
@@ -2706,7 +2704,7 @@
     "posterImage": "/89rX9774vG6GzE128Varjy6rKOl.jpg",
     "backdrops": [],
     "overview": "Alpha, a troubled 13-year-old lives with her single mom. Their world collapses the day she returns from school with a tattoo on her arm.",
-    "score": 59,
+    "score": 60,
     "genres": [
       "Drama",
       "Horror",
@@ -2881,7 +2879,7 @@
     "posterImage": "/5CjhoLMEd0NKWy7Yyazf2CPqlwk.jpg",
     "backdrops": [],
     "overview": "A young Aboriginal couple brings home their second baby. What should be a joyous time takes a sinister turn, as the baby's mother starts seeing a malevolent spirit she is convinced is trying to take her baby.",
-    "score": 65,
+    "score": 63.89,
     "genres": [
       "Horror",
       "Mystery"
@@ -3387,7 +3385,7 @@
     "posterImage": "/2xxmiejiP664Pyyjdftx8BWzHDS.jpg",
     "backdrops": [],
     "overview": "An aspiring author looking to get more out of life takes up a writing residency and finds herself in the sort of romantic entanglements that could come from the pages of a Jane Austen novel.",
-    "score": 68.28,
+    "score": 67.78999999999999,
     "genres": [
       "Comedy",
       "Romance",
@@ -3404,7 +3402,7 @@
     "posterImage": "/5CjhoLMEd0NKWy7Yyazf2CPqlwk.jpg",
     "backdrops": [],
     "overview": "A young Aboriginal couple brings home their second baby. What should be a joyous time takes a sinister turn, as the baby's mother starts seeing a malevolent spirit she is convinced is trying to take her baby.",
-    "score": 65,
+    "score": 63.89,
     "genres": [
       "Horror",
       "Mystery"
@@ -3482,7 +3480,7 @@
     "posterImage": "/ddOe8coyI38cauKrd5PRu4bfj9u.jpg",
     "backdrops": [],
     "overview": "When Mr. Deen discovers one of his students has been living out of his car and thrown into jail, he decides to bail him out. Determined to curb Nate’s self-destructive behavior, Deen quickly discovers a host of dark secrets slowly tearing Nate apart. What began as a good deed becomes a desperate fight to save Nate from his own demons. As Nate spirals deeper into despair, Deen must decide how far he’s willing to go to save a kid on the brink of losing everything—even himself.",
-    "score": 61.3,
+    "score": 61,
     "genres": [
       "Drama"
     ],
@@ -3593,7 +3591,7 @@
     "posterImage": "/hPj1RiuhW72lIfa8UrIncDGSSD0.jpg",
     "backdrops": [],
     "overview": "Brought together by the unexpected inheritance of an abandoned house in rural Normandy, four cousins discover they share a mysterious family history. In 1895, their ancestor Adèle, then aged 21, leaves her hometown to search for her mother in Paris. She discovers a city on the cusp of modernity, bustling with new-found avant-garde creativity, with the rise of photography and the birth of Impressionist painting. As her descendants retrace her steps, they unravel Adèle's surprising past. The two timelines of 1895 and 2024 intertwine and collide, confronting the cousins’ contemporary attitudes with life in late 19th century Paris, leaving everyone’s future forever changed.",
-    "score": 77,
+    "score": 76.86,
     "genres": [
       "Comedy",
       "Drama"
@@ -3735,7 +3733,7 @@
     "posterImage": "/7zcrIiAn1SW6C4COlqboHP0L19p.jpg",
     "backdrops": [],
     "overview": "Yann can’t find a job he likes or can keep, and dreams of a better life. One day he learns that the famous travel guide Le Routard pays its employees to travel the world. Surely the perfect free holiday! Smooth-talking his way through the door, Yann manages to get himself hired for a trial research trip to Morocco, but he rapidly comes to realise that he’s seriously underestimated the job… Beguiled by Sofia, a feisty tourist guide, Yann gets swept up in an art trafficking operation led by the infamous mobster art dealer Dr Charoux and is plunged into an adventure where nothing will go as planned!",
-    "score": 46.83,
+    "score": 46.61,
     "genres": [
       "Comedy"
     ],
@@ -3796,7 +3794,7 @@
     "posterImage": "/h6XnbrKBnMJzyP6EooycgGiUECB.jpg",
     "backdrops": [],
     "overview": "A middle-class family's fate becomes intertwined with their only son's enigmatic new friend in post one-child policy China, putting unspoken secrets, unmet expectations, and untended emotions under the microscope.",
-    "score": 59.669999999999995,
+    "score": 60,
     "genres": [
       "Drama",
       "Mystery",
@@ -3849,7 +3847,7 @@
     "posterImage": "/65ll0fwaCMDHuD5XMJk4f4Olc5b.jpg",
     "backdrops": [],
     "overview": "A lost penguin rescued from an oil spill transforms the life of a heartbroken fisherman. They become unlikely friends, so bonded that even the vast ocean cannot divide them.",
-    "score": 74.83,
+    "score": 75,
     "genres": [
       "Family",
       "Adventure",
@@ -3908,65 +3906,16 @@
     "systemRequirements": null
   },
   {
-    "id": 1159799,
+    "id": 1528015,
     "type": "movie",
-    "title": "My Penguin Friend",
-    "releaseDate": "2024-08-07",
-    "posterImage": "/65ll0fwaCMDHuD5XMJk4f4Olc5b.jpg",
+    "title": "The Cycle",
+    "releaseDate": "2025-09-11",
+    "posterImage": "/gf6nDDXUs2gyRRUwTB03gn5Ea1T.jpg",
     "backdrops": [],
-    "overview": "A lost penguin rescued from an oil spill transforms the life of a heartbroken fisherman. They become unlikely friends, so bonded that even the vast ocean cannot divide them.",
-    "score": 74.83,
-    "genres": [
-      "Family",
-      "Adventure",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1447896,
-    "type": "movie",
-    "title": "So Beautiful, Wonderful and Lovely",
-    "releaseDate": "2025-09-27",
-    "posterImage": "/k0ZkQ0dSnzV9Fi4dJkTqH0vJBQ1.jpg",
-    "backdrops": [],
-    "overview": "School cleaner Nozomi Haruta was happy. She was supposed to marry her partner, her beloved, her soulmate, the handsome teacher Chitose Yokomizo, but when he secretly marries someone else, he ruins her dreams and breaks her heart. Also, maybe her mind? Seized by desperation, Nozomi photobombs his big wedding photograph by replacing the bride, steals the camera, and makes a run for it! Headlong into the path of a courier carrying Castella cakes! When she wakes up, she sees Chitose hovering over her, only it’s not him, but a being who calls himself Castella (as in the cake). For the next two weeks (the expiration date for the cakes), he will be Nozomi’s cake-based companion and help her get over her despair.",
+    "overview": "A warm and loving family — father, mother, and child — live happily together until they receive a phone call from the younger sister who had passed away, now reincarnated in a new body. From then on, they begin to face threats from unwelcoming relatives and a strange cult deep in a faraway forest.",
     "score": 0,
     "genres": [
-      "Drama",
-      "Comedy"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1252037,
-    "type": "movie",
-    "title": "The Tiger",
-    "releaseDate": "2025-09-18",
-    "posterImage": "/oDlsfcc8CnC6bKIEZq28kkq0Lus.jpg",
-    "backdrops": [],
-    "overview": "In the Eastern Front of World War II in 1943, a five-man crew of a German Tiger tank is sent on a secret mission far behind the fiercely contested front line. Fueled by the Wehrmacht's methamphetamine, their assignment increasingly becomes a journey into the heart of darkness.",
-    "score": 0,
-    "genres": [
-      "Action",
-      "War",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1510750,
-    "type": "movie",
-    "title": "Eerie Hometown",
-    "releaseDate": "2025-09-19",
-    "posterImage": "/gO8WBjn7HPBCyCFzKg8iyJyrle9.jpg",
-    "backdrops": [],
-    "overview": "LA-born Leon returns to his father’s hometown, Chihai—a small seaside village on the west coast of Taiwan—after discovering that his supposedly dead grandmother is still alive. While trying to get to know her, Leon meets Wen, a mysterious girl who has rented a room in his family’s house. As Wen uses her hypnosis skills to help Leon with his depression, the two gradually develop a romantic relationship. Meanwhile, they uncover dark secrets about Leon’s family and Chihai.",
-    "score": 0,
-    "genres": [
+      "Horror",
       "Thriller",
       "Mystery"
     ],
@@ -3974,28 +3923,13 @@
     "systemRequirements": null
   },
   {
-    "id": 1315706,
+    "id": 1442877,
     "type": "movie",
-    "title": "Sijjin 8",
-    "releaseDate": "2025-06-05",
-    "posterImage": "/b2sP8nhFRZXQKiUGrn6YI0irSdn.jpg",
+    "title": "Harsh Land and Distant Sky",
+    "releaseDate": "2025-09-10",
+    "posterImage": "/eAnPCatcn2PZqoAttX3wI3oFqmT.jpg",
     "backdrops": [],
-    "overview": "A man and his family are tormented by malevolent supernatural forces after he brings his elderly mother into his home.",
-    "score": 40,
-    "genres": [
-      "Horror"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1532470,
-    "type": "movie",
-    "title": "Ungrateful Beings",
-    "releaseDate": "2025-09-18",
-    "posterImage": null,
-    "backdrops": [],
-    "overview": "Follows a family in the Czech Republic who come back from an Adriatic holiday where their 17-year-old daughter – who suffers from an eating disorder – has fallen in love with a local scoundrel. When it turns out he is a murder suspect, the daughter’s parents pretend to be him in order to stave off her eating disorder.",
+    "overview": "Harun suffers from his dreams, causing him mental anguish. This is the result of his experiences as a warrior in the civil war. He seeks a cure for his illness, uses traditional and religious methods, goes to an elderly woman to get a tattoo on his hand. If he loses blood from the tattoo, he thinks he will be fine that way. She had an only son who was killed in the war. This would be the beginning of a new story in the lives of Aaron and Mary. They embark on a journey to find the body of Mary's son, who was killed in the war. Mary's son was supposed to get married before going to war. When they find his body, they take him back to their village and celebrate his wedding and funeral in one ceremony.",
     "score": 0,
     "genres": [
       "Drama"
@@ -4004,16 +3938,16 @@
     "systemRequirements": null
   },
   {
-    "id": 1400379,
+    "id": 1532385,
     "type": "movie",
-    "title": "The Librarians",
-    "releaseDate": "2025-09-26",
-    "posterImage": "/f2xA2e81wBiRxio32kRJe42P05M.jpg",
+    "title": "Beautiful Dreamer",
+    "releaseDate": "2025-09-21",
+    "posterImage": "/wq7fDJGvuSfdi21eWpQ6eYhG62S.jpg",
     "backdrops": [],
-    "overview": "Librarians unite to combat book banning, defending intellectual freedom on democracy's frontlines amid unprecedented censorship in Texas, Florida, and beyond.",
+    "overview": "In-seon, still holding on to her late husband's ashes three years after his suicide, decides it's finally time to let him go. But when her daughter, Su-yeon, returns home and resists the idea, In-seon begins to question her decision. As tensions mount, Su-yeon tries to reclaim the ashes—only to accidentally shatter the urn. With no other choice, mother and daughter must confront their long-buried grief… and say their final goodbye on a bright, sunny day.",
     "score": 0,
     "genres": [
-      "Documentary"
+      "Drama"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4025,11 +3959,26 @@
     "releaseDate": "2025-09-22",
     "posterImage": "/qMgem8jNcrjOWLXRz1hMJTBNyKy.jpg",
     "backdrops": [],
-    "overview": "It tells the story of a group of people gathered at a restaurant with a sign reading 'Seven O'Clock Breakfast Meeting for Broken Hearts', exchanging souvenirs of broken hearts, sharing their stories, communicating, healing their wounds, and creating new relationships.",
+    "overview": "\"I just got dumped. Will you have breakfast with me?\" At a breakfast club, heartbroken Sa-gang and Ji-hoon stumble upon mysterious “breakup souvenirs.” Each item holds a secret pain, reflecting their own. Will they find the souvenir's owner?",
     "score": 0,
     "genres": [
       "Drama",
       "Romance"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1400214,
+    "type": "movie",
+    "title": "Maspalomas",
+    "releaseDate": "2025-09-26",
+    "posterImage": "/unFHU9kT8SBbbUFfR4LvYp3jI5I.jpg",
+    "backdrops": [],
+    "overview": "Maspalomas is named after the enclave located in the south of the island of Gran Canaria, famous for its sea of dunes next to its kilometres of beaches and a famous mecca for gay tourism, like Sitges and Mykonos. The film tells the story of Vicente, an elderly man who is openly homosexual and who, when he is admitted to an old people's home, decides to go back into the closet.",
+    "score": 0,
+    "genres": [
+      "Drama"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4052,49 +4001,65 @@
     "systemRequirements": null
   },
   {
-    "id": 1521352,
+    "id": 1157322,
     "type": "movie",
-    "title": "Sai: Disaster",
-    "releaseDate": "2025-09-18",
-    "posterImage": "/inlkcbSoPHAfhH68r1tiPRYpTAH.jpg",
+    "title": "Franz",
+    "releaseDate": "2025-09-25",
+    "posterImage": "/cCRBkb1U9eKz1DYa4UMGZBSkcjC.jpg",
     "backdrops": [],
-    "overview": "Four people lead ordinary lives in different places, their paths never crossing. A mysterious man appears in each story, always as someone else. One moment, a cram school instructor; the next, a truck driver, a barber - his identity constantly shifting. Then, death strikes. A detective pursues the truth, closing in on a revelation...",
+    "overview": "Award-winning director Agnieszka Holland is embarking on her most ambitious project to date, a biopic of the iconic 20th-century Czech writer Franz Kafka. Conceived as a kaleidoscopic mosaic, the film follows the imprint Kafka left on the world from his birth in 19th-century Prague to his death in post-WW1 Vienna. Franz will give the audience a brand new perspective on the life of the man behind the literary giant.",
     "score": 0,
     "genres": [
       "Drama",
-      "Crime"
+      "History"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1425630,
+    "id": 1070157,
     "type": "movie",
-    "title": "Shakthi Thirumagan",
-    "releaseDate": "2025-09-19",
-    "posterImage": "/eKMNqfF6BJZ47O7OklrMgZ5r6T.jpg",
+    "title": "Balti",
+    "releaseDate": "2025-09-26",
+    "posterImage": "/tpgbGGIM76Vk44KLxTNM2UkzmLG.jpg",
     "backdrops": [],
     "overview": "",
     "score": 0,
     "genres": [
       "Action",
       "Drama",
-      "Thriller"
+      "Romance"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1414620,
+    "id": 1063875,
     "type": "movie",
-    "title": "Summer Blue Hour",
-    "releaseDate": "2025-04-30",
-    "posterImage": "/kMFzAI0CGtkgTso0KE1CeJVEPDQ.jpg",
+    "title": "Miss Violet",
+    "releaseDate": "2024-11-06",
+    "posterImage": "/lQR9i4gBsMVJsT4LtIHwTPPANAI.jpg",
     "backdrops": [],
-    "overview": "SU Ming-yi (played by CHENG Yu-xi) holds her first photography exhibition, reflecting on her youth and thinking of YAN Li-yao (played by SHIH Bo-yu). In high school, she was the class monitor, secretly admiring YAN Li-yao. Despite his frequent absences, they crossed paths often, with her feelings hidden. YAN Li-yao and CHENG Yan (played by LIN Zi-heng) were close but had contrasting personalities. After SU Ming-yi confessed, YAN Li-yao suggested a “trial” relationship. After graduation, they each buried their secrets. Years later, through an old roll of film and a photography exhibition, these long-hidden feelings are finally revealed, offering redemption for all involved.",
-    "score": 80,
+    "overview": "France. End of the 19th century. Louise Violet  40, a Parisian teacher, is sent on a mission to the French countryside. But in a place where the daily life is linked to the seasons, land and crops, she must first convince parents to send their kids to school. With the help of the mayor, she is gradually accepted by the parents and their children. But soon, her past catches up with her. Despite the obstacles she faces, Miss Violet will give her heart and soul to her belief that education is the key to freedom.",
+    "score": 72,
     "genres": [
-      "Drama"
+      "Drama",
+      "History"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1315706,
+    "type": "movie",
+    "title": "Sijjin 8",
+    "releaseDate": "2025-06-05",
+    "posterImage": "/b2sP8nhFRZXQKiUGrn6YI0irSdn.jpg",
+    "backdrops": [],
+    "overview": "A man and his family are tormented by malevolent supernatural forces after he brings his elderly mother into his home.",
+    "score": 40,
+    "genres": [
+      "Horror"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4118,40 +4083,6 @@
     "systemRequirements": null
   },
   {
-    "id": 1134463,
-    "type": "movie",
-    "title": "Dreams",
-    "releaseDate": "2025-07-10",
-    "posterImage": "/npO1ULL0E7yAll5pizvlGsrsxbA.jpg",
-    "backdrops": [],
-    "overview": "Fernando, a young ballet dancer from Mexico, dreams of international recognition and a life in the US. Believing his lover, Jennifer, a socialite and philanthropist, will support him, he leaves everything behind— narrowly escaping death in the process. However, his arrival disrupts Jennifer’s carefully curated world. She will do anything to protect both their futures— and the life she has built.",
-    "score": 100,
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1172265,
-    "type": "movie",
-    "title": "The Blue Trail",
-    "releaseDate": "2025-08-28",
-    "posterImage": "/ua8XnJ450rhBTxkY2wpD2ITw7BJ.jpg",
-    "backdrops": [],
-    "overview": "In the name of economic recovery, the Brazilian Government created a perennial system of compulsory vertical isolation for seniors over 80 to be confined in a colony. Teca is 77 and lives in the village of Muriti, in the Amazon, when she is surprised by the announcement of the age reduction, including her age group. Cornered, Teca makes an intriguing journey hidden from the officers amidst rivers, boats and the underworld to clandestinely try to fulfill her last dream, to take a plane ride.",
-    "score": 80,
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Fantasy",
-      "Science Fiction"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
     "id": 1249423,
     "type": "movie",
     "title": "Black Dog",
@@ -4167,145 +4098,32 @@
     "systemRequirements": null
   },
   {
-    "id": 819277,
+    "id": 1433124,
     "type": "movie",
-    "title": "Midas Man",
-    "releaseDate": "2024-08-23",
-    "posterImage": "/4nAfF0Szcb72eRn9WwRFsdvZu5q.jpg",
+    "title": "Maryam: Janji dan Jiwa yang Terikat",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/uznJ8CF53TAYHS6zIYCmxdH4sSJ.jpg",
     "backdrops": [],
-    "overview": "When Brian Epstein set foot in the Cavern Club in November 1961 to watch The Beatles perform, he saw something no one else could – a glimmer of gold. Sharply dressed and well-spoken, Brian was hardly the most obvious radical – but being Jewish, closeted and having grown up as an outsider who had failed at pretty much everything, he was a 26-year old with something to prove and who wanted to tear up the rulebook.",
-    "score": 65,
-    "genres": [
-      "Music",
-      "Drama",
-      "History"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 975056,
-    "type": "movie",
-    "title": "Cabrini",
-    "releaseDate": "2024-03-07",
-    "posterImage": "/rBiHiN8W4BqMFrDozemzkof7GmF.jpg",
-    "backdrops": [],
-    "overview": "Italian immigrant Francesca Cabrini arrives in 1889 New York City and is greeted by disease, crime, and impoverished children. Cabrini sets off on a daring mission to convince the hostile mayor to secure housing and healthcare for society's most vulnerable. With broken English and poor health, Cabrini uses her entrepreneurial mind to build an empire of hope unlike anything the world had ever seen.",
-    "score": 78.57000000000001,
-    "genres": [
-      "History",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1530654,
-    "type": "movie",
-    "title": "Брат навсегда",
-    "releaseDate": "2025-09-15",
-    "posterImage": "/ycK1OWqZM7wVnNAtqLwryBuUIi3.jpg",
-    "backdrops": [],
-    "overview": "A documentary about the phenomenon of the Brother duology and its place in the country's cultural code. Directors Anna and Grigory Selyanov explore Balabanov's legacy, rare archives, and routes from Moscow to New York to understand how these films united several generations of Russians.",
+    "overview": "Since birth, Maryam's life has never been free from terror and the shadow of a genie. Until finally she received a mysterious letter that always appeared in front of her, the letter always appeared even though it had been thrown away, torn apart, even burned. She knew there was something invisible following her. The figure promised her not to leave her, clinging to her every step, whispering in a voice only she could hear. The more Maryam tried to run, the stronger the bonds held her back. Until slowly, she wasn't sure anymore... was she still living as herself, or did she belong to that figure forever?",
     "score": 0,
     "genres": [
-      "Documentary"
+      "Horror"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1104937,
+    "id": 1456349,
     "type": "movie",
-    "title": "Kill the Jockey",
-    "releaseDate": "2024-09-26",
-    "posterImage": "/d1c9uQtAHPGYJaLXkR0G5k6nmyG.jpg",
+    "title": "It Was Just an Accident",
+    "releaseDate": "2025-10-01",
+    "posterImage": "/rTR6bDRyNAcFGlmf1PGx7sH2XhF.jpg",
     "backdrops": [],
-    "overview": "Remo's self-destructive behavior overshadows his talent. Abril, an upcoming jockey, is pregnant with Remo's baby and has to decide between the child or continuing to race. They both race for Sirena, a businessman who saved Remo's life in the past but now is determined to find him, dead or alive.",
-    "score": 68,
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1501242,
-    "type": "movie",
-    "title": "Not Me That Went Viral",
-    "releaseDate": "2025-09-26",
-    "posterImage": "/nAvuksR3eQRok0VAr8Q7gW0o0Ma.jpg",
-    "backdrops": [],
-    "overview": "",
+    "overview": "Vahid, an Azerbaijani auto mechanic, was once imprisoned by Iranian authorities. During his sentence, he was interrogated blindfolded. One day, a man named Eghbal enters his workshop. His prosthetic leg creaks, and Vahid thinks he recognizes one of his former torturers.",
     "score": 0,
     "genres": [
       "Drama",
-      "Mystery"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1221061,
-    "type": "movie",
-    "title": "Sound of Falling",
-    "releaseDate": "2025-08-28",
-    "posterImage": "/a4eidwbeIXquVHCQnD2jm7eDCGg.jpg",
-    "backdrops": [],
-    "overview": "Over the course of a century, as four girls from different time periods experience their youth on a German farm, their lives become intertwined until time seems to dissolve.",
-    "score": 85,
-    "genres": [
-      "Drama",
-      "History"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1423008,
-    "type": "movie",
-    "title": "#Iwilltellyouthetruth",
-    "releaseDate": "2025-04-25",
-    "posterImage": "/56uaeLqASeLLHy4pVw1wBgwaFCf.jpg",
-    "backdrops": [],
-    "overview": "During a night shift, security guard Kiriyama watches a popular live streaming show titled '#Iwilltellyouthetruth' from the guardroom. The show is known for exposing the hidden truths behind sensational incidents and gossip, offering cash rewards and tips in return. The more shocking the revelation, the hotter the viewer reaction—and the greater the payout. In desperate need of money, Kiriyama decides to join the program and is eventually selected as a participant. However, what he faces is a truth far more immense and unimaginable than he ever anticipated. Truth always draws people in, but sometimes it can consume everything in its path. Depending on how people react, it may even reveal an entirely different face.",
-    "score": 50,
-    "genres": [
-      "Mystery"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1420733,
-    "type": "movie",
-    "title": "The Cursed: Insatiable Desires",
-    "releaseDate": "2025-09-17",
-    "posterImage": "/8Cd40pV1s0tj4CXkfsSBFZKV1rd.jpg",
-    "backdrops": [],
-    "overview": "An old man attempting to harm the village's mystical guardian tree. An office worker, obsessed with beauty, tampering with her neighbor's packages. A mother making deals with ghosts to se-cure her daughter's place in medical school. A senior police officer insisting on handling a case alone, despite his junior's objections. A college student seeking fame on social media through horror content. These seemingly unrelated incidents are eerily linked by their intertwined relation-ships and a shared undercurrent of wrong choices driven by desire. At the heart of it allies a sinister dark market. Once its true nature is revealed, there's no turning back.",
-    "score": 0,
-    "genres": [
-      "Horror",
       "Thriller"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1425725,
-    "type": "movie",
-    "title": "Hans Zimmer & Friends: Diamond in the Desert",
-    "releaseDate": "2025-02-19",
-    "posterImage": "/qH8fkKakfGoMvr3Az6QHf2tRvSB.jpg",
-    "backdrops": [],
-    "overview": "Conversations with collaborators and friends, alongside special live performances from Dubai's Coca-Cola Arena and beyond, from the dunes of the Arabian Desert, to the heights of the Burj Al Arab.",
-    "score": 88,
-    "genres": [
-      "Music",
-      "Documentary"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4329,16 +4147,127 @@
     "systemRequirements": null
   },
   {
-    "id": 1301278,
+    "id": 1062402,
     "type": "movie",
-    "title": "Karam",
-    "releaseDate": "2025-09-25",
-    "posterImage": "/7fSMbrHOZAmuvBfWa8KJJpD9CyZ.jpg",
+    "title": "Bang Bang",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/8qYYsOLVDg3dMdakor6V5cGfvS6.jpg",
+    "backdrops": [],
+    "overview": "Retired pugilist Bernard “Bang Bang” Rozyski is inspired to try his hand at training once he reconnects with his estranged grandson. While their training brings Bang Bang out of the hole he’s been living in, everyone questions his motivations, including an ex-girlfriend from decades ago, who was privy to Bang Bang’s meteoric rise in the sport in the 80s as well as the rivalry with his former opponent, her cousin and Detroit's Mayoral candidate Darnell Washington. Is Bang Bang merely passing down inherited rage, or is there true altruism behind his tutelage?",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1228682,
+    "type": "movie",
+    "title": "Dreams (Sex Love)",
+    "releaseDate": "2024-10-04",
+    "posterImage": "/ctBhKsd2AGlubApDf7VogbFKRlG.jpg",
+    "backdrops": [],
+    "overview": "A 17-year-old girl experiences a sexual awakening when she falls head over heels in love with her female teacher. She writes this down in her diary, and writes so well, vividly and recognizably that both mother and grandmother think the book should be published, without taking into account that the girl has only written it to keep the crush alive for herself.",
+    "score": 71,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1208041,
+    "type": "movie",
+    "title": "The Queen of Witchcraft",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/vhbnSktvLiUzWhLxeZPqSIMf9sC.jpg",
+    "backdrops": [],
+    "overview": "Mirah, a woman shunned by her village after the mysterious deaths of men connected to her, seeks refuge in a Padang restaurant owned by Bana, who falls in love with her. As more men die, Mirah discovers she’s cursed by her stepsister Puti with the deadly “Bahu Laweyan” curse, which kills any man who becomes intimately involved with her. Fueled by revenge, Mirah plans to destroy Puti’s happiness by targeting her husband. Despite the deadly curse, Mirah and Bana craft their own tragic love story, choosing to be together no matter the consequences.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1510750,
+    "type": "movie",
+    "title": "Eerie Hometown",
+    "releaseDate": "2025-09-19",
+    "posterImage": "/gO8WBjn7HPBCyCFzKg8iyJyrle9.jpg",
+    "backdrops": [],
+    "overview": "LA-born Leon returns to his father’s hometown, Chihai—a small seaside village on the west coast of Taiwan—after discovering that his supposedly dead grandmother is still alive. While trying to get to know her, Leon meets Wen, a mysterious girl who has rented a room in his family’s house. As Wen uses her hypnosis skills to help Leon with his depression, the two gradually develop a romantic relationship. Meanwhile, they uncover dark secrets about Leon’s family and Chihai.",
+    "score": 0,
+    "genres": [
+      "Thriller",
+      "Mystery"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1501242,
+    "type": "movie",
+    "title": "Not Me That Went Viral",
+    "releaseDate": "2025-09-26",
+    "posterImage": "/nAvuksR3eQRok0VAr8Q7gW0o0Ma.jpg",
     "backdrops": [],
     "overview": "",
     "score": 0,
     "genres": [
-      "Thriller"
+      "Drama",
+      "Mystery"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1159799,
+    "type": "movie",
+    "title": "My Penguin Friend",
+    "releaseDate": "2024-08-07",
+    "posterImage": "/65ll0fwaCMDHuD5XMJk4f4Olc5b.jpg",
+    "backdrops": [],
+    "overview": "A lost penguin rescued from an oil spill transforms the life of a heartbroken fisherman. They become unlikely friends, so bonded that even the vast ocean cannot divide them.",
+    "score": 75,
+    "genres": [
+      "Family",
+      "Adventure",
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1514535,
+    "type": "movie",
+    "title": "Mona Mur in Conversation",
+    "releaseDate": "2025-09-26",
+    "posterImage": "/rLRjoLgxRTF9CuQ1NdbnOzackP5.jpg",
+    "backdrops": [],
+    "overview": "The film explores the life and career of the Hamburg-born musician, whose creative work began in the West German post-punk scene of the 1980s.",
+    "score": 0,
+    "genres": [
+      "Documentary"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1205297,
+    "type": "movie",
+    "title": "The Compatriots",
+    "releaseDate": "2025-09-16",
+    "posterImage": "/lg7J7jmQszWx3MOJvssfQ3Nkexv.jpg",
+    "backdrops": [],
+    "overview": "Javi is undocumented and on the verge of being deported, when he bumps into his estranged best friend Hunter, a boisterous bachelor yearning for connection. Together, they fight to keep Javi in the only country he’s ever known.",
+    "score": 0,
+    "genres": [
+      "Comedy",
+      "Drama"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4360,33 +4289,17 @@
     "systemRequirements": null
   },
   {
-    "id": 1271895,
+    "id": 1314235,
     "type": "movie",
-    "title": "96 Minutes",
-    "releaseDate": "2025-09-05",
-    "posterImage": "/qCuxkkO7kz1eOosTT0yOvkyItJ6.jpg",
+    "title": "The Triumph of the Heart",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/9FP30aoKo3SV9Eobb7a0RBD6DwK.jpg",
     "backdrops": [],
-    "overview": "Former bomb disposal expert, Song Kang-Ren, and his fiancée, Huang Xin, board a high-speed train that contains a bomb. At the same time, Liu Kai, a well-known physics teacher who was involved in an affair scandal, also boards this same train in order to win back his wife, Ting Juan, who took the prior high-speed rail to return home in frustration…  After all, can the bomb be successfully defused this time? and resolve the crisis?",
+    "overview": "The extraordinary true story of St. Maximilian Kolbe, a Polish Catholic priest who volunteered to die in place of another man in Auschwitz during World War II.",
     "score": 0,
     "genres": [
-      "Action",
-      "Crime",
-      "Romance"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1495175,
-    "type": "movie",
-    "title": "Kaze no majimu",
-    "releaseDate": "2025-09-05",
-    "posterImage": "/2Z54xMhvTCy7CVUxo7kVC3Jja6k.jpg",
-    "backdrops": [],
-    "overview": "Majimu, a timid office temp in Okinawa, stumbles upon a company contest and proposes an idea no one expects—crafting local rum from sugarcane. With no experience but growing passion, she faces skeptical bosses, family doubts, and island politics. As challenges mount, her bold dream sparks a movement that could change everything. A heartwarming story based on the true tale of ambition, identity, and finding purpose in the unlikeliest place.",
-    "score": 0,
-    "genres": [
-      "Drama"
+      "Drama",
+      "History"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4407,6 +4320,170 @@
     "systemRequirements": null
   },
   {
+    "id": 1357359,
+    "type": "movie",
+    "title": "Ejen Ali: The Movie 2",
+    "releaseDate": "2025-05-22",
+    "posterImage": "/cjDAlNKylyqNUpv6nDoFR1YBEAD.jpg",
+    "backdrops": [],
+    "overview": "Ejen Ali is appointed as the pilot of Project Satria, a new armoured suit with the help of an Artificial Intelligence programme specially designed to optimise the physical performance and mental skills of MATA agents while carrying out their secret missions.",
+    "score": 78,
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Family",
+      "Mystery",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1523071,
+    "type": "movie",
+    "title": "Over De Grens",
+    "releaseDate": "2025-08-28",
+    "posterImage": "/q8U0Ef6iZob6SmetTV654YnnX2k.jpg",
+    "backdrops": [],
+    "overview": "",
+    "score": 0,
+    "genres": [],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 823999,
+    "type": "movie",
+    "title": "Diabolik: Ginko Attacks!",
+    "releaseDate": "2022-11-17",
+    "posterImage": "/8QVbWBv94BAT9u1q9uJccwOxMzt.jpg",
+    "backdrops": [],
+    "overview": "Diabolik narrowly escapes Inspector Ginko's latest trap, leaving his partner in crime Eva Kant behind. Furious, Eva offers Ginko her help in capturing him, but the former has to face first the return of an old flame of his, noblewoman Altea.",
+    "score": 59.75,
+    "genres": [
+      "Crime",
+      "Action"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1301278,
+    "type": "movie",
+    "title": "Karam",
+    "releaseDate": "2025-09-25",
+    "posterImage": "/7fSMbrHOZAmuvBfWa8KJJpD9CyZ.jpg",
+    "backdrops": [],
+    "overview": "",
+    "score": 0,
+    "genres": [
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1521352,
+    "type": "movie",
+    "title": "Sai: Disaster",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/inlkcbSoPHAfhH68r1tiPRYpTAH.jpg",
+    "backdrops": [],
+    "overview": "Four people lead ordinary lives in different places, their paths never crossing. A mysterious man appears in each story, always as someone else. One moment, a cram school instructor; the next, a truck driver, a barber - his identity constantly shifting. Then, death strikes. A detective pursues the truth, closing in on a revelation...",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1420733,
+    "type": "movie",
+    "title": "The Cursed: Insatiable Desires",
+    "releaseDate": "2025-09-17",
+    "posterImage": "/8Cd40pV1s0tj4CXkfsSBFZKV1rd.jpg",
+    "backdrops": [],
+    "overview": "An old man attempting to harm the village's mystical guardian tree. An office worker, obsessed with beauty, tampering with her neighbor's packages. A mother making deals with ghosts to se-cure her daughter's place in medical school. A senior police officer insisting on handling a case alone, despite his junior's objections. A college student seeking fame on social media through horror content. These seemingly unrelated incidents are eerily linked by their intertwined relation-ships and a shared undercurrent of wrong choices driven by desire. At the heart of it allies a sinister dark market. Once its true nature is revealed, there's no turning back.",
+    "score": 0,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1366976,
+    "type": "movie",
+    "title": "Malet",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/y1DWCHs3Iq4ScXb0GHrQBBsS4Fn.jpg",
+    "backdrops": [],
+    "overview": "Rural Catalonia, 16th century. A quack doctor arrives in a village to cure the mayor's son, but a local healer warns him that a curse is hanging over them.",
+    "score": 0,
+    "genres": [
+      "Horror",
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1321624,
+    "type": "movie",
+    "title": "Evil Unbound",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/sZNQmsAjeY2EomhT2xxJeqKMl2w.jpg",
+    "backdrops": [],
+    "overview": "Based on true events set during WWII in Northeast China, an ordinary man is thrust into a turbulent fate against the backdrop of the inhumane bacterial experiments conducted by the Japanese Imperial Army's notorious Unit 731.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1244112,
+    "type": "movie",
+    "title": "The Super Elfkins",
+    "releaseDate": "2024-12-24",
+    "posterImage": "/le7Lc7jmi5z9ro4SRcJLeJevo2r.jpg",
+    "backdrops": [],
+    "overview": "Helvi's world is turned upside down when she discovers the existence of a technically advanced Elfkin gang that, in stark contrast to Elfie’s own clan, is second to none when it comes to fun and thrill-seeking. Can Helvi’s friendship with Bo, the youngest gang member, reconcile the two Elfkin clans after more than 250 years?",
+    "score": 61,
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Family"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1289893,
+    "type": "movie",
+    "title": "Somnium",
+    "releaseDate": "2025-08-28",
+    "posterImage": "/cPUeMJkPLDWSOA6OU862EdZhylS.jpg",
+    "backdrops": [],
+    "overview": "Gemma moves to LA, hoping to become an actress. She takes an overnight gig at a sleep clinic that promises to make their clients’ dreams come true. But the longer she spends there, the more it becomes clear that something sinister is going on.",
+    "score": 0,
+    "genres": [
+      "Horror",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
     "id": 1465549,
     "type": "movie",
     "title": "Bodyguard of Lies",
@@ -4422,127 +4499,48 @@
     "systemRequirements": null
   },
   {
-    "id": 1062402,
+    "id": 1491333,
     "type": "movie",
-    "title": "Bang Bang",
-    "releaseDate": "2025-09-12",
-    "posterImage": "/8qYYsOLVDg3dMdakor6V5cGfvS6.jpg",
+    "title": "Incarnation",
+    "releaseDate": "2025-07-17",
+    "posterImage": "/u85X0coyKbHIC2OwL1FqdtoVvJh.jpg",
     "backdrops": [],
-    "overview": "Retired pugilist Bernard “Bang Bang” Rozyski is inspired to try his hand at training once he reconnects with his estranged grandson. While their training brings Bang Bang out of the hole he’s been living in, everyone questions his motivations, including an ex-girlfriend from decades ago, who was privy to Bang Bang’s meteoric rise in the sport in the 80s as well as the rivalry with his former opponent, her cousin and Detroit's Mayoral candidate Darnell Washington. Is Bang Bang merely passing down inherited rage, or is there true altruism behind his tutelage?",
-    "score": 0,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1491336,
-    "type": "movie",
-    "title": "Castration Movie Anthology ii. The Best of Both Worlds",
-    "releaseDate": "2025-09-01",
-    "posterImage": "/rtxXBBBr7sjW9KQz02dSjDfaV0m.jpg",
-    "backdrops": [],
-    "overview": "In New York, Circle tries to leave a trans separatist cult.",
-    "score": 0,
+    "overview": "Sister Talia, about to take her perpetual vows, learns of her friend Thuy's death and discovers that another friend, Trang, is possessed by a demon. Using her ability as a medium, Talia exorcises the demon and helps Detective Oh investigate a series of chain suicides. They uncover that Thuy's mother, Chao, a shaman from Vietnam, uses a curse called \"Go\" to drive people to suicide. When Talia learns Chao plans to pass the curse onto Thuy's daughter Jin, she decides to sacrifice herself by taking the curse into her own body. As she prepares for her fate, Talia is confronted with an unexpected truth.",
+    "score": 40,
     "genres": [
       "Horror",
-      "Romance",
-      "Comedy"
+      "Fantasy"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1535956,
+    "id": 1127992,
     "type": "movie",
-    "title": "Raindrops on a Roof",
-    "releaseDate": "2025-09-18",
-    "posterImage": "/jIMcpSgg65alK24pkIX6DDb7Z4y.jpg",
-    "backdrops": [],
-    "overview": "",
-    "score": 0,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1504424,
-    "type": "movie",
-    "title": "7 steg",
+    "title": "Long Shadows",
     "releaseDate": "2025-09-26",
-    "posterImage": null,
+    "posterImage": "/4nUowgm89E98RUSRe6BqMm0TIFx.jpg",
     "backdrops": [],
-    "overview": "Every love relationship goes through different phases – more precisely 7 Steps. The 7 Steps dictate the conditions for Elle’s entire existence. After a year of falling in love, traveling and romantic adventures where Elle and Josef have spent almost every waking minute together, Elle disappears without a trace. Josef takes up the search for her and tries to find the answer to what might have happened through the past.",
+    "overview": "When a young boy's mother and father are savagely murdered, he ages out of an orphanage intent on revenge, but the love of a girl and psychological trauma leads him down a mystifying path.",
     "score": 0,
     "genres": [
-      "Romance",
-      "Drama"
+      "Western"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1205938,
+    "id": 741596,
     "type": "movie",
-    "title": "Hajduk in Belgrade",
-    "releaseDate": "2025-09-25",
-    "posterImage": "/NzewQPQ4v2C00pV1L22BJV5Nkw.jpg",
+    "title": "Atonement",
+    "releaseDate": "2025-08-30",
+    "posterImage": "/i8oxXUaEVPHCTSFpOgA8M4HWBO.jpg",
     "backdrops": [],
-    "overview": "In the 1980s, a boy named Hajduk moves with his family from a small village to the capitol of Yugoslavia, where he's going to start spreading his way of honor and true values.",
+    "overview": "Single father Lung (Ronald CHENG) and his daughter Ying (FU Shun Ying) are each other’s only dependence. Despite the huge debt left by his ex-wife, Lung believes in good karma for good people, until he loses his beloved daughter in a kidnap while travelling in Thailand.  Lung abandons all his faith. He marries a Thai Chinese, Lan (Chrissie CHAU) and starts a new life in Thailand, but he never leaves the past behind. All these years he has been gathering information of the kidnap gang, and vows to take justice into his own hands at any cost…",
     "score": 0,
     "genres": [
       "Drama",
-      "Family"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1535376,
-    "type": "movie",
-    "title": "By another name",
-    "releaseDate": "2025-09-22",
-    "posterImage": null,
-    "backdrops": [],
-    "overview": "Jae-hyun and Su-jin, even when confronted with death, cannot abandon their restless desire to make a film—because they believe that very impulse is their love for each other.",
-    "score": 0,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1280525,
-    "type": "movie",
-    "title": "School of Magical Animals 4",
-    "releaseDate": "2025-09-25",
-    "posterImage": "/8sDGCdVymSziTGg14QJPhoXGfHR.jpg",
-    "backdrops": [],
-    "overview": "Ida's friend Miriam visits the school for three months, but a secret threatens to tear them apart. Miriam is entrusted with the tarsier Fitzgeraldo, while Max, deeply in love, is given the owl Muriel. Meanwhile, the sale of the school is imminent, and the future of the magical community is in peril.",
-    "score": 0,
-    "genres": [
-      "Fantasy",
-      "Family"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1066583,
-    "type": "movie",
-    "title": "One Hand Don't Clap",
-    "releaseDate": "1991-08-28",
-    "posterImage": "/tnsTgNHBuUxJ02pT4muY2bzxVoO.jpg",
-    "backdrops": [],
-    "overview": "Kavery Kaul’s engaging documentary traces the history of calypso and soca music from their birth in the African-East Indian traditions of Trinidad and Tobago through its worldwide diaspora, including its popularization in the 1950s by Harry Belafonte and the new independent distribution networks that arose to serve the expatriate community in the 1980s.  North American restoration premiere at To Save and Project: The 19th MoMA International Festival of Film Preservation on January 27 and 31, 2023.  Digital restoration by the Academy Film Archive and the Women’s Film Preservation Fund of New York Women in Film & Television; courtesy of Riverfilms.",
-    "score": 60,
-    "genres": [
-      "Documentary",
-      "Music"
+      "Action"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4566,17 +4564,15 @@
   {
     "id": 1321624,
     "type": "movie",
-    "title": "731",
+    "title": "Evil Unbound",
     "releaseDate": "2025-09-18",
-    "posterImage": "/xQ7fdJkRWiXMGZB6Kazo0vHTnuq.jpg",
+    "posterImage": "/sZNQmsAjeY2EomhT2xxJeqKMl2w.jpg",
     "backdrops": [],
     "overview": "Based on true events set during WWII in Northeast China, an ordinary man is thrust into a turbulent fate against the backdrop of the inhumane bacterial experiments conducted by the Japanese Imperial Army's notorious Unit 731.",
     "score": 0,
     "genres": [
       "Drama",
-      "War",
-      "Mystery",
-      "Horror"
+      "War"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4770,7 +4766,7 @@
     "type": "movie",
     "title": "The Secret Agent",
     "releaseDate": "2025-07-23",
-    "posterImage": "/jEc23Gooi2Q4nlt2PNvnyMcXv0C.jpg",
+    "posterImage": "/1XBAWMWSs3oZo5MZQX8CGBRMIHB.jpg",
     "backdrops": [],
     "overview": "Brazil, 1977. Marcelo, a technology expert in his early 40s, is on the run. He arrives in Recife during carnival week, hoping to reunite with his son but soon realizes that the city is far from being the non violent refuge he seeks.",
     "score": 85,

@@ -1,0 +1,15 @@
+# Ignore the Node.js modules folder
+node_modules
+
+# Ignore our local data cache
+.cache/
+
+# Ignore temporary data files from worker robots
+movies.json
+tv.json
+rawg-data.json
+comments-backup.json
+ratings-backup.json
+
+# Ignore system files
+.DS_Store

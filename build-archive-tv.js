@@ -6,6 +6,9 @@ const SHOWS_API_URL = `https://api.tvmaze.com/shows`;
 const CACHE_FILE = '.cache/tv_archive_progress.json';
 const SHOWS_PER_RUN = 100; // How many new shows to process each time
 
+// THE FIX: Ensure the cache directory exists before we try to write to it.
+fs.mkdirSync('.cache', { recursive: true });
+
 async function buildArchiveTvData() {
     console.log("TV Archivist starting...");
 
@@ -29,7 +32,7 @@ async function buildArchiveTvData() {
                 newShows.push(...pageData);
             } else {
                 console.log("Reached the end of the TVmaze list.");
-                break; // Exit the loop if there are no more shows
+                break; 
             }
             await new Promise(resolve => setTimeout(resolve, 200));
         } catch (error) { console.error(`Error archiving page ${page}:`, error); }
@@ -44,7 +47,7 @@ async function buildArchiveTvData() {
             score: show.rating?.average ? show.rating.average * 10 : null,
             genres: show.genres || [], screenshots: [], systemRequirements: null
         };
-    }).filter(Boolean); // Filter out any null entries
+    }).filter(Boolean);
 
     // 2. Load the existing archive and add the new shows
     let existingArchive = [];
@@ -53,7 +56,6 @@ async function buildArchiveTvData() {
     }
     const combinedArchive = [...existingArchive, ...normalizedShows];
     
-    // Remove duplicates, just in case
     const uniqueArchive = Array.from(new Map(combinedArchive.map(item => [item.id, item])).values());
 
     fs.writeFileSync('tv-archive.json', JSON.stringify(uniqueArchive, null, 2));

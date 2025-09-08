@@ -1,17 +1,15 @@
 {
   "id": 1321624,
   "type": "movie",
-  "title": "731",
+  "title": "Evil Unbound",
   "releaseDate": "2025-09-18",
-  "posterImage": "/xQ7fdJkRWiXMGZB6Kazo0vHTnuq.jpg",
+  "posterImage": "/sZNQmsAjeY2EomhT2xxJeqKMl2w.jpg",
   "backdrops": [],
   "overview": "Based on true events set during WWII in Northeast China, an ordinary man is thrust into a turbulent fate against the backdrop of the inhumane bacterial experiments conducted by the Japanese Imperial Army's notorious Unit 731.",
   "score": 0,
   "genres": [
     "Drama",
-    "War",
-    "Mystery",
-    "Horror"
+    "War"
   ],
   "screenshots": [],
   "systemRequirements": null

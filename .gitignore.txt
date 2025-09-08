@@ -10,6 +10,7 @@ tv.json
 rawg-data.json
 comments-backup.json
 ratings-backup.json
+tv-archive.json
 
 # Ignore system files
 .DS_Store

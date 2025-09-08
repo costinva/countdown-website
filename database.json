@@ -4546,217 +4546,49 @@
     "systemRequirements": null
   },
   {
-    "id": 1066583,
+    "id": 1271895,
     "type": "movie",
-    "title": "One Hand Don't Clap",
-    "releaseDate": "1991-08-28",
-    "posterImage": "/tnsTgNHBuUxJ02pT4muY2bzxVoO.jpg",
+    "title": "96 Minutes",
+    "releaseDate": "2025-09-05",
+    "posterImage": "/qCuxkkO7kz1eOosTT0yOvkyItJ6.jpg",
     "backdrops": [],
-    "overview": "Kavery Kaul’s engaging documentary traces the history of calypso and soca music from their birth in the African-East Indian traditions of Trinidad and Tobago through its worldwide diaspora, including its popularization in the 1950s by Harry Belafonte and the new independent distribution networks that arose to serve the expatriate community in the 1980s.  North American restoration premiere at To Save and Project: The 19th MoMA International Festival of Film Preservation on January 27 and 31, 2023.  Digital restoration by the Academy Film Archive and the Women’s Film Preservation Fund of New York Women in Film & Television; courtesy of Riverfilms.",
-    "score": 60,
-    "genres": [
-      "Documentary",
-      "Music"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1321624,
-    "type": "movie",
-    "title": "Evil Unbound",
-    "releaseDate": "2025-09-18",
-    "posterImage": "/sZNQmsAjeY2EomhT2xxJeqKMl2w.jpg",
-    "backdrops": [],
-    "overview": "Based on true events set during WWII in Northeast China, an ordinary man is thrust into a turbulent fate against the backdrop of the inhumane bacterial experiments conducted by the Japanese Imperial Army's notorious Unit 731.",
+    "overview": "Former bomb disposal expert, Song Kang-Ren, and his fiancée, Huang Xin, board a high-speed train that contains a bomb. At the same time, Liu Kai, a well-known physics teacher who was involved in an affair scandal, also boards this same train in order to win back his wife, Ting Juan, who took the prior high-speed rail to return home in frustration…  After all, can the bomb be successfully defused this time? and resolve the crisis?",
     "score": 0,
     "genres": [
-      "Drama",
-      "War"
+      "Action",
+      "Crime",
+      "Romance"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1304880,
+    "id": 1221061,
     "type": "movie",
-    "title": "Maru",
-    "releaseDate": "2024-10-18",
-    "posterImage": "/6u2BtLZfzWTP26FKyigDbKbgsvN.jpg",
+    "title": "Sound of Falling",
+    "releaseDate": "2025-08-28",
+    "posterImage": "/a4eidwbeIXquVHCQnD2jm7eDCGg.jpg",
     "backdrops": [],
-    "overview": "Sawada graduated from an art university but cannot rely on it to make a living and is working as an assistant to a famous contemporary artist. He lost his independent will and became accustomed to simply doing what he was told.  One day, Sawada had an accident on the way to work and lost his job because of an arm injury. When he returned to the room, there was an ant on the floor. After drawing a circle as if guided by an ant, Sawada's daily life begins to be eroded by the circle.",
-    "score": 60,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1127656,
-    "type": "movie",
-    "title": "Blind Love",
-    "releaseDate": "2025-09-19",
-    "posterImage": "/cJPul4LKufnwFmqUmiETvqTmCZz.jpg",
-    "backdrops": [],
-    "overview": "An unexpected kiss unburies memories and longing for Shu-yi, a mother quietly holding her family together despite her unhappiness. As her rebelling son Han grows drawn to the enigmatic Xue-jin, Shu-yi rekindles her past connection with the same woman in this tenderly crafted exploration of family dynamics, identity and desire.",
-    "score": 0,
-    "genres": [
-      "Romance",
-      "Family",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1461260,
-    "type": "movie",
-    "title": "Sihir Pelakor",
-    "releaseDate": "2025-07-31",
-    "posterImage": "/n4YGTt7Oju3MM91QxaArXMFOOu8.jpg",
-    "backdrops": [],
-    "overview": "Because of Rini's spell, Edi left his wife and two children. As a daughter who lost her father, Vita tried to win back her father's love and bring him back into the arms of his family.",
+    "overview": "Over the course of a century, as four girls from different time periods experience their youth on a German farm, their lives become intertwined until time seems to dissolve.",
     "score": 85,
     "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1532385,
-    "type": "movie",
-    "title": "Beautiful Dreamer",
-    "releaseDate": "2025-09-21",
-    "posterImage": "/wq7fDJGvuSfdi21eWpQ6eYhG62S.jpg",
-    "backdrops": [],
-    "overview": "In-seon, still holding on to her late husband's ashes three years after his suicide, decides it's finally time to let him go. But when her daughter, Su-yeon, returns home and resists the idea, In-seon begins to question her decision. As tensions mount, Su-yeon tries to reclaim the ashes—only to accidentally shatter the urn. With no other choice, mother and daughter must confront their long-buried grief… and say their final goodbye on a bright, sunny day.",
-    "score": 0,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1289888,
-    "type": "movie",
-    "title": "French Lover",
-    "releaseDate": "2025-09-26",
-    "posterImage": "/bLqPpqNoKbNbXysIeft1tLIl6KB.jpg",
-    "backdrops": [],
-    "overview": "Abel Camara, the biggest star of the moment, crosses paths with girl-next-door Marion. Neither of them suspects this will be the beginning of a great love story.",
-    "score": 0,
-    "genres": [
-      "Comedy",
-      "Romance"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1179505,
-    "type": "movie",
-    "title": "Make a Girl",
-    "releaseDate": "2025-01-31",
-    "posterImage": "/zgcTimQTpSpakFELdBaqBkYROYM.jpg",
-    "backdrops": [],
-    "overview": "The first feature project by anime artist, Yasuda Gensho, with over six million social media followers. The cyberlove suspense story is set to hit the world!",
-    "score": 0,
-    "genres": [
-      "Animation",
-      "Science Fiction",
-      "Romance"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1047884,
-    "type": "movie",
-    "title": "Family Matters",
-    "releaseDate": "2025-09-12",
-    "posterImage": "/rms2HpZTpd4D10q8AfLTNpVgqAK.jpg",
-    "backdrops": [],
-    "overview": "Elder sister, Spring, seeks her origins before heading to university, Autumn, the mother, grapples with conceiving a child through artificial insemination, Summer, the younger brother, tries to engage with a paternal figure he barely knows just before his military service, and Winter, the father, desperately tries to change his fate as problems mount up.",
-    "score": 0,
-    "genres": [
       "Drama",
-      "Family"
+      "History"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1244112,
+    "id": 1535376,
     "type": "movie",
-    "title": "The Super Elfkins",
-    "releaseDate": "2024-12-24",
-    "posterImage": "/le7Lc7jmi5z9ro4SRcJLeJevo2r.jpg",
+    "title": "By another name",
+    "releaseDate": "2025-09-22",
+    "posterImage": null,
     "backdrops": [],
-    "overview": "Helvi's world is turned upside down when she discovers the existence of a technically advanced Elfkin gang that, in stark contrast to Elfie’s own clan, is second to none when it comes to fun and thrill-seeking. Can Helvi’s friendship with Bo, the youngest gang member, reconcile the two Elfkin clans after more than 250 years?",
-    "score": 61,
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Family"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 927594,
-    "type": "movie",
-    "title": "Love Life",
-    "releaseDate": "2022-09-09",
-    "posterImage": "/5OSTURpAJCFsUydL6w4JPx48SSQ.jpg",
-    "backdrops": [],
-    "overview": "Taeko and her husband, Jirō, are living a peaceful existence with her young son, Keita, when a tragic accident brings the boy's long-lost father, Park, back into her life. To cope with the pain and guilt, Taeko throws herself into helping this deaf and homeless man.",
-    "score": 72,
+    "overview": "Jae-hyun and Su-jin, even when confronted with death, cannot abandon their restless desire to make a film—because they believe that very impulse is their love for each other.",
+    "score": 0,
     "genres": [
       "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 756397,
-    "type": "movie",
-    "title": "Hitpig!",
-    "releaseDate": "2024-11-01",
-    "posterImage": "/bYa20LYAZ3Q7lKXtLYybo0yWWTN.jpg",
-    "backdrops": [],
-    "overview": "A porcine bounty hunter accepts his next hit: Pickles, a naive, ebullient elephant. Though he initially sets out to capture the perky pachyderm, the unlikely pair find themselves crisscrossing the globe on an adventure that brings out the best in both of them.",
-    "score": 66.8,
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Adventure",
-      "Family"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1357359,
-    "type": "movie",
-    "title": "Ejen Ali: The Movie 2",
-    "releaseDate": "2025-05-22",
-    "posterImage": "/cjDAlNKylyqNUpv6nDoFR1YBEAD.jpg",
-    "backdrops": [],
-    "overview": "Ejen Ali is appointed as the pilot of Project Satria, a new armoured suit with the help of an Artificial Intelligence programme specially designed to optimise the physical performance and mental skills of MATA agents while carrying out their secret missions.",
-    "score": 78,
-    "genres": [
-      "Animation",
-      "Action",
-      "Adventure",
-      "Comedy",
-      "Family",
-      "Mystery",
-      "Science Fiction",
-      "Thriller"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4779,64 +4611,66 @@
     "systemRequirements": null
   },
   {
-    "id": 741596,
+    "id": 1533390,
     "type": "movie",
-    "title": "Atonement",
-    "releaseDate": "2025-08-30",
-    "posterImage": "/i8oxXUaEVPHCTSFpOgA8M4HWBO.jpg",
-    "backdrops": [],
-    "overview": "Single father Lung (Ronald CHENG) and his daughter Ying (FU Shun Ying) are each other’s only dependence. Despite the huge debt left by his ex-wife, Lung believes in good karma for good people, until he loses his beloved daughter in a kidnap while travelling in Thailand.  Lung abandons all his faith. He marries a Thai Chinese, Lan (Chrissie CHAU) and starts a new life in Thailand, but he never leaves the past behind. All these years he has been gathering information of the kidnap gang, and vows to take justice into his own hands at any cost…",
-    "score": 0,
-    "genres": [
-      "Drama",
-      "Action"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1418520,
-    "type": "movie",
-    "title": "The Heart Is a Muscle",
+    "title": "An einem Tag im September",
     "releaseDate": "2025-09-12",
-    "posterImage": "/9Z3GHCiaqzy7lcTv1L2iggGF7Kb.jpg",
+    "posterImage": "/nW113cXbJ5AS6ectqBL5UkO7NxZ.jpg",
     "backdrops": [],
-    "overview": "At a barbecue, Ryan’s five-year-old son briefly goes missing. Ryan’s violent reaction to this scare sets off a chain of events and unearths secrets from the past. A journey of self-discovery and forgiveness begins.",
+    "overview": "",
     "score": 0,
     "genres": [
-      "Drama"
+      "History"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1336794,
+    "id": 1447896,
     "type": "movie",
-    "title": "Mothernet",
-    "releaseDate": "2025-09-22",
-    "posterImage": "/wIgRhGs79Je8vroEfDsGoOT5hdP.jpg",
+    "title": "So Beautiful, Wonderful and Lovely",
+    "releaseDate": "2025-09-27",
+    "posterImage": "/k0ZkQ0dSnzV9Fi4dJkTqH0vJBQ1.jpg",
     "backdrops": [],
-    "overview": "Rama, a 16 year old teenager, must face reality after a tragic accident that left his mother in a coma. With the help of Artificial Intelligence (AI), Rama and his father try to face their new reality.",
+    "overview": "School cleaner Nozomi Haruta was happy. She was supposed to marry her partner, her beloved, her soulmate, the handsome teacher Chitose Yokomizo, but when he secretly marries someone else, he ruins her dreams and breaks her heart. Also, maybe her mind? Seized by desperation, Nozomi photobombs his big wedding photograph by replacing the bride, steals the camera, and makes a run for it! Headlong into the path of a courier carrying Castella cakes! When she wakes up, she sees Chitose hovering over her, only it’s not him, but a being who calls himself Castella (as in the cake). For the next two weeks (the expiration date for the cakes), he will be Nozomi’s cake-based companion and help her get over her despair.",
     "score": 0,
     "genres": [
       "Drama",
-      "Science Fiction"
+      "Comedy"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1042687,
+    "id": 1425630,
     "type": "movie",
-    "title": "Can I Get a Witness?",
+    "title": "Shakthi Thirumagan",
     "releaseDate": "2025-09-19",
-    "posterImage": "/rzSCbYNYgDO1jJR0y4ynArFNaob.jpg",
+    "posterImage": "/eKMNqfF6BJZ47O7OklrMgZ5r6T.jpg",
     "backdrops": [],
-    "overview": "In the not-too-distant future, we have solved all the world’s problems, mitigated climate change, eradicated poverty, and achieved true trans-species equality. There’s just one catch… humans have to end life at 50, and teenage artists have to document it. It’s Kiah’s first day on the job.",
+    "overview": "",
     "score": 0,
     "genres": [
-      "Science Fiction",
+      "Action",
+      "Drama",
       "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1127656,
+    "type": "movie",
+    "title": "Blind Love",
+    "releaseDate": "2025-09-19",
+    "posterImage": "/cJPul4LKufnwFmqUmiETvqTmCZz.jpg",
+    "backdrops": [],
+    "overview": "An unexpected kiss unburies memories and longing for Shu-yi, a mother quietly holding her family together despite her unhappiness. As her rebelling son Han grows drawn to the enigmatic Xue-jin, Shu-yi rekindles her past connection with the same woman in this tenderly crafted exploration of family dynamics, identity and desire.",
+    "score": 0,
+    "genres": [
+      "Romance",
+      "Family",
+      "Drama"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -4859,16 +4693,173 @@
     "systemRequirements": null
   },
   {
-    "id": 1366976,
+    "id": 1336794,
     "type": "movie",
-    "title": "Malet",
-    "releaseDate": "2025-09-12",
-    "posterImage": "/y1DWCHs3Iq4ScXb0GHrQBBsS4Fn.jpg",
+    "title": "Mothernet",
+    "releaseDate": "2025-09-22",
+    "posterImage": "/wIgRhGs79Je8vroEfDsGoOT5hdP.jpg",
     "backdrops": [],
-    "overview": "Rural Catalonia, 16th century. A quack doctor arrives in a village to cure the mayor's son, but a local healer warns him that a curse is hanging over them.",
+    "overview": "Rama, a 16 year old teenager, must face reality after a tragic accident that left his mother in a coma. With the help of Artificial Intelligence (AI), Rama and his father try to face their new reality.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Science Fiction"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1461260,
+    "type": "movie",
+    "title": "Sihir Pelakor",
+    "releaseDate": "2025-07-31",
+    "posterImage": "/n4YGTt7Oju3MM91QxaArXMFOOu8.jpg",
+    "backdrops": [],
+    "overview": "Because of Rini's spell, Edi left his wife and two children. As a daughter who lost her father, Vita tried to win back her father's love and bring him back into the arms of his family.",
+    "score": 85,
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1304880,
+    "type": "movie",
+    "title": "Maru",
+    "releaseDate": "2024-10-18",
+    "posterImage": "/6u2BtLZfzWTP26FKyigDbKbgsvN.jpg",
+    "backdrops": [],
+    "overview": "Sawada graduated from an art university but cannot rely on it to make a living and is working as an assistant to a famous contemporary artist. He lost his independent will and became accustomed to simply doing what he was told.  One day, Sawada had an accident on the way to work and lost his job because of an arm injury. When he returned to the room, there was an ant on the floor. After drawing a circle as if guided by an ant, Sawada's daily life begins to be eroded by the circle.",
+    "score": 60,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1066583,
+    "type": "movie",
+    "title": "One Hand Don't Clap",
+    "releaseDate": "1991-08-28",
+    "posterImage": "/tnsTgNHBuUxJ02pT4muY2bzxVoO.jpg",
+    "backdrops": [],
+    "overview": "Kavery Kaul’s engaging documentary traces the history of calypso and soca music from their birth in the African-East Indian traditions of Trinidad and Tobago through its worldwide diaspora, including its popularization in the 1950s by Harry Belafonte and the new independent distribution networks that arose to serve the expatriate community in the 1980s.  North American restoration premiere at To Save and Project: The 19th MoMA International Festival of Film Preservation on January 27 and 31, 2023.  Digital restoration by the Academy Film Archive and the Women’s Film Preservation Fund of New York Women in Film & Television; courtesy of Riverfilms.",
+    "score": 60,
+    "genres": [
+      "Documentary",
+      "Music"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1042687,
+    "type": "movie",
+    "title": "Can I Get a Witness?",
+    "releaseDate": "2025-09-19",
+    "posterImage": "/rzSCbYNYgDO1jJR0y4ynArFNaob.jpg",
+    "backdrops": [],
+    "overview": "In the not-too-distant future, we have solved all the world’s problems, mitigated climate change, eradicated poverty, and achieved true trans-species equality. There’s just one catch… humans have to end life at 50, and teenage artists have to document it. It’s Kiah’s first day on the job.",
+    "score": 0,
+    "genres": [
+      "Science Fiction",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1531930,
+    "type": "movie",
+    "title": "The House Beyond the Stairs",
+    "releaseDate": "2025-09-28",
+    "posterImage": null,
+    "backdrops": [],
+    "overview": "The cat in a box, is it dead or alive? Schrödinger, a quantum physicist, asked the question. He answered that the cat is simultaneously both dead and alive. It paved a path to paradox. The monk in the house seeks after the truth in quantum physics. The time for the stars to bloom, the sunset when the flowers fall, the moment when light disappears in darkness, how do they exist in the same landscape? His question becomes spiral stairs.",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1205938,
+    "type": "movie",
+    "title": "Hajduk in Belgrade",
+    "releaseDate": "2025-09-25",
+    "posterImage": "/NzewQPQ4v2C00pV1L22BJV5Nkw.jpg",
+    "backdrops": [],
+    "overview": "In the 1980s, a boy named Hajduk moves with his family from a small village to the capitol of Yugoslavia, where he's going to start spreading his way of honor and true values.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "Family"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1289888,
+    "type": "movie",
+    "title": "French Lover",
+    "releaseDate": "2025-09-26",
+    "posterImage": "/bLqPpqNoKbNbXysIeft1tLIl6KB.jpg",
+    "backdrops": [],
+    "overview": "Abel Camara, the biggest star of the moment, crosses paths with girl-next-door Marion. Neither of them suspects this will be the beginning of a great love story.",
+    "score": 0,
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1186936,
+    "type": "movie",
+    "title": "Uma Babá Gloriosa",
+    "releaseDate": "2025-09-18",
+    "posterImage": null,
+    "backdrops": [],
+    "overview": "",
+    "score": 0,
+    "genres": [
+      "Comedy"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1491336,
+    "type": "movie",
+    "title": "Castration Movie Anthology ii. The Best of Both Worlds",
+    "releaseDate": "2025-09-01",
+    "posterImage": "/rtxXBBBr7sjW9KQz02dSjDfaV0m.jpg",
+    "backdrops": [],
+    "overview": "In New York, Circle tries to leave a trans separatist cult.",
     "score": 0,
     "genres": [
       "Horror",
+      "Romance",
+      "Comedy"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1535956,
+    "type": "movie",
+    "title": "Raindrops on a Roof",
+    "releaseDate": "2025-09-18",
+    "posterImage": "/jIMcpSgg65alK24pkIX6DDb7Z4y.jpg",
+    "backdrops": [],
+    "overview": "",
+    "score": 0,
+    "genres": [
       "Drama"
     ],
     "screenshots": [],

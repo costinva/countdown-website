@@ -1,118 +1,66 @@
+// script.js - FINAL, CORRECTED, AND RESTRUCTURED
 document.addEventListener('DOMContentLoaded', () => {
-    // A variable to hold our entire media database once it's loaded
+    // --- STATE MANAGEMENT ---
     let allMedia = [];
-    
-    // The main elements we will be working with
-    const searchInput = document.getElementById('search-input');
+    let currentFilterItems = [];
+    let itemsCurrentlyDisplayed = 0;
+    const ITEMS_PER_PAGE = 50;
+
+    // --- ELEMENT SELECTORS ---
     const countdownGrid = document.querySelector('.countdown-grid');
     const pageTitleElement = document.querySelector('.grid-title');
+    const searchInput = document.getElementById('search-input');
+    const gridHeader = document.querySelector('.grid-header');
+    const mainGrid = document.querySelector('.grid-main');
 
-    // --- 1. DATA FETCHING ---
-    // Fetches our local database and starts the initial page setup
-    async function fetchDataAndInitialize() {
-        try {
-            const response = await fetch('database.json');
-            allMedia = await response.json();
-            console.log("Database loaded successfully.", allMedia.length, "items.");
-            
-            // Render the initial set of cards based on the page's title
-            renderInitialCards();
-            
-        } catch (error) {
-            console.error("Failed to load database.json:", error);
-            countdownGrid.innerHTML = "<p>Error: Could not load data.</p>";
-        }
-    }
-
-    // --- 2. RENDERING LOGIC ---
-    // Clears the grid and renders a new set of cards from a provided list
-    function renderCards(itemList) {
-        if (!countdownGrid) return;
-        
-        countdownGrid.innerHTML = ''; // Clear the grid
-
-        if (itemList.length === 0) {
-            countdownGrid.innerHTML = "<p>No results found.</p>";
-            return;
-        }
-
-        let cardsHtml = '';
-        itemList.forEach(item => {
-            cardsHtml += createCardHtml(item);
-        });
-
-        countdownGrid.innerHTML = cardsHtml;
-        initializeAllCountdowns(); // CRUCIAL: Re-initialize timers for the new cards
-    }
-
-    // --- 3. SEARCH LOGIC ---
-    // This function is called every time the user types in the search box
-    function handleSearch() {
-        if (allMedia.length === 0) return; // Don't search if database isn't loaded yet
-
-        const query = searchInput.value.toLowerCase();
-        
-        // Filter the entire database based on the search query
-        const filteredMedia = allMedia.filter(item => {
-            return item.title.toLowerCase().includes(query);
-        });
-
-        // Update the title and render the filtered cards
-        pageTitleElement.textContent = query ? `Search results for "${searchInput.value}"` : "All Media";
-        renderCards(filteredMedia);
-    }
+    // =========================================================================
+    // HELPER FUNCTIONS (Defined FIRST)
+    // =========================================================================
     
-    // Attach the event listener to the search input
-    if (searchInput) {
-        searchInput.addEventListener('input', handleSearch);
-    }
-
-    // --- 4. HELPER FUNCTIONS ---
-    // Renders the initial cards based on what page we are on
-    function renderInitialCards() {
-        const pageTitle = pageTitleElement.textContent.toLowerCase();
-        const initialFilter = allMedia.filter(item => {
-            if (pageTitle.includes('upcoming') && pageTitle.includes('movies')) return item.type === 'movie' && new Date(item.releaseDate) > new Date();
-            if (pageTitle.includes('upcoming') && pageTitle.includes('tv')) return item.type === 'tv' && new Date(item.releaseDate) > new Date();
-            if (pageTitle.includes('launched') && pageTitle.includes('movies')) return item.type === 'movie' && new Date(item.releaseDate) <= new Date();
-            if (pageTitle.includes('launched') && pageTitle.includes('tv')) return item.type === 'tv' && new Date(item.releaseDate) <= new Date();
-            return false;
-        });
-        renderCards(initialFilter);
-    }
-
-    // Generates the HTML for a single card
-    function createCardHtml(item) {
-        const posterUrl = `https://image.tmdb.org/t/p/w500${item.posterImage}`;
-        const isLaunched = new Date(item.releaseDate) < new Date();
+    function createCardElement(item) {
+        if (!item || !item.title || !item.posterImage) return null;
+        let posterUrl = item.posterImage;
+        if ((item.type === 'movie' || item.type === 'tv') && posterUrl && !posterUrl.startsWith('http')) {
+            posterUrl = `https://image.tmdb.org/t/p/w500${posterUrl}`;
+        }
+        
+        const releaseDate = item.releaseDate || 'N/A';
+        const isLaunched = releaseDate === 'N/A' ? false : new Date(releaseDate) < new Date();
+        const tagType = (item.type || 'MEDIA').toUpperCase();
         const timerOrStatusHtml = isLaunched ? `<div class="card-status"><h4>Launched</h4></div>` : `<div class="card-timer"><div><span class="days">0</span><p>Days</p></div><div><span class="hours">0</span><p>Hours</p></div><div><span class="mins">0</span><p>Mins</p></div><div><span class="secs">0</span><p>Secs</p></div></div>`;
-        const tagType = item.type.toUpperCase();
-        return `<a href="details.html?id=${item.type}-${item.id}" class="countdown-card" data-date="${item.releaseDate}T12:00:00"><img src="${posterUrl}" class="card-bg" alt="${item.title} Poster"><div class="card-overlay"></div><div class="card-content"><div class="card-tag">${tagType}</div><h3>${item.title}</h3>${timerOrStatusHtml}</div></a>`;
+        
+        const cardLink = document.createElement('a');
+        cardLink.href = `details.html?id=${item.type}-${item.id}`;
+        cardLink.className = 'countdown-card';
+        cardLink.dataset.date = `${releaseDate}T12:00:00`;
+        cardLink.dataset.poster = posterUrl;
+        (item.screenshots || []).forEach((ss, i) => { cardLink.dataset[`ss${i}`] = ss; });
+
+        cardLink.innerHTML = `
+            <div class="card-bg" style="background-image: url('${posterUrl}')"></div>
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <div class="card-tag">${tagType}</div>
+                <h3>${item.title}</h3>
+                ${timerOrStatusHtml}
+            </div>`;
+        return cardLink;
     }
 
-    // Initializes all timers on the currently visible cards
     function initializeAllCountdowns() {
-        const countdownCards = document.querySelectorAll('.countdown-card');
-        countdownCards.forEach(card => {
-            const timerDiv = card.querySelector('.card-timer');
-            if (!timerDiv) return; // Skip launched cards
-
+        document.querySelectorAll('.countdown-card .card-timer').forEach(timerDiv => {
+            const card = timerDiv.closest('.countdown-card');
+            if (!card) return;
             const eventDateStr = card.dataset.date;
             if (!eventDateStr || isNaN(new Date(eventDateStr).getTime())) return;
-            
             const eventDate = new Date(eventDateStr);
-            const timerElements = {
-                days: card.querySelector('.days'),
-                hours: card.querySelector('.hours'),
-                mins: card.querySelector('.mins'),
-                secs: card.querySelector('.secs')
-            };
-
+            const timerElements = { days: timerDiv.querySelector('.days'), hours: timerDiv.querySelector('.hours'), mins: timerDiv.querySelector('.mins'), secs: timerDiv.querySelector('.secs') };
+            if (!timerElements.days) return;
             const updateCountdown = () => {
                 const diff = eventDate.getTime() - new Date().getTime();
                 if (diff <= 0) {
-                    timerDiv.innerHTML = "<h4>Launched</h4>";
-                    clearInterval(timer);
+                    if (timerDiv) timerDiv.innerHTML = "<h4>Launched</h4>";
+                    if (timer) clearInterval(timer);
                     return;
                 }
                 timerElements.days.textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -125,6 +73,200 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 5. START EVERYTHING ---
-    fetchDataAndInitialize();
+    function addSeeMoreButton() {
+        const button = document.createElement('button');
+        button.id = 'see-more-btn';
+        button.textContent = 'See More';
+        mainGrid.appendChild(button);
+    }
+    
+    function removeSeeMoreButton() {
+        const button = document.getElementById('see-more-btn');
+        if (button) button.remove();
+    }
+    
+    function addGenresDropdownIfNeeded() {
+        if (!gridHeader || !pageTitleElement) return;
+        const pageTitle = pageTitleElement.textContent.toLowerCase();
+        const isGame = pageTitle.includes('games');
+        const isMovieOrTv = pageTitle.includes('movies') || pageTitle.includes('tv');
+        if (!isMovieOrTv && !isGame) return;
+        const movieTvGenres = ['Action', 'Horror', 'Comedy', 'Science Fiction', 'Romance', 'Fantasy', 'Drama'];
+        const gameGenres = ['Action', 'RPG', 'Shooter', 'Strategy', 'Puzzle', 'Adventure', 'Indie', 'Simulation'];
+        const genres = isGame ? gameGenres : movieTvGenres;
+        let genreLinks = '<a href="#" class="genre-link" data-genre="all">All Genres</a>';
+        genres.forEach(genre => { genreLinks += `<a href="#" class="genre-link" data-genre="${genre}">${genre}</a>`; });
+        const dropdown = document.createElement('div');
+        dropdown.className = 'genres-dropdown';
+        dropdown.innerHTML = `<button class="genres-button">Genres ▼</button><div class="genres-list">${genreLinks}</div></div>`;
+        gridHeader.appendChild(dropdown);
+    }
+
+    function handleCardMouseEnter(event) {
+        const card = event.target.closest('.countdown-card');
+        if (!card || card.dataset.ss0 === undefined) return;
+        const screenshots = [];
+        for (let i = 0; i < 4; i++) { if (card.dataset[`ss${i}`]) screenshots.push(card.dataset[`ss${i}`]); }
+        if (screenshots.length <= 0) return;
+        let currentIndex = 0;
+        const bgElement = card.querySelector('.card-bg');
+        const slideshowInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % screenshots.length;
+            bgElement.style.backgroundImage = `url('${screenshots[currentIndex]}')`;
+        }, 1500);
+        card.dataset.slideshowInterval = slideshowInterval;
+    }
+
+    function handleCardMouseLeave(event) {
+        const card = event.target.closest('.countdown-card');
+        if (!card || !card.dataset.slideshowInterval) return;
+        clearInterval(parseInt(card.dataset.slideshowInterval));
+        card.removeAttribute('data-slideshow-interval');
+        const bgElement = card.querySelector('.card-bg');
+        bgElement.style.backgroundImage = `url('${card.dataset.poster}')`;
+    }
+
+    // =========================================================================
+    // RENDERING LOGIC
+    // =========================================================================
+    
+    function renderCards(itemList) {
+        countdownGrid.innerHTML = '';
+        if (itemList.length === 0) {
+            countdownGrid.innerHTML = "<p>No results found.</p>";
+            return;
+        }
+        const cardsFragment = document.createDocumentFragment();
+        itemList.forEach(item => {
+            const cardElement = createCardElement(item);
+            if (cardElement) cardsFragment.appendChild(cardElement);
+        });
+        countdownGrid.appendChild(cardsFragment);
+        initializeAllCountdowns();
+    }
+    
+    function renderInitialPage() {
+        itemsCurrentlyDisplayed = 0;
+        countdownGrid.innerHTML = '';
+        renderMoreCards();
+    }
+    
+    function renderMoreCards() {
+        removeSeeMoreButton();
+        const itemsToRender = currentFilterItems.slice(itemsCurrentlyDisplayed, itemsCurrentlyDisplayed + ITEMS_PER_PAGE);
+        
+        const cardsFragment = document.createDocumentFragment();
+        itemsToRender.forEach(item => {
+            const cardElement = createCardElement(item);
+            if (cardElement) cardsFragment.appendChild(cardElement);
+        });
+        countdownGrid.appendChild(cardsFragment);
+        initializeAllCountdowns();
+        
+        itemsCurrentlyDisplayed += itemsToRender.length;
+        
+        if (itemsCurrentlyDisplayed < currentFilterItems.length) {
+            addSeeMoreButton();
+        }
+    }
+    
+    // =========================================================================
+    // FILTERING & SEARCH LOGIC
+    // =========================================================================
+
+    function getBaseItemsForCurrentPage() {
+        const pageTitle = pageTitleElement.textContent.toLowerCase();
+        return allMedia.filter(item => {
+            if (!item.releaseDate || !item.posterImage) return false;
+            const isUpcoming = new Date(item.releaseDate) > new Date();
+            const isMovie = item.type === 'movie';
+            const isTv = item.type === 'tv';
+            const isGame = item.type === 'game';
+            if (pageTitle.includes('upcoming movies')) return isMovie && isUpcoming;
+            if (pageTitle.includes('upcoming tv')) return isTv && isUpcoming;
+            if (pageTitle.includes('upcoming games')) return isGame && isUpcoming;
+            if (pageTitle.includes('launched movies')) return isMovie && !isUpcoming;
+            if (pageTitle.includes('launched tv')) return isTv && !isUpcoming;
+            if (pageTitle.includes('launched games')) return isGame && !isUpcoming;
+            return false;
+        });
+    }
+    
+    function filterAndSetInitialItems() {
+        currentFilterItems = getBaseItemsForCurrentPage();
+    }
+
+    function handleGenreFilter(genre) {
+        const baseItems = getBaseItemsForCurrentPage();
+        currentFilterItems = (genre === 'all')
+            ? baseItems
+            : baseItems.filter(item => (item.genres || []).includes(genre));
+        renderInitialPage();
+    }
+    
+    function handleSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        removeSeeMoreButton();
+        if (query.length > 2) {
+             const filtered = allMedia.filter(item => item.title && item.title.toLowerCase().includes(query));
+             pageTitleElement.textContent = `Search Results for "${searchInput.value}"`;
+             renderCards(filtered);
+        } else if (query.length === 0) {
+            pageTitleElement.textContent = originalPageTitle;
+            filterAndSetInitialItems();
+            renderInitialPage();
+        }
+    }
+    
+    // =========================================================================
+    // EVENT LISTENER SETUP (Defined before it's called)
+    // =========================================================================
+    function setupEventListeners() {
+        if (gridHeader) {
+            gridHeader.addEventListener('click', (event) => {
+                if (event.target.classList.contains('genre-link')) {
+                    event.preventDefault();
+                    handleGenreFilter(event.target.dataset.genre);
+                }
+            });
+        }
+        if (searchInput) searchInput.addEventListener('input', handleSearch);
+        if (mainGrid) {
+            mainGrid.addEventListener('click', (event) => {
+                if (event.target.id === 'see-more-btn') {
+                    renderMoreCards();
+                }
+            });
+        }
+        if (countdownGrid) {
+            countdownGrid.addEventListener('mouseenter', handleCardMouseEnter, true);
+            countdownGrid.addEventListener('mouseleave', handleCardMouseLeave, true);
+        }
+    }
+    
+    // =========================================================================
+    // INITIALIZATION (The main entry point, now at the end)
+    // =========================================================================
+    async function initializePage() {
+        if (!pageTitleElement || !countdownGrid) return; 
+        
+        originalPageTitle = pageTitleElement.textContent; 
+        
+        try {
+            const response = await fetch('database.json');
+            if (!response.ok) throw new Error('database.json not found');
+            allMedia = await response.json();
+            
+            filterAndSetInitialItems();
+            renderInitialPage();
+            addGenresDropdownIfNeeded();
+            setupEventListeners(); // This will now work correctly
+        } catch (error) {
+            console.error("Initialization failed:", error);
+            countdownGrid.innerHTML = "<p>Error loading page data.</p>";
+        }
+    }
+
+    // --- KICK EVERYTHING OFF ---
+    initializePage();
 });

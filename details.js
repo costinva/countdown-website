@@ -1,100 +1,109 @@
-// This script runs as soon as the details.html page is loaded
+// details.js - FINAL, BULLETPROOF VERSION
 window.addEventListener('DOMContentLoaded', async () => {
-    
-    // --- 1. GET DATA AND FIND THE ITEM ---
+    const heroTitle = document.getElementById('hero-title');
     const params = new URLSearchParams(window.location.search);
     const itemId = params.get('id');
 
     if (!itemId) {
-        document.getElementById('hero-title').textContent = 'Error: Item not found.';
+        heroTitle.textContent = 'Error: No item ID provided.';
         return;
     }
 
     try {
         const response = await fetch('database.json');
+        if (!response.ok) throw new Error(`Network response was not ok: ${response.statusText}`);
         const database = await response.json();
-        
         const [type, numericId] = itemId.split('-');
         const item = database.find(i => i.type === type && i.id == numericId);
 
         if (!item) {
-            document.getElementById('hero-title').textContent = 'Error: Item not found in database.';
+            heroTitle.textContent = 'Error: Item not found in our database.';
             return;
         }
+        populatePage(item);
+    } catch (error) {
+        console.error("A critical error occurred:", error);
+        heroTitle.textContent = 'Error: Could not load data.';
+    }
+});
 
-        // --- 2. START THE BACKDROP SLIDESHOW (with new fallback logic) ---
-        startBackdropSlideshow(item.backdrops, item.posterImage);
+function populatePage(item) {
+    document.getElementById('hero-title').textContent = item.title || 'Title not available';
+    document.getElementById('details-title').textContent = item.title || 'Title not available';
+    document.getElementById('details-overview').textContent = item.overview || 'No overview available.';
+    
+    // --- CRITICAL FIX: Handles all image URL types ---
+    let posterUrl = item.posterImage;
+    if ((item.type === 'movie' || item.type === 'tv') && posterUrl && !posterUrl.startsWith('http')) {
+        posterUrl = `https://image.tmdb.org/t/p/w500${posterUrl}`;
+    }
+    if (posterUrl) document.getElementById('details-poster-img').src = posterUrl;
+    
+    startBackdropSlideshow(item.backdrops, item.posterImage, item.type);
 
-        // --- 3. POPULATE THE HERO SECTION ---
-        document.getElementById('hero-title').textContent = item.title;
-        const releaseDate = new Date(item.releaseDate + "T12:00:00");
-
-        if (releaseDate > new Date()) {
-            startCountdown(releaseDate);
-        } else {
-            document.getElementById('hero-countdown').classList.add('hidden');
-            document.getElementById('hero-status').classList.remove('hidden');
-        }
-
-        // --- 4. POPULATE THE DETAILS CONTENT SECTION ---
-        const posterUrl = `https://image.tmdb.org/t/p/w500${item.posterImage}`;
-        document.getElementById('details-poster-img').src = posterUrl;
-        
-        document.getElementById('details-title').textContent = item.title;
-        document.getElementById('details-release-date').textContent = `Release: ${item.releaseDate}`;
-        document.getElementById('details-genres').textContent = item.genres.join(', ');
-        document.getElementById('details-overview').textContent = item.overview;
-        
-        const score = Math.round(item.score || 0); // Use 0 as a default if score is missing
+    if (item.releaseDate) {
+        const releaseDate = new Date(item.releaseDate);
+        if (releaseDate > new Date()) { startCountdown(releaseDate); } 
+        else { document.getElementById('hero-countdown').classList.add('hidden'); document.getElementById('hero-status').classList.remove('hidden'); }
+    } else { document.getElementById('hero-countdown').classList.add('hidden'); document.getElementById('hero-status').classList.remove('hidden'); }
+    
+    const movieTvInfo = document.getElementById('movie-tv-info');
+    const gameInfo = document.getElementById('game-info');
+    if (item.type === 'movie' || item.type === 'tv') {
+        if (movieTvInfo) movieTvInfo.classList.remove('hidden');
+        if (gameInfo) gameInfo.classList.add('hidden');
+        document.getElementById('details-release-date').textContent = `Release: ${item.releaseDate || 'N/A'}`;
+        document.getElementById('details-genres').textContent = (item.genres || []).join(', ');
+        const score = Math.round(item.score || 0);
         const scoreCircle = document.getElementById('details-score-circle');
         scoreCircle.textContent = `${score}%`;
         if (score >= 70) scoreCircle.style.borderColor = '#21d07a';
         else if (score >= 40) scoreCircle.style.borderColor = '#d2d531';
         else scoreCircle.style.borderColor = '#db2360';
-
-    } catch (error) {
-        console.error("Error loading or processing data:", error);
-        document.getElementById('hero-title').textContent = 'Error: Could not load data.';
+    } else if (item.type === 'game') {
+        if (gameInfo) gameInfo.classList.remove('hidden');
+        if (movieTvInfo) movieTvInfo.classList.add('hidden');
+        const requirementsDiv = document.getElementById('system-requirements');
+        if (requirementsDiv) {
+            if (item.systemRequirements) { requirementsDiv.innerHTML = item.systemRequirements; } 
+            else { requirementsDiv.textContent = 'No PC requirements available.'; }
+        }
     }
-});
+}
 
-
-// --- HELPER FUNCTIONS ---
-
-function startBackdropSlideshow(backdrops, posterImage) {
+function startBackdropSlideshow(backdrops, posterImage, type) {
     const backdropElement = document.getElementById('hero-backdrop');
     
-    // Check if we have a valid list of backdrops
-    if (backdrops && backdrops.length > 0) {
-        // --- SLIDESHOW LOGIC ---
-        let currentBackdropIndex = 0;
+    // Helper function to build a full URL safely
+    const buildFullUrl = (path) => {
+        if (!path) return null;
+        if (path.startsWith('http')) return path; // For RAWG/TVmaze
+        if (type === 'movie' || type === 'tv') return `https://image.tmdb.org/t/p/original${path}`;
+        return null;
+    };
+    
+    const imageUrls = (backdrops || []).map(buildFullUrl).filter(Boolean);
+    const fallbackUrl = buildFullUrl(posterImage);
+
+    if (imageUrls.length > 0) {
+        let currentIndex = 0;
         const changeBackdrop = () => {
-            const backdropUrl = `https://image.tmdb.org/t/p/original${backdrops[currentBackdropIndex]}`;
-            backdropElement.style.backgroundImage = `url('${backdropUrl}')`;
-            currentBackdropIndex = (currentBackdropIndex + 1) % backdrops.length;
+            backdropElement.style.backgroundImage = `url('${imageUrls[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % imageUrls.length;
         };
         changeBackdrop();
         setInterval(changeBackdrop, 7000);
-
-    } else if (posterImage) {
-        // --- FALLBACK LOGIC ---
-        // If no backdrops, use the poster as a blurred background
-        console.log("No backdrops found. Using poster as fallback.");
-        const posterUrl = `https://image.tmdb.org/t/p/original${posterImage}`;
-        backdropElement.style.backgroundImage = `url('${posterUrl}')`;
-        // We will add a new CSS class to apply the blur effect
+    } else if (fallbackUrl) {
+        backdropElement.style.backgroundImage = `url('${fallbackUrl}')`;
         backdropElement.classList.add('fallback-blur');
     }
 }
 
-
 function startCountdown(eventDate) {
-    // ... (This function is the same as the previous version)
     const daysEl = document.getElementById('hero-days');
     const hoursEl = document.getElementById('hero-hours');
     const minsEl = document.getElementById('hero-mins');
     const secsEl = document.getElementById('hero-secs');
-
     const update = () => {
         const diff = eventDate.getTime() - new Date().getTime();
         if (diff <= 0) {
@@ -108,7 +117,6 @@ function startCountdown(eventDate) {
         minsEl.textContent = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
         secsEl.textContent = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
     };
-
     const timer = setInterval(update, 1000);
     update();
 }

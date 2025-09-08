@@ -1,0 +1,16 @@
+{
+  "id": 3321,
+  "type": "tv",
+  "title": "NOVA (New Episode)",
+  "releaseDate": "2025-09-17",
+  "posterImage": "https://static.tvmaze.com/uploads/images/original_untouched/17/44039.jpg",
+  "backdropImage": "https://static.tvmaze.com/uploads/images/original_untouched/17/44039.jpg",
+  "overview": "NOVA brings you stories from the frontlines of science and engineering, answering the big questions of today and tomorrow, from how our ancestors lived, to whether parallel universes exist, to how technology will transform our lives.",
+  "score": 84,
+  "genres": [
+    "Nature",
+    "History"
+  ],
+  "screenshots": [],
+  "systemRequirements": null
+}

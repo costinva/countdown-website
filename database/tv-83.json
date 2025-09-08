@@ -1,0 +1,16 @@
+{
+  "id": 83,
+  "type": "tv",
+  "title": "The Simpsons (New Episode)",
+  "releaseDate": "2025-09-28",
+  "posterImage": "https://static.tvmaze.com/uploads/images/original_untouched/586/1465676.jpg",
+  "backdropImage": "https://static.tvmaze.com/uploads/images/original_untouched/586/1465676.jpg",
+  "overview": "The Simpsons is the longest running scripted show in US television history. It captures the adventures of Homer, Marge, Maggie, Bart and Lisa who are living in a fictional town called Springfield.",
+  "score": 81,
+  "genres": [
+    "Comedy",
+    "Family"
+  ],
+  "screenshots": [],
+  "systemRequirements": null
+}

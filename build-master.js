@@ -1,23 +1,59 @@
-// build-master.js - FINAL, CORRECTED VERSION
+// build-master.js - FINAL, CORRECTED VERSION FOR DATABASE SPLIT
 const fs = require('fs');
+const path = require('path'); // Added for path manipulation
 
 function buildMaster() {
-    console.log("Master Robot starting... Combining all available data...");
+    console.log("Master Robot starting... Combining all available data and splitting for frontend...");
 
-    // Load data from all worker robots
+    // 1. Ensure the 'database' directory exists
+    const databaseDir = 'database';
+    fs.mkdirSync(databaseDir, { recursive: true });
+    
+    // 2. Load data from all worker robots
     const moviesData = fs.existsSync('movies.json') ? JSON.parse(fs.readFileSync('movies.json')) : [];
-    const tvData = fs.existsSync('tv.json') ? JSON.parse(fs.readFileSync('tv.json')) : [];
+    const tvUpcomingData = fs.existsSync('tv-upcoming.json') ? JSON.parse(fs.readFileSync('tv-upcoming.json')) : [];
+    const tvArchiveData = fs.existsSync('tv-archive.json') ? JSON.parse(fs.readFileSync('tv-archive.json')) : [];
     const gamesData = fs.existsSync('rawg-data.json') ? JSON.parse(fs.readFileSync('rawg-data.json')) : [];
 
-    const allMediaDetailed = [...moviesData, ...tvData, ...gamesData];
+    // Combine all TV data, prioritizing upcoming if an ID clashes (though not expected with different types)
+    // We want unique TV shows. If an archived show also appears in upcoming, we take the upcoming version.
+    const combinedTvDataMap = new Map();
+    tvArchiveData.forEach(item => combinedTvDataMap.set(item.id, item));
+    tvUpcomingData.forEach(item => combinedTvDataMap.set(item.id, item)); // Upcoming overwrites archive for same ID
+    const combinedTvData = Array.from(combinedTvDataMap.values());
+
+    const allMediaDetailed = [...moviesData, ...combinedTvData, ...gamesData];
     
-    fs.writeFileSync('database.json', JSON.stringify(allMediaDetailed, null, 2));
-    console.log(`Successfully created master database.json with ${allMediaDetailed.length} items.`);
+    console.log(`Master Robot has collected ${allMediaDetailed.length} detailed items.`);
+
+    // 3. Create the lightweight 'database.json' manifest for script.js
+    const manifestData = allMediaDetailed.map(item => ({
+        id: item.id,
+        type: item.type,
+        title: item.title,
+        releaseDate: item.releaseDate,
+        posterImage: item.posterImage,
+        genres: item.genres,
+        // Add other properties if script.js needs them directly for filtering/display BEFORE clicking
+        // E.g., if search needs overview, it needs to be here. For now, assuming script.js only needs basic for list display.
+        overview: item.overview // Added as script.js uses it for search currently
+    }));
+
+    fs.writeFileSync('database.json', JSON.stringify(manifestData, null, 2));
+    console.log(`Successfully created lightweight database.json manifest with ${manifestData.length} items.`);
+
+    // 4. Create individual detail files in the 'database/' folder
+    allMediaDetailed.forEach(item => {
+        const fileName = `${item.type}-${item.id}.json`; // e.g., 'movie-123.json', 'tv-456.json'
+        fs.writeFileSync(path.join(databaseDir, fileName), JSON.stringify(item, null, 2));
+    });
+    console.log(`Successfully created ${allMediaDetailed.length} individual detail files in '${databaseDir}/' folder.`);
 
     const today = new Date();
-    const allValidMedia = allMediaDetailed.filter(item => item.releaseDate && item.posterImage);
-    const upcoming = allValidMedia.filter(item => new Date(item.releaseDate) > today);
-    const launched = allValidMedia.filter(item => new Date(item.releaseDate) <= today);
+    // Filter by the manifest data, as that's what the front-end script.js will get
+    const allValidMediaFromManifest = manifestData.filter(item => item.releaseDate && item.posterImage);
+    const upcoming = allValidMediaFromManifest.filter(item => new Date(item.releaseDate) > today);
+    const launched = allValidMediaFromManifest.filter(item => new Date(item.releaseDate) <= today);
 
     // Build all pages using the clean HTML template
     fs.writeFileSync('index.html', generateFinalHtml(upcoming.filter(i => i.type === 'movie'), 'upcoming', 'movies'));
@@ -31,8 +67,7 @@ function buildMaster() {
     console.log("Master Robot's job is done.");
 }
 
-// THIS IS THE CRITICAL FIX: This function is now very simple.
-// It DOES NOT build the cards OR the dropdown menu.
+// generateFinalHtml function remains the same as you provided
 function generateFinalHtml(itemList, mainCategory, subCategory) {
     const moviesActive = subCategory === 'movies' ? 'class="active"' : '';
     const tvActive = subCategory === 'tv' ? 'class="active"' : '';
@@ -91,7 +126,5 @@ function generateFinalHtml(itemList, mainCategory, subCategory) {
 </html>
     `;
 }
-
-// We don't need generateCardHtml in this file anymore, so we remove it to be clean.
 
 buildMaster();

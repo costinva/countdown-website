@@ -1,0 +1,15 @@
+{
+  "id": 42005,
+  "type": "tv",
+  "title": "There's Something About Movies",
+  "releaseDate": "2019-05-02",
+  "posterImage": "https://static.tvmaze.com/uploads/images/original_untouched/482/1206631.jpg",
+  "backdropImage": "https://static.tvmaze.com/uploads/images/original_untouched/482/1206631.jpg",
+  "overview": "Alan Carr hosts a fun-packed panel show that puts comedians and actors' film trivia to the test.",
+  "score": null,
+  "genres": [
+    "Comedy"
+  ],
+  "screenshots": [],
+  "systemRequirements": null
+}

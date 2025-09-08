@@ -1,0 +1,15 @@
+{
+  "id": 42069,
+  "type": "tv",
+  "title": "Super Band",
+  "releaseDate": "2019-04-12",
+  "posterImage": "https://static.tvmaze.com/uploads/images/original_untouched/331/829668.jpg",
+  "backdropImage": "https://static.tvmaze.com/uploads/images/original_untouched/331/829668.jpg",
+  "overview": "JTBC's music audition show Super Band was launched on a mission to create a \"super\" band composed of versatile musicians capable of producing music spanning many musical genres. The contestants will pair with each other to make their own bands and advance to each round. The final winning band receives prize money of 100 million won and the chance to have a concert tour.",
+  "score": null,
+  "genres": [
+    "Music"
+  ],
+  "screenshots": [],
+  "systemRequirements": null
+}

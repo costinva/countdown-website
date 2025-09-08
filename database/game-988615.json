@@ -1,0 +1,21 @@
+{
+  "id": 988615,
+  "type": "game",
+  "title": "Borderlands 4",
+  "releaseDate": "2025-09-12",
+  "posterImage": "https://media.rawg.io/media/games/9cc/9ccb59a7c634091bc8a9b7978d4dc322.jpg",
+  "backdropImage": "https://media.rawg.io/media/games/9cc/9ccb59a7c634091bc8a9b7978d4dc322.jpg",
+  "overview": "See if you have what it takes to go down in history as a legendary Vault Hunter as you search for secret alien treasure, blasting everything in sight.",
+  "score": null,
+  "genres": [
+    "Adventure",
+    "Action",
+    "RPG"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/games/9cc/9ccb59a7c634091bc8a9b7978d4dc322.jpg",
+    "https://media.rawg.io/media/screenshots/4fd/4fd722f6d31564c28b86b39c4fb341c9.jpg",
+    "https://media.rawg.io/media/screenshots/1a4/1a487bfc4e5b2b5245807cbe82672bd2.jpg"
+  ],
+  "systemRequirements": null
+}

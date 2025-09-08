@@ -1,0 +1,20 @@
+{
+  "id": 1009898,
+  "type": "game",
+  "title": "Day Of The Tank",
+  "releaseDate": "2025-09-01",
+  "posterImage": "https://media.rawg.io/media/screenshots/e11/e11e0e46dc4695b38797f9d8e813da5a.jpg",
+  "backdropImage": "https://media.rawg.io/media/screenshots/e11/e11e0e46dc4695b38797f9d8e813da5a.jpg",
+  "overview": "Defend your Command Post from waves of enemy tanks by killing all of them. Fight across multiple destructible levels.FeaturesPlayer Tanks\nThey are equipped with an auto-loader that can reload shells in one second. Base/Command PostKeep it safe, and don't shoot it yourself. Three hits and it is destroyed.Enemy Tanks                  Each enemy uses a different navigation algorithm to find the CP or you. Kill them all to beat the level.There are also special enemies that are armored:                   or drop powerups:                    PowerupsCall in an artillery strike to decimate your enemiesSpeed up your reload speed and blanket a lane with shellsGenerate a temporary force field around your tank for protection Repair and give temporary invulnerability to your CPAcquire an additional lifeFreeze all enemies on the battlefield for a moment",
+  "score": null,
+  "genres": [
+    "Action"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/screenshots/e11/e11e0e46dc4695b38797f9d8e813da5a.jpg",
+    "https://media.rawg.io/media/screenshots/155/15532e0717c8eb8de02835c567149f2d.jpg",
+    "https://media.rawg.io/media/screenshots/3ad/3ad12c2453f883781d19cf3133150455.jpg",
+    "https://media.rawg.io/media/screenshots/21a/21afbb9a1fcdef81c891ca37191bcaaa.jpg"
+  ],
+  "systemRequirements": null
+}

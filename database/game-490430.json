@@ -1,0 +1,20 @@
+{
+  "id": 490430,
+  "type": "game",
+  "title": "Prince of Persia: The Sands of Time Remake",
+  "releaseDate": "2026-12-31",
+  "posterImage": "https://media.rawg.io/media/games/b92/b92b55aeab9ed1777104f71f4b22a613.jpg",
+  "backdropImage": "https://media.rawg.io/media/games/b92/b92b55aeab9ed1777104f71f4b22a613.jpg",
+  "overview": "The Prince has returned! Experience the classic tale that redefined action-adventure gaming in this full-scale remake for a new generation.\n\n- You are the Prince of Persia. Embark on a journey to save your kingdom from the treacherous Vizier.\n- Master the Sands of Time and use your dagger to reverse, accelerate, freeze, and slow time itself.\n- Fight cursed enemies and solve puzzles along the way.\n- Experience incredible graphical enhancements and re-designed gameplay mechanics.\n- Unlock Prince of Persia, the original game from 1989, along your journey.",
+  "score": null,
+  "genres": [
+    "Action"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/games/b92/b92b55aeab9ed1777104f71f4b22a613.jpg",
+    "https://media.rawg.io/media/screenshots/27e/27eda6606d4c7a763ab0352319f6c601.jpg",
+    "https://media.rawg.io/media/screenshots/a73/a731e879c475428c35d5a13b9512c742.jpg",
+    "https://media.rawg.io/media/screenshots/797/7976cd46c437ec13f7f8e70c1f1dbee8.jpg"
+  ],
+  "systemRequirements": null
+}

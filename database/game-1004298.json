@@ -1,0 +1,20 @@
+{
+  "id": 1004298,
+  "type": "game",
+  "title": "007 First Light",
+  "releaseDate": "2026-03-27",
+  "posterImage": "https://media.rawg.io/media/screenshots/490/490ccae2dcd56af896bda49422bdf5c0.jpg",
+  "backdropImage": "https://media.rawg.io/media/screenshots/490/490ccae2dcd56af896bda49422bdf5c0.jpg",
+  "overview": "007 First Light is a brand new James Bond video game developed and published by IO Interactive.\n\nFeaturing a wholly original Bond origin story, players will step into the shoes of the world's favorite Secret Agent to earn their 00 status.",
+  "score": null,
+  "genres": [
+    "Action"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/screenshots/490/490ccae2dcd56af896bda49422bdf5c0.jpg",
+    "https://media.rawg.io/media/screenshots/09a/09a91ae875c2d3cc9b0d7aa73ea816bd.jpg",
+    "https://media.rawg.io/media/screenshots/234/234ec23a3478d26f066a65cf9910ec1f.jpg",
+    "https://media.rawg.io/media/screenshots/21f/21f4b318f2611d8d23dc3cbb1c3be746.jpg"
+  ],
+  "systemRequirements": null
+}

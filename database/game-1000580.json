@@ -1,0 +1,18 @@
+{
+  "id": 1000580,
+  "type": "game",
+  "title": "Kirby Air Riders",
+  "releaseDate": "2025-11-20",
+  "posterImage": "https://media.rawg.io/media/games/083/0839770a3c15e3e6edf658fe2a5cc830.jpg",
+  "backdropImage": "https://media.rawg.io/media/games/083/0839770a3c15e3e6edf658fe2a5cc830.jpg",
+  "overview": "A new game titled Kirby Air Riders. More details to come.",
+  "score": null,
+  "genres": [
+    "Adventure",
+    "Action"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/games/083/0839770a3c15e3e6edf658fe2a5cc830.jpg"
+  ],
+  "systemRequirements": null
+}

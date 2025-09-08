@@ -1,0 +1,17 @@
+{
+  "id": 1005610,
+  "type": "game",
+  "title": "Painkiller",
+  "releaseDate": "2025-10-09",
+  "posterImage": "https://media.rawg.io/media/games/a2c/a2c382cdfc98dcbb1a9448a41b664875.jpg",
+  "backdropImage": "https://media.rawg.io/media/games/a2c/a2c382cdfc98dcbb1a9448a41b664875.jpg",
+  "overview": "A new game titled Painkiller. More details to come.",
+  "score": null,
+  "genres": [
+    "Shooter"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/games/a2c/a2c382cdfc98dcbb1a9448a41b664875.jpg"
+  ],
+  "systemRequirements": null
+}

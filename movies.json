@@ -1975,28 +1975,13 @@
     "systemRequirements": null
   },
   {
-    "id": 1537123,
+    "id": 628898,
     "type": "movie",
-    "title": "Me Too",
-    "releaseDate": "2025-09-18",
-    "posterImage": "/xwubH8xYFHBDuTVmXriLfVyJUnP.jpg",
+    "title": "Queen of Manhattan",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/hvKZPrKntHkTLinu3JwgziUDrmQ.jpg",
     "backdrops": [],
-    "overview": "",
-    "score": 0,
-    "genres": [
-      "Crime"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1413529,
-    "type": "movie",
-    "title": "Hustle",
-    "releaseDate": "2025-09-27",
-    "posterImage": "/lWIk4Djk8rnHWlyGLUdzB2i4mBo.jpg",
-    "backdrops": [],
-    "overview": "Mia Sloan is a bright yet unmotivated 29-year-old waitress who suddenly finds herself in the unenviable position of having one day to raise thousands of dollars in back-due rent in order to stave off eviction. During this memorably hectic day, Mia journeys through her hometown of Tallahassee, encountering various figures from her life while attempting to earn the funds any way she can.",
+    "overview": "Follows the wild, exhilarating life of legendary adult film icon Vanessa Del Rio, set against the backdrop of organized crime-controlled Times Square during the 70s and 80s.",
     "score": 0,
     "genres": [
       "Drama"
@@ -2005,63 +1990,16 @@
     "systemRequirements": null
   },
   {
-    "id": 1080365,
+    "id": 1418569,
     "type": "movie",
-    "title": "They Call Him OG",
-    "releaseDate": "2025-09-25",
-    "posterImage": "/jCjXP26jkeV0TCMqkSvJTDKCDNk.jpg",
+    "title": "Holding Liat",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/eqLXeHTCCepLaYSMwOcBpex5FJI.jpg",
     "backdrops": [],
-    "overview": "OG revolves around a ruthless gangster named Ojas Gambheera \"OG\" who returns to Mumbai after disappearing for 10 years on a personal crusade to finish crime bosses.",
+    "overview": "After Liat Beinin Atzili is kidnapped on October 7th, her Israeli-American family faces their own conflicting perspectives to fight for her release and the future of the places they call home.",
     "score": 0,
     "genres": [
-      "Action",
-      "Thriller"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 25538,
-    "type": "movie",
-    "title": "Yi Yi",
-    "releaseDate": "2000-09-20",
-    "posterImage": "/mR8dSQZI8X6Z1NClJhFrtJp636z.jpg",
-    "backdrops": [],
-    "overview": "Each member of a family in Taipei asks hard questions about life's meaning as they live through everyday quandaries. NJ is morose: his brother owes him money, his mother-in-law is in a coma, his wife suffers a spiritual crisis when she finds her life a blank and his business partners make bad decisions.",
-    "score": 79.24000000000001,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1220685,
-    "type": "movie",
-    "title": "Avem",
-    "releaseDate": "2025-09-24",
-    "posterImage": "/oiGk0fQEoVK7Kj4yFeP0iNeQCn3.jpg",
-    "backdrops": [],
-    "overview": "On the day of the 10th year anniversary of him leaving his home country and facing a recent loss, a young man begins to have a painful physical transformation as he longs for a life of freedom.",
-    "score": 0,
-    "genres": [
-      "Horror"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1406253,
-    "type": "movie",
-    "title": "Devour",
-    "releaseDate": "2025-09-27",
-    "posterImage": "/dXi7bnFjNYKxUzI82wU2dt6rpBD.jpg",
-    "backdrops": [],
-    "overview": "A struggling all female metal band called \"The Virginia Bitches\" have a taste for blood and while on tour their van breaks down in the middle of nowhere. Seeking help they come across a town full of cannibals led by an infamous Warlock.",
-    "score": 0,
-    "genres": [
-      "Horror",
-      "Action"
+      "Documentary"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -2079,52 +2017,6 @@
       "Adventure",
       "Drama",
       "Mystery"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1219620,
-    "type": "movie",
-    "title": "All That’s Left of You",
-    "releaseDate": "2025-09-25",
-    "posterImage": "/8XRz9JeUTSmvZQQHTurTLcILy4N.jpg",
-    "backdrops": [],
-    "overview": "After a Palestinian teen confronts Israeli soldiers at a West Bank protest, his mother recounts the series of events that led him to that fateful moment, starting with his grandfather’s forced displacement.",
-    "score": 0,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1213227,
-    "type": "movie",
-    "title": "Train",
-    "releaseDate": "2025-09-19",
-    "posterImage": "/kdR0jx7i8AmRn3UijWLb9j7osi2.jpg",
-    "backdrops": [],
-    "overview": "",
-    "score": 0,
-    "genres": [
-      "Thriller",
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1372588,
-    "type": "movie",
-    "title": "Akhanda 2: Thaandavam",
-    "releaseDate": "2025-09-25",
-    "posterImage": "/2RGcVKH22rPBN21bq4nlx8wBUD6.jpg",
-    "backdrops": [],
-    "overview": "A heartwarming journey explores the connection between children's innocence, the natural world, and spiritual faith as communities strive for progress.",
-    "score": 0,
-    "genres": [
-      "Action"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -2162,35 +2054,145 @@
     "systemRequirements": null
   },
   {
-    "id": 891584,
+    "id": 1390615,
     "type": "movie",
-    "title": "The History of Sound",
-    "releaseDate": "2025-09-12",
-    "posterImage": "/q3ouZG12PCP87aP7ZnirkdUf7qn.jpg",
+    "title": "Raktabeej 2",
+    "releaseDate": "2025-09-26",
+    "posterImage": "/7lZPnEkiWlzFk3H55Y0KhhGiK8n.jpg",
     "backdrops": [],
-    "overview": "Two young music students, Lionel and David, attending the Boston Conservatory in 1917, bond over their shared love of folk music. They reconnect a few years later, embarking on a song collecting trip in the backwaters of Maine.",
+    "overview": "Sequel to the 2023 Indian action drama, Raktabeej.",
     "score": 0,
     "genres": [
+      "Crime",
       "Drama",
-      "Romance",
-      "Music"
+      "Thriller",
+      "Action"
     ],
     "screenshots": [],
     "systemRequirements": null
   },
   {
-    "id": 1159939,
+    "id": 1220685,
     "type": "movie",
-    "title": "The Partisan",
-    "releaseDate": "2025-09-30",
-    "posterImage": null,
+    "title": "Avem",
+    "releaseDate": "2025-09-24",
+    "posterImage": "/oiGk0fQEoVK7Kj4yFeP0iNeQCn3.jpg",
     "backdrops": [],
-    "overview": "A Polish spy who works for the British during the Second World War. After a betrayal, she is compromised in Warsaw and finds herself in a murky world of treachery.",
+    "overview": "On the day of the 10th year anniversary of him leaving his home country and facing a recent loss, a young man begins to have a painful physical transformation as he longs for a life of freedom.",
     "score": 0,
     "genres": [
-      "History",
-      "War",
-      "Thriller"
+      "Horror"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1533786,
+    "type": "movie",
+    "title": "Flat Tire Down Memory Lane",
+    "releaseDate": "2025-09-20",
+    "posterImage": null,
+    "backdrops": [],
+    "overview": "This newly completed work – made after Johnston’s death – constructs a highly revealing portrait of the artist via interviews with his sister, Marjory (who in his later years collaborated with Daniel on his artwork and continues to advocate for and promote his work), a special focus on his drawings, as well as documentation of his last home, a house in Waller, Texas, which he filled with a truly mind-boggling volume of books, records, VHS tapes, and other collections, all of which serve as a kind of self-portrait of a unique mind and sensibility.",
+    "score": 0,
+    "genres": [
+      "Documentary"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1006724,
+    "type": "movie",
+    "title": "Dead Talents Society",
+    "releaseDate": "2024-08-07",
+    "posterImage": "/yDcc3OWNEtzjDtJly1OyZShtTMV.jpg",
+    "backdrops": [],
+    "overview": "When ghosts must compete to survive in the underworld by haunting the living, one unassuming young woman needs help creating a lasting performance while under the tutelage of a passionate agent and a washed-up diva.",
+    "score": 70.43,
+    "genres": [
+      "Horror",
+      "Comedy"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1189794,
+    "type": "movie",
+    "title": "Good Game",
+    "releaseDate": "2025-08-30",
+    "posterImage": "/ak1oOGozQBCv06RWotGFWXcUA9W.jpg",
+    "backdrops": [],
+    "overview": "Tai is the middle-aged owner of an Internet cafe, but unfortunately, it’s not doing so well. It’s mostly empty, especially because, as his landlord points out, kids play games on their phones nowadays. He decides to participate in the Hong Kong One Shot Esports tournament and hopefully win the grand-prize money to save his business. To qualify, he needs to be part of a team, so he recruits Solo, a recently fired esports player facing a decline in his career; Fay, who started working at Tai’s Internet cafe after not lasting long at her previous jobs; and former movie star Octo, who plays games with his elderly wife to help her exercise her brain and fight the degeneration process. Together, they call themselves Happy Hour, and they’ll combine their strengths in gaming to win this fierce competition. It ain’t over till it’s game over!",
+    "score": 0,
+    "genres": [
+      "Family"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 629078,
+    "type": "movie",
+    "title": "The Glassworker",
+    "releaseDate": "2024-07-26",
+    "posterImage": "/Aj4IhLVphVwKuZrE5EcSGTUMmk2.jpg",
+    "backdrops": [],
+    "overview": "A young glassworker-in-training living with his pacifist father finds his apprenticeship upended by an impending war and the arrival of an army colonel to their seaside town.",
+    "score": 71,
+    "genres": [
+      "Animation",
+      "Family",
+      "Romance",
+      "War"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1219620,
+    "type": "movie",
+    "title": "All That’s Left of You",
+    "releaseDate": "2025-09-25",
+    "posterImage": "/8XRz9JeUTSmvZQQHTurTLcILy4N.jpg",
+    "backdrops": [],
+    "overview": "After a Palestinian teen confronts Israeli soldiers at a West Bank protest, his mother recounts the series of events that led him to that fateful moment, starting with his grandfather’s forced displacement.",
+    "score": 0,
+    "genres": [
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1306816,
+    "type": "movie",
+    "title": "My Daughter is a Zombie",
+    "releaseDate": "2025-07-30",
+    "posterImage": "/fuQizwk80Vm02FmCUTd8LPhHHrm.jpg",
+    "backdrops": [],
+    "overview": "Jung-hwan, a professional wild animal trainer, spends his days bickering and playing with his teenage daughter, Soo-ah, who is passionate about dancing. Then one day, Soo-ah gets infected by a zombie virus that sweeps across the world. To protect her, Jung-hwan takes Soo-ah to Eunbong-ri, a seaside village where his mother, Bam-soon, lives. In a society determined to root out the infected, Jung-hwan notices that Soo-ah still seems to understand words, responds to her favorite songs and dances, and even flinches when scolded by Grandma Bam-soon's back scratching stick. Refusing to give up on his daughter, Jung-hwan calls on his years of animal training experience and begins the top-secret mission of training his zombie daughter…",
+    "score": 70,
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1238188,
+    "type": "movie",
+    "title": "The Captive",
+    "releaseDate": "2025-09-12",
+    "posterImage": "/uk8M5TJTfeuo3fUoFf68TqtdgwX.jpg",
+    "backdrops": [],
+    "overview": "1575 Algiers, Miguel de Cervantes, a wounded 28-year-old Spanish Navy soldier, is held prisoner by Ottoman corsairs. Faced with a ticking clock, a cruel death awaits him should his fellow countrymen fail to pay his ransom soon; but within the confines of his cell, Cervantes discovers a surprising refuge - the art of storytelling. Crafted from resilience and hope, his stories enthral his fellow captives and capture the attention of Hasan, the enigmatic and feared Bey of Algiers. With a secret affinity ignited between captor and captive, suspicions rise amidst growing tensions in the city; Cervantes, driven by an unwavering sense of optimism, devises a daring plan for freedom.",
+    "score": 0,
+    "genres": [
+      "Drama",
+      "History"
     ],
     "screenshots": [],
     "systemRequirements": null
@@ -2213,55 +2215,14 @@
     "systemRequirements": null
   },
   {
-    "id": 1392527,
+    "id": 1406253,
     "type": "movie",
-    "title": "Renoir",
-    "releaseDate": "2025-06-20",
-    "posterImage": "/lrx60QNgsJbnyaf6d3INyvaGH9k.jpg",
-    "backdrops": [],
-    "overview": "In 1987 Tokyo, a quirky and sensitive 11-year-old girl copes with a terminally ill father and stressed-out working mother while encountering various adults dealing with their own struggles.",
-    "score": 60,
-    "genres": [
-      "Drama"
-    ],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1534953,
-    "type": "movie",
-    "title": "Tödliche Schatten",
-    "releaseDate": "2025-09-13",
-    "posterImage": null,
-    "backdrops": [],
-    "overview": "",
-    "score": 0,
-    "genres": [],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1214833,
-    "type": "movie",
-    "title": "Gavagai",
+    "title": "Devour",
     "releaseDate": "2025-09-27",
-    "posterImage": null,
+    "posterImage": "/dXi7bnFjNYKxUzI82wU2dt6rpBD.jpg",
     "backdrops": [],
-    "overview": "",
+    "overview": "A struggling all female metal band called \"The Virginia Bitches\" have a taste for blood and while on tour their van breaks down in the middle of nowhere. Seeking help they come across a town full of cannibals led by an infamous Warlock.",
     "score": 0,
-    "genres": [],
-    "screenshots": [],
-    "systemRequirements": null
-  },
-  {
-    "id": 1410193,
-    "type": "movie",
-    "title": "Tharae The Exorcist",
-    "releaseDate": "2025-08-07",
-    "posterImage": "/yxjsJDdI15qEkQdc1EeSlblGLhM.jpg",
-    "backdrops": [],
-    "overview": "When a vengeful demon resurfaces in Thailand's largest Catholic village, a rigid priest and a maverick shaman must set aside their differences to confront an evil that defies both faith and folklore.",
-    "score": 40,
     "genres": [
       "Horror",
       "Action"
@@ -2270,19 +2231,66 @@
     "systemRequirements": null
   },
   {
-    "id": 629078,
+    "id": 1121483,
     "type": "movie",
-    "title": "The Glassworker",
-    "releaseDate": "2024-07-26",
-    "posterImage": "/Aj4IhLVphVwKuZrE5EcSGTUMmk2.jpg",
+    "title": "The Art Of Abuse",
+    "releaseDate": "2025-10-01",
+    "posterImage": "/knFma0tgomVP4QWTtJSQh7arzQB.jpg",
     "backdrops": [],
-    "overview": "A young glassworker-in-training living with his pacifist father finds his apprenticeship upended by an impending war and the arrival of an army colonel to their seaside town.",
-    "score": 71,
+    "overview": "To some art is simply a painting, a sketch, perhaps a photograph - but to others, art is pain. That kind of art can't be framed, it has to be captured in a different way. At least that's what a villain would think.",
+    "score": 0,
     "genres": [
-      "Animation",
-      "Family",
-      "Romance",
-      "War"
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1080365,
+    "type": "movie",
+    "title": "They Call Him OG",
+    "releaseDate": "2025-09-25",
+    "posterImage": "/jCjXP26jkeV0TCMqkSvJTDKCDNk.jpg",
+    "backdrops": [],
+    "overview": "OG revolves around a ruthless gangster named Ojas Gambheera \"OG\" who returns to Mumbai after disappearing for 10 years on a personal crusade to finish crime bosses.",
+    "score": 0,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 1102493,
+    "type": "movie",
+    "title": "Small Things Like These",
+    "releaseDate": "2024-11-01",
+    "posterImage": "/rdcO38cbWFg002nXg5QYtk7Tz4L.jpg",
+    "backdrops": [],
+    "overview": "In 1985, while working as a coal merchant to support his family, Bill Furlong discovers disturbing secrets kept by the local convent and uncovers truths of his own; forcing him to confront his past and the complicit silence of a small Irish town controlled by the Catholic Church.",
+    "score": 67,
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "screenshots": [],
+    "systemRequirements": null
+  },
+  {
+    "id": 985,
+    "type": "movie",
+    "title": "Eraserhead",
+    "releaseDate": "1977-09-28",
+    "posterImage": "/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg",
+    "backdrops": [],
+    "overview": "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
+    "score": 73.59,
+    "genres": [
+      "Horror",
+      "Fantasy"
     ],
     "screenshots": [],
     "systemRequirements": null

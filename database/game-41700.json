@@ -1,0 +1,23 @@
+{
+  "id": 41700,
+  "type": "game",
+  "title": "Star Citizen",
+  "releaseDate": "2025-12-11",
+  "posterImage": "https://media.rawg.io/media/games/926/9268bcfde5bea6f457a6833a55b653e9.jpg",
+  "backdropImage": "https://media.rawg.io/media/games/926/9268bcfde5bea6f457a6833a55b653e9.jpg",
+  "overview": "FIGHT. TRADE. EXPLORE. \r\nA UNIVERSE AWAITS.\r\n\r\nImagine a universe that combines the freedom of exploration, the thrill of combat, and the unique challenge of building a life in space. Star Citizen puts ultimate control in the hands of the player, whether you're making your way as a cargo hauler, exploring the vastness of space, or scraping out a living outside the law, you will navigate through a mixture of procedurally generated and handcrafted worlds and interact with a variety of characters.",
+  "score": null,
+  "genres": [
+    "Shooter",
+    "Adventure",
+    "Action",
+    "Simulation"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/games/926/9268bcfde5bea6f457a6833a55b653e9.jpg",
+    "https://media.rawg.io/media/screenshots/135/135bfdfec6fb5c5a4541c8cafcd069dd.jpg",
+    "https://media.rawg.io/media/screenshots/cb4/cb4f28ec91b657d6de8434334f79e94d.jpg",
+    "https://media.rawg.io/media/screenshots/919/919e33af4d7378adce12a3778636b7b7.jpg"
+  ],
+  "systemRequirements": null
+}

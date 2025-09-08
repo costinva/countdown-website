@@ -1,0 +1,21 @@
+{
+  "id": 1009961,
+  "type": "game",
+  "title": "PButtons",
+  "releaseDate": "2025-09-02",
+  "posterImage": "https://media.rawg.io/media/screenshots/78a/78a7f4cbc8fc97a5ff4ad9b565d462de.jpg",
+  "backdropImage": "https://media.rawg.io/media/screenshots/78a/78a7f4cbc8fc97a5ff4ad9b565d462de.jpg",
+  "overview": "Have you ever felt the urge to press a button — even when you knew you weren’t supposed to? In shops, museums, or even at home, there’s something irresistible about a shiny red button just sitting there, begging to be pushed.What will happen if you press it?\nWill a mechanism spring to life? Will lights flash? Will an alarm sound? Or… will it explode?PButtons turns that instinct into a puzzle game. Here, the red buttons — called PButtons (for Passive) — are just out of reach. You can't click them with your mouse. Instead, they must be triggered by something else in the environment: a falling object, a mechanical arm, a chain reaction — anything but your direct input.Your only control? The AButtons (for Active) — square buttons in various colors that you can press to interact with the level. These stand in contrast to the round, red PButtons, which serve as passive elements within each puzzle.Every level is a small logical machine: press the right AButton at the right time, and you might trigger a mechanism that helps activate the PButton. Understand how the system works, solve the puzzle, and enjoy the deep satisfaction of watching that forbidden red button finally light up.",
+  "score": null,
+  "genres": [
+    "Casual",
+    "Indie"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/screenshots/78a/78a7f4cbc8fc97a5ff4ad9b565d462de.jpg",
+    "https://media.rawg.io/media/screenshots/015/015f605daa85cef391a037065c7bbbfa.jpg",
+    "https://media.rawg.io/media/screenshots/cd1/cd1593394f13fe3f0a92203cce53808c.jpg",
+    "https://media.rawg.io/media/screenshots/6f6/6f6ebd7681ddba5988352b930546a890.jpg"
+  ],
+  "systemRequirements": null
+}

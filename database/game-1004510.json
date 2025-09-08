@@ -1,0 +1,20 @@
+{
+  "id": 1004510,
+  "type": "game",
+  "title": "Hirogami",
+  "releaseDate": "2025-09-03",
+  "posterImage": "https://media.rawg.io/media/screenshots/c16/c1671f91eb36a0acfec0a208cdec61f0.jpg",
+  "backdropImage": "https://media.rawg.io/media/screenshots/c16/c1671f91eb36a0acfec0a208cdec61f0.jpg",
+  "overview": "Explore a beautiful origami world as Hiro, a fan-wielding master of the art of ‘folding’. Embark on a mystical journey to save your fragile home from deadly digital invaders. Take on animal forms to traverse the landscape, solve puzzles, overcome enemies, and save the realm.",
+  "score": null,
+  "genres": [
+    "Platformer",
+    "Adventure",
+    "Action"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/screenshots/c16/c1671f91eb36a0acfec0a208cdec61f0.jpg",
+    "https://media.rawg.io/media/screenshots/c16/c1671f91eb36a0acfec0a208cdec61f0.jpg"
+  ],
+  "systemRequirements": null
+}

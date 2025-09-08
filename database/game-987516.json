@@ -1,0 +1,21 @@
+{
+  "id": 987516,
+  "type": "game",
+  "title": "Dying Light: The Beast",
+  "releaseDate": "2025-09-19",
+  "posterImage": "https://media.rawg.io/media/games/b20/b2055f1b6d12a6342deec3565e465852.jpg",
+  "backdropImage": "https://media.rawg.io/media/games/b20/b2055f1b6d12a6342deec3565e465852.jpg",
+  "overview": "A new game titled Dying Light: The Beast. More details to come.",
+  "score": null,
+  "genres": [
+    "Shooter",
+    "Action"
+  ],
+  "screenshots": [
+    "https://media.rawg.io/media/games/b20/b2055f1b6d12a6342deec3565e465852.jpg",
+    "https://media.rawg.io/media/screenshots/e82/e827a66e7aa78cc030f21e81c305fcf9.jpg",
+    "https://media.rawg.io/media/screenshots/fec/fec137f244b09dd82ddf8fe2efb0b32e.jpg",
+    "https://media.rawg.io/media/screenshots/810/81053960d4cb53974d3a6df8f323813c.jpg"
+  ],
+  "systemRequirements": null
+}

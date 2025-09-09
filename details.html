@@ -45,7 +45,7 @@
         </div>
     </section>
 
-    <main id="details-content-section">
+    <main id="details-content-section" class="content-wrapper"> <!-- ADDED content-wrapper class -->
         <div class="details-poster">
             <img id="details-poster-img" src="" alt="Poster">
         </div>
@@ -55,16 +55,47 @@
                 <span id="details-release-date"></span>
                 <span id="details-genres"></span>
             </div>
-            <div class="details-score">
-                <div id="details-score-circle" class="score-circle">0%</div>
-                <span>User Score</span>
+            <div class="details-score-group">
+                <div class="details-score">
+                    <div id="user-score-circle" class="score-circle">N/A</div>
+                    <span>User Score</span>
+                </div>
+                <div class="details-score">
+                    <div id="guest-score-circle" class="score-circle">N/A</div>
+                    <span>Guest Score</span>
+                </div>
             </div>
             <h3>Overview</h3>
             <p id="details-overview">Loading overview...</p>
+
+            <div id="rating-summary" class="rating-summary-container">
+                <!-- JS will populate this -->
+            </div>
         </div>
     </main>
     
-    <!-- FOOTER WITH CORRECTED LOCAL IMAGE PATH -->
+    <section id="comments-section" class="content-wrapper"> <!-- ADDED content-wrapper class -->
+        <h3>Guest Reviews</h3>
+        <div class="review-form-container">
+            <h4>Leave a Review</h4>
+            <form id="review-form">
+                <input type="text" id="author-name" placeholder="Your Name" required>
+                <div class="star-rating">
+                    <input type="radio" id="rate-5" name="rating" value="5" /><label for="rate-5">★</label>
+                    <input type="radio" id="rate-4" name="rating" value="4" /><label for="rate-4">★</label>
+                    <input type="radio" id="rate-3" name="rating" value="3" /><label for="rate-3">★</label>
+                    <input type="radio" id="rate-2" name="rating" value="2" /><label for="rate-2">★</label>
+                    <input type="radio" id="rate-1" name="rating" value="1" /><label for="rate-1">★</label>
+                </div>
+                <textarea id="comment-text" placeholder="Write your review here..."></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+        <div id="comments-list" class="comments-list-container">
+            <!-- JS will populate this -->
+        </div>
+    </section>
+
     <footer>
         <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">
             <img src="images/tmdb-logo.svg" alt="The Movie Database" class="tmdb-logo">

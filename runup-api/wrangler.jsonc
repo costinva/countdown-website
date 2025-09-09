@@ -1,0 +1,12 @@
+{
+  "name": "runup-api", // This MUST be "runup-api"
+  "main": "src/index.js",
+  "compatibility_date": "2023-10-30",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "countdown-db",
+      "database_id": "26aed731-2397-4f6a-b0a1-caa9cabb3320" // Double-check this is correct!
+    }
+  ]
+}

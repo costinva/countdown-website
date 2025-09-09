@@ -135,3 +135,493 @@ footer .tmdb-logo:hover { opacity: 1; }
 #see-more-btn:hover {
     background-color: #3a3a3a;
 }
+/* --- Review Section Styles --- */
+.details-section-width {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+#reviews-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+.rating-summary-container {
+    display: flex;
+    gap: 30px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.rating-average {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 30px;
+    border-right: 1px solid #333;
+}
+.average-score {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.rating-breakdown {
+    flex-grow: 1;
+}
+.rating-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+.rating-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.rating-bar div {
+    height: 100%;
+    background-color: #4d88ff;
+}
+.review-form-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+#review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#review-form input, #review-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+#review-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+#review-form button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d88ff;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.star-rating input { display: none; }
+.star-rating label {
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.star-rating input:checked ~ label,
+.star-rating:not(:checked) > label:hover,
+.star-rating:not(:checked) > label:hover ~ label {
+    color: #ffc107;
+}
+.comments-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.comment-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.comment-author {
+    font-weight: 700;
+}
+.comment-rating {
+    font-size: 1.2rem;
+    color: #ffc107;
+}
+.comment-body {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.comment-footer {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: right;
+}
+/* --- Adjustments for wider review section and score group --- */
+#details-content-section {
+    max-width: 1400px; /* Make the main content section wider */
+    padding: 60px 80px; /* Adjust padding for wider layout */
+}
+
+/* Ensure the review section also spans wider */
+#reviews-section {
+    max-width: 1400px;
+    padding: 0 80px;
+}
+
+.details-poster {
+    flex: 0 0 300px; /* Fixed width for poster to ensure consistent layout */
+    margin-right: 60px; /* Increased space */
+}
+
+.details-info {
+    flex: 1; /* Allow info section to take remaining space */
+}
+
+.details-score-group {
+    display: flex;
+    gap: 30px; /* Space between the two score circles */
+    margin-bottom: 30px;
+}
+
+/* Additional styling for the score circle if needed, ensure consistency */
+.score-circle {
+    /* Keep existing styles, might add specific colors later if needed */
+}
+
+/* Style for the Guest Tag */
+.guest-tag {
+    background-color: rgba(77, 136, 255, 0.2); /* Light blue background */
+    color: #4d88ff; /* Matching text color */
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+/* --- Adjustments for wider content sections --- */
+#details-content-section {
+    display: flex; /* Keep flex for poster and info */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 60px 80px; /* Increased padding to make content appear wider */
+    max-width: 1400px; /* Increased max-width */
+    margin: 0 auto;
+    color: #fff;
+}
+
+.details-poster {
+    flex: 0 0 300px; /* Fixed width for poster */
+    margin-right: 60px; /* Increased space */
+    margin-top: -100px;
+    position: relative;
+    z-index: 5;
+}
+
+.details-info {
+    flex: 1; /* Allow info section to take remaining space */
+    min-width: 400px; /* Ensure it doesn't get too narrow on smaller screens */
+}
+
+/* Style for the new score group (User Score + Guest Score) */
+.details-score-group {
+    display: flex;
+    gap: 30px; /* Space between the two score circles */
+    margin-bottom: 30px;
+}
+
+/* New section for comments, spanning wider */
+#comments-section.wider-section {
+    max-width: 1400px; /* Same max-width as details-content-section */
+    margin: 40px auto; /* Centered, with margin from above content */
+    padding: 0 80px; /* Matching padding */
+}
+
+/* Ensure the rating summary, now inside details-info, flows correctly */
+.rating-summary-container {
+    margin-top: 30px; /* Space from overview */
+    background-color: #1a1a1a; /* Ensure it retains its background */
+    padding: 20px;
+    border-radius: 8px;
+    /* Removed margin-bottom and flex properties as it's now inside details-info */
+}
+
+/* Adjust comment form and list width within the wider section */
+.review-form-container,
+.comments-list-container {
+    width: 100%; /* Will take full width of its parent (#comments-section) */
+}
+
+/* Style for the Guest Tag */
+.guest-tag {
+    background-color: rgba(77, 136, 255, 0.2); /* Light blue background */
+    color: #4d88ff; /* Matching text color */
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Responsive Adjustments for new wider layout */
+@media (max-width: 1024px) {
+    #details-content-section, #comments-section.wider-section {
+        padding: 40px; /* Reduce padding on slightly smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #details-content-section {
+        flex-direction: column; /* Stack poster and info vertically */
+        align-items: center;
+        padding: 20px;
+    }
+    .details-poster {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 250px; /* Adjust poster size for mobile */
+    }
+    .details-info {
+        min-width: unset; /* Remove min-width on mobile */
+        width: 100%;
+    }
+    .details-score-group {
+        flex-direction: column; /* Stack scores vertically on mobile */
+        gap: 15px;
+    }
+    #comments-section.wider-section {
+        padding: 20px; /* Reduce padding for comments section on mobile */
+    }
+}
+/* --- Adjustments for wider content sections --- */
+#details-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.details-poster {
+    flex: 0 0 300px;
+    margin-right: 60px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 5;
+}
+
+.details-info {
+    flex: 1;
+    min-width: 400px;
+}
+
+.details-score-group {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.rating-summary-container {
+    margin-top: 30px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --- NEW / MODIFIED: Styles for the comments section (yellow rectangle) --- */
+#comments-section.wider-section {
+    max-width: 900px; /* Reduced max-width for the overall section */
+    margin: 40px auto; /* Center the section */
+    padding: 0 40px; /* Adjusted padding */
+}
+
+/* Make the form and comments list narrower and centered within their section */
+.review-form-container,
+.comments-list-container {
+    max-width: 700px; /* Approximately 35% less than ~1040px content width (1400-2*80) */
+    margin: 0 auto 20px auto; /* Center and add bottom margin */
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+/* Ensure review form elements take full width of their new container */
+#review-form input, #review-form textarea {
+    width: 100%; 
+}
+
+/* Guest Tag Style (unchanged, just here for context) */
+.guest-tag {
+    background-color: rgba(77, 136, 255, 0.2);
+    color: #4d88ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    #details-content-section, #comments-section.wider-section {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #details-content-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .details-poster {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 250px;
+    }
+    .details-info {
+        min-width: unset;
+        width: 100%;
+    }
+    .details-score-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    #comments-section.wider-section {
+        padding: 20px;
+    }
+    .review-form-container,
+    .comments-list-container {
+        max-width: 100%; /* Take full width of parent on small screens */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px; /* Adjust padding for mobile */
+    }
+}
+/* --- New Global Content Wrapper for Alignment --- */
+.content-wrapper {
+    max-width: 1200px; /* Overall max width for major content blocks */
+    margin: 0 auto;    /* Center the block */
+    padding: 0 40px;   /* Consistent side padding within the wrapper */
+}
+
+/* Redefine details-content-section to use the wrapper and flex for poster/info */
+#details-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 60px; /* Top padding for this section */
+    padding-bottom: 60px; /* Bottom padding for this section */
+    /* max-width, margin:auto, padding: 60px 80px are now managed by .content-wrapper */
+}
+
+.details-poster {
+    flex: 0 0 300px; /* Fixed width for poster */
+    margin-right: 60px; /* Space between poster and info */
+    margin-top: -100px; /* Keeps the poster overlapping the hero section */
+    position: relative;
+    z-index: 5;
+}
+
+.details-info {
+    flex: 1; /* Allows info section to take remaining space */
+    min-width: 400px; /* Prevents info section from becoming too narrow */
+}
+
+/* --- Blue Rectangle (Rating Summary): inside details-info, make it less wide --- */
+.rating-summary-container {
+    margin-top: 30px; /* Space from overview */
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px; /* Approximately 35% less wide than `details-info`'s typical flow */
+    /* It will naturally align left within details-info (default flex-start) */
+}
+
+/* --- Yellow Rectangle (Comments Section): Align left with poster, less wide overall --- */
+#comments-section.content-wrapper { /* Now uses content-wrapper for max-width and centering */
+    margin-top: 40px; /* Space from content above */
+    padding-bottom: 40px; /* Consistent bottom padding for this section */
+    /* Remove old max-width, margin:auto, padding from here - managed by .content-wrapper */
+}
+
+#comments-section h3 {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    /* This heading will align to the left padding of .content-wrapper */
+}
+
+.review-form-container,
+.comments-list-container {
+    max-width: 700px; /* Controls the actual width of the form/comments list */
+    margin-left: 0;   /* ALIGNS LEFT: This ensures it starts under the poster */
+    margin-right: auto; /* Pushes content to the left within its .content-wrapper */
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between form and list */
+}
+
+/* --- Responsive Adjustments (updated to account for .content-wrapper) --- */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        padding: 0 20px; /* Reduce side padding on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 0 15px; /* Further reduce padding for mobile */
+    }
+    #details-content-section {
+        flex-direction: column; /* Stack poster and info vertically */
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .details-poster {
+        margin-right: 0; /* No right margin when stacked */
+        margin-bottom: 20px;
+        max-width: 250px;
+    }
+    .details-info {
+        min-width: unset; /* Remove min-width on mobile */
+        width: 100%; /* Take full width */
+    }
+    .details-score-group {
+        flex-direction: column; /* Stack scores vertically on mobile */
+        gap: 15px;
+    }
+    #comments-section.content-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .review-form-container,
+    .comments-list-container,
+    .rating-summary-container {
+        max-width: 100%; /* Take full width of parent on small screens */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px; /* Adjust padding for mobile */
+    }
+}

@@ -1,10 +1,15 @@
-// script.js - FINAL VERSION WITH "SEE MORE" PAGINATION
+// script.js - FINAL VERSION WITH API-POWERED PAGINATION AND FILTERING
 document.addEventListener('DOMContentLoaded', () => {
-    // --- STATE MANAGEMENT ---
-    let allMedia = [];
-    let currentPageItems = []; // The full list of items for the current page filter
-    let itemsCurrentlyShown = 0;
-    const ITEMS_PER_PAGE = 100;
+    // --- CONFIGURATION & STATE MANAGEMENT ---
+    const API_URL = 'https://runup-api.veronica-vero2vv.workers.dev'; // <--- VERIFY YOUR WORKER URL!
+    let itemsCurrentlyRendered = 0;
+    const ITEMS_PER_LOAD = 100;
+    let currentPage = 1;
+    let totalItemsAvailable = 0;
+    let mediaType = '';
+    let mediaCategory = '';
+    let currentSearchQuery = '';
+    let currentGenreFilter = 'all';
 
     // --- ELEMENT SELECTORS ---
     const mainElement = document.querySelector('.grid-main');
@@ -12,27 +17,84 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageTitleElement = document.querySelector('.grid-title');
     const searchInput = document.getElementById('search-input');
     const gridHeader = document.querySelector('.grid-header');
-    let seeMoreBtn; // Will be created dynamically
+    let seeMoreBtn;
 
     // =========================================================================
     // INITIALIZATION
     // =========================================================================
     async function initializePage() {
         if (!pageTitleElement || !countdownGrid) return;
+        
+        const pageTitleText = pageTitleElement.textContent.toLowerCase();
+        if (pageTitleText.includes('movies')) mediaType = 'movie';
+        else if (pageTitleText.includes('tv')) mediaType = 'tv';
+        else if (pageTitleText.includes('games')) mediaType = 'game';
+
+        if (pageTitleText.includes('upcoming')) mediaCategory = 'upcoming';
+        else if (pageTitleText.includes('launched')) mediaCategory = 'launched';
+
         originalPageTitle = pageTitleElement.textContent;
         createSeeMoreButton();
+        addGenresDropdownIfNeeded();
+        setupEventListeners();
+        
+        await fetchAndRenderMedia(true); 
+    }
+
+    // =========================================================================
+    // DATA FETCHING FROM API
+    // =========================================================================
+    async function fetchAndRenderMedia(reset = false) {
+        if (reset) {
+            currentPage = 1;
+            itemsCurrentlyRendered = 0;
+            countdownGrid.innerHTML = '';
+            seeMoreBtn.classList.add('hidden');
+            countdownGrid.innerHTML = '<p>Loading...</p>';
+        }
+
         try {
-            const response = await fetch('database.json');
-            if (!response.ok) throw new Error('database.json not found');
-            allMedia = await response.json();
-            
-            filterAndSetInitialItems();
-            renderMoreCards(true); // Initial render
-            addGenresDropdownIfNeeded();
-            setupEventListeners();
+            let apiUrl = `${API_URL}/api/media?page=${currentPage}&limit=${ITEMS_PER_LOAD}`;
+            if (mediaType) apiUrl += `&type=${mediaType}`;
+            if (mediaCategory) apiUrl += `&category=${mediaCategory}`;
+            if (currentSearchQuery) apiUrl += `&search=${currentSearchQuery}`;
+            if (currentGenreFilter !== 'all') apiUrl += `&genre=${currentGenreFilter}`;
+
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Failed to fetch media from API');
+            const data = await response.json();
+
+            if (reset) countdownGrid.innerHTML = ''; 
+
+            const itemsToRender = data.items || [];
+            totalItemsAvailable = data.total;
+
+            if (itemsToRender.length === 0 && reset) {
+                countdownGrid.innerHTML = "<p>No results found.</p>";
+                return;
+            }
+
+            const cardsFragment = document.createDocumentFragment();
+            itemsToRender.forEach(item => {
+                const cardElement = createCardElement(item);
+                if (cardElement) cardsFragment.appendChild(cardElement);
+            });
+            countdownGrid.appendChild(cardsFragment);
+            itemsCurrentlyRendered += itemsToRender.length;
+            currentPage++;
+
+            if (itemsCurrentlyRendered < totalItemsAvailable) {
+                seeMoreBtn.classList.remove('hidden');
+            } else {
+                seeMoreBtn.classList.add('hidden');
+            }
+
+            initializeAllCountdowns();
+
         } catch (error) {
-            console.error("Initialization failed:", error);
-            countdownGrid.innerHTML = "<p>Error loading page data.</p>";
+            console.error("Failed to load media:", error);
+            countdownGrid.innerHTML = "<p>Error loading media. Please try again later.</p>";
+            seeMoreBtn.classList.add('hidden');
         }
     }
 
@@ -43,100 +105,39 @@ document.addEventListener('DOMContentLoaded', () => {
         gridHeader.addEventListener('click', (event) => {
             if (event.target.classList.contains('genre-link')) {
                 event.preventDefault();
-                handleGenreFilter(event.target.dataset.genre);
+                currentGenreFilter = event.target.dataset.genre;
+                fetchAndRenderMedia(true);
             }
         });
         searchInput.addEventListener('input', handleSearch);
         countdownGrid.addEventListener('mouseenter', handleCardMouseEnter, true);
         countdownGrid.addEventListener('mouseleave', handleCardMouseLeave, true);
-        seeMoreBtn.addEventListener('click', () => renderMoreCards(false));
+        seeMoreBtn.addEventListener('click', () => fetchAndRenderMedia(false));
     }
     
     // =========================================================================
     // FILTERING & SEARCH LOGIC
     // =========================================================================
-    function handleGenreFilter(genre) {
-        const baseItems = getBaseItemsForCurrentPage();
-        currentPageItems = (genre === 'all')
-            ? baseItems
-            : baseItems.filter(item => (item.genres || []).includes(genre));
-        renderMoreCards(true); // Reset and render the new filtered list
-    }
-    
-    function handleSearch() {
+    async function handleSearch() {
         const query = searchInput.value.toLowerCase().trim();
         if (query.length > 2) {
-             currentPageItems = allMedia.filter(item => item.title && item.title.toLowerCase().includes(query));
+             currentSearchQuery = query;
              pageTitleElement.textContent = `Search Results for "${searchInput.value}"`;
-             renderMoreCards(true); // Reset and render search results
-        } else if (query.length === 0) {
+             await fetchAndRenderMedia(true);
+        } else if (query.length === 0 && currentSearchQuery.length > 0) {
+            currentSearchQuery = '';
             pageTitleElement.textContent = originalPageTitle;
-            filterAndSetInitialItems();
-            renderMoreCards(true); // Reset to the original page view
+            await fetchAndRenderMedia(true);
         }
     }
-
-    function filterAndSetInitialItems() {
-        currentPageItems = getBaseItemsForCurrentPage();
-    }
     
-    function getBaseItemsForCurrentPage() {
-        const pageTitle = originalPageTitle.toLowerCase();
-        return allMedia.filter(item => {
-            if (!item.releaseDate || !item.posterImage) return false;
-            const isUpcoming = new Date(item.releaseDate) > new Date();
-            const isMovie = item.type === 'movie';
-            const isTv = item.type === 'tv';
-            const isGame = item.type === 'game';
-            if (pageTitle.includes('upcoming movies')) return isMovie && isUpcoming;
-            if (pageTitle.includes('upcoming tv')) return isTv && isUpcoming;
-            if (pageTitle.includes('upcoming games')) return isGame && isUpcoming;
-            if (pageTitle.includes('launched movies')) return isMovie && !isUpcoming;
-            if (pageTitle.includes('launched tv')) return isTv && !isUpcoming;
-            if (pageTitle.includes('launched games')) return isGame && !isUpcoming;
-            return false;
-        });
-    }
-
     // =========================================================================
     // RENDERING & HELPERS
     // =========================================================================
-    function renderMoreCards(reset = false) {
-        if (reset) {
-            countdownGrid.innerHTML = '';
-            itemsCurrentlyShown = 0;
-        }
-
-        const itemsToRender = currentPageItems.slice(itemsCurrentlyShown, itemsCurrentlyShown + ITEMS_PER_PAGE);
-
-        if (itemsToRender.length === 0 && reset) {
-            countdownGrid.innerHTML = "<p>No results found.</p>";
-            seeMoreBtn.classList.add('hidden');
-            return;
-        }
-
-        const cardsFragment = document.createDocumentFragment();
-        itemsToRender.forEach(item => {
-            const cardElement = createCardElement(item);
-            if (cardElement) cardsFragment.appendChild(cardElement);
-        });
-        countdownGrid.appendChild(cardsFragment);
-        itemsCurrentlyShown += itemsToRender.length;
-
-        // Update the "See More" button visibility
-        if (itemsCurrentlyShown < currentPageItems.length) {
-            seeMoreBtn.classList.remove('hidden');
-        } else {
-            seeMoreBtn.classList.add('hidden');
-        }
-
-        initializeAllCountdowns();
-    }
-
     function createCardElement(item) {
         if (!item || !item.title || !item.posterImage) return null;
         let posterUrl = item.posterImage;
-        if ((item.type === 'movie' || item.type === 'tv') && posterUrl && !posterUrl.startsWith('http')) {
+        if (posterUrl && !posterUrl.startsWith('http') && (item.type === 'movie' || item.type === 'tv')) {
              posterUrl = `https://image.tmdb.org/t/p/w500${posterUrl}`;
         }
         const releaseDate = item.releaseDate || 'N/A';
@@ -148,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cardLink.className = 'countdown-card';
         cardLink.dataset.date = `${releaseDate}T12:00:00`;
         cardLink.dataset.poster = posterUrl;
-        (item.screenshots || []).forEach((ss, i) => { cardLink.dataset[`ss${i}`] = ss; });
         cardLink.innerHTML = `<div class="card-bg" style="background-image: url('${posterUrl}')"></div><div class="card-overlay"></div><div class="card-content"><div class="card-tag">${tagType}</div><h3>${item.title}</h3>${timerOrStatusHtml}</div>`;
         return cardLink;
     }
@@ -157,19 +157,13 @@ document.addEventListener('DOMContentLoaded', () => {
         seeMoreBtn = document.createElement('button');
         seeMoreBtn.id = 'see-more-btn';
         seeMoreBtn.textContent = 'See More';
-        seeMoreBtn.classList.add('hidden'); // Start hidden
+        seeMoreBtn.classList.add('hidden');
         mainElement.appendChild(seeMoreBtn);
     }
 
-    function addGenresDropdownIfNeeded() { /* ... function is unchanged ... */ }
-    function initializeAllCountdowns() { /* ... function is unchanged ... */ }
-    function handleCardMouseEnter(event) { /* ... function is unchanged ... */ }
-    function handleCardMouseLeave(event) { /* ... function is unchanged ... */ }
-
-    // --- PASTE THE UNCHANGED FUNCTIONS HERE ---
     function addGenresDropdownIfNeeded() {
         if (!gridHeader) return;
-        const pageTitle = originalPageTitle.toLowerCase();
+        const pageTitle = pageTitleElement.textContent.toLowerCase();
         if (!pageTitle.includes('movies') && !pageTitle.includes('tv') && !pageTitle.includes('games')) return;
         
         const movieTvGenres = ['Action', 'Horror', 'Comedy', 'Science Fiction', 'Romance', 'Fantasy', 'Drama'];
@@ -183,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dropdown.className = 'genres-dropdown';
         dropdown.innerHTML = `<button class="genres-button">Genres ▼</button><div class="genres-list">${genreLinks}</div></div>`;
         
-        // Avoid adding multiple dropdowns
         if (!gridHeader.querySelector('.genres-dropdown')) {
             gridHeader.appendChild(dropdown);
         }
@@ -214,29 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function handleCardMouseEnter(event) {
-        const card = event.target.closest('.countdown-card');
-        if (!card || card.dataset.ss0 === undefined) return;
-        const screenshots = [];
-        for (let i = 0; i < 4; i++) { if (card.dataset[`ss${i}`]) screenshots.push(card.dataset[`ss${i}`]); }
-        if (screenshots.length <= 0) return;
-        let currentIndex = 0;
-        const bgElement = card.querySelector('.card-bg');
-        const slideshowInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % screenshots.length;
-            bgElement.style.backgroundImage = `url('${screenshots[currentIndex]}')`;
-        }, 1500);
-        card.dataset.slideshowInterval = slideshowInterval;
-    }
-
-    function handleCardMouseLeave(event) {
-        const card = event.target.closest('.countdown-card');
-        if (!card || !card.dataset.slideshowInterval) return;
-        clearInterval(parseInt(card.dataset.slideshowInterval));
-        card.removeAttribute('data-slideshow-interval');
-        const bgElement = card.querySelector('.card-bg');
-        bgElement.style.backgroundImage = `url('${card.dataset.poster}')`;
-    }
+    function handleCardMouseEnter(event) {} // Removed screenshot hover, as data is not available directly
+    function handleCardMouseLeave(event) {} // Removed screenshot hover, as data is not available directly
     
     // --- KICK EVERYTHING OFF ---
     initializePage();

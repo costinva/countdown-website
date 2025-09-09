@@ -5,8 +5,8 @@ const path = require('path');
 // You will then execute them one by one using `wrangler d1 execute`.
 
 const DATABASE_DIR = 'database'; // <--- Confirm this matches your folder name (e.g., 'database' or 'full_archive')
-const OUTPUT_DIR = 'd1_sql_batches'; // <--- NEW: Folder to save the SQL files
-const ITEMS_PER_SQL_BATCH = 1000; // Number of items per SQL file. Adjust if files are still too large.
+const OUTPUT_DIR = 'd1_sql_batches'; // Folder to save the SQL files
+const ITEMS_PER_SQL_BATCH = 15000; // <--- INCREASED: Number of items per SQL file.
 
 async function generateD1InsertSqlFiles() {
     console.log(`Generating D1 insert SQL files from '${DATABASE_DIR}' into '${OUTPUT_DIR}'...`);
@@ -32,8 +32,11 @@ async function generateD1InsertSqlFiles() {
         }
 
         if (item && item.id && item.type && item.title) {
-            // SQL statement for a single item
-            const sql = `INSERT OR IGNORE INTO media (id, type, title, releaseDate, posterImage, overview) VALUES ('${
+            const itemGenres = Array.isArray(item.genres) && item.genres.length > 0
+                             ? item.genres.join(', ')
+                             : null;
+
+            const sql = `INSERT OR IGNORE INTO media (id, type, title, releaseDate, posterImage, overview, genres) VALUES ('${
                 String(item.id).replace(/'/g, "''")
             }', '${
                 String(item.type).replace(/'/g, "''")
@@ -45,6 +48,8 @@ async function generateD1InsertSqlFiles() {
                 item.posterImage ? `'${String(item.posterImage).replace(/'/g, "''")}'` : 'NULL'
             }, ${
                 item.overview ? `'${String(item.overview).replace(/'/g, "''")}'` : 'NULL'
+            }, ${
+                itemGenres ? `'${String(itemGenres).replace(/'/g, "''")}'` : 'NULL'
             });`;
 
             currentSqlCommands.push(sql);
@@ -75,11 +80,9 @@ async function generateD1InsertSqlFiles() {
     console.log(`Total items processed: ${totalItemsProcessed}`);
     console.log(`You will find the generated SQL files in the '${OUTPUT_DIR}' folder.`);
     console.log(`\n--- Next Steps ---`);
-    console.log(`1. Go to your terminal (in your main project directory).`);
-    console.log(`2. Execute each file against your D1 database:`);
-    console.log(`   wrangler d1 execute <YOUR_DATABASE_NAME> --file ${OUTPUT_DIR}/d1_media_inserts_part1.sql`);
-    console.log(`   wrangler d1 execute <YOUR_DATABASE_NAME> --file ${OUTPUT_DIR}/d1_media_inserts_part2.sql`);
-    console.log(`   ...and so on for all generated files.`);
+    console.log(`1. Ensure your D1 database schema is correct (media, comments, users tables).`);
+    console.log(`2. Execute all generated files against your D1 database:`);
+    console.log(`   Get-ChildItem -Path ${OUTPUT_DIR} -Filter *.sql | ForEach-Object { wrangler d1 execute <YOUR_DATABASE_NAME> --file $_.FullName --remote }`);
     console.log(`   (Remember to replace <YOUR_DATABASE_NAME> with 'countdown-db')`);
 }
 

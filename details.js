@@ -1,11 +1,10 @@
-// details.js - UPGRADED FOR GUEST REVIEWS AND LAYOUT ADJUSTMENTS
-window.addEventListener('DOMContentLoaded', async () => {
+// details.js - FINAL VERSION WITH API-POWERED DETAILS AND REVIEWS
+document.addEventListener('DOMContentLoaded', async () => {
     const heroTitle = document.getElementById('hero-title');
     const params = new URLSearchParams(window.location.search);
     const itemId = params.get('id'); // e.g., "movie-12345"
 
-    // Set your actual worker URL here
-    const API_URL = 'https://runup-api.veronica-vero2vv.workers.dev'; // <--- VERIFY THIS URL!
+    const API_URL = 'https://runup-api.veronica-vero2vv.workers.dev'; // <--- VERIFY YOUR WORKER URL!
 
     if (!itemId) {
         heroTitle.textContent = 'Error: No item ID provided.';
@@ -13,13 +12,16 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`database/${itemId}.json`);
-        if (!response.ok) throw new Error(`Could not find data file for ${itemId}`);
+        // --- CRITICAL CHANGE: Fetch item details from API instead of local /database/ folder ---
+        const response = await fetch(`${API_URL}/api/media/details/${itemId}`);
+        if (!response.ok) {
+            heroTitle.textContent = `Error: Could not find item ${itemId}.`;
+            throw new Error(`Could not find item ${itemId} from API`);
+        }
         const item = await response.json();
         
-        populatePage(item); // Populates static details
+        populatePage(item); // Populates static details from API data
         
-        // Load reviews after populating the page
         await loadAndDisplayReviews(itemId, API_URL);
         setupReviewForm(itemId, API_URL);
 
@@ -39,40 +41,36 @@ async function loadAndDisplayReviews(itemId, API_URL) {
         displayComments(data.comments);
     } catch (error) {
         console.error('Error loading reviews:', error);
-        // Target the comments section directly to display error, or hide it
         document.getElementById('comments-section').innerHTML = '<p>Could not load reviews at this time.</p>';
     }
 }
 
 function displayRatingSummary(guestSummary, userSummary) {
     const guestScoreCircle = document.getElementById('guest-score-circle');
-    const userScoreCircle = document.getElementById('user-score-circle'); // Already handled in populatePage for static score
+    const userScoreCircle = document.getElementById('user-score-circle');
 
     if (!guestSummary || !userSummary) {
         document.getElementById('rating-summary').innerHTML = '<p>Could not load review summaries.</p>';
         return;
     }
 
-    // Update Guest Score Circle
     if (guestSummary.totalReviews > 0) {
-        const score = Math.round(parseFloat(guestSummary.averageRating) * 20); // Convert 1-5 to 0-100%
+        const score = Math.round(parseFloat(guestSummary.averageRating) * 20);
         guestScoreCircle.textContent = `${score}%`;
         if (score >= 70) guestScoreCircle.style.borderColor = '#21d07a';
         else if (score >= 40) guestScoreCircle.style.borderColor = '#d2d531';
         else guestScoreCircle.style.borderColor = '#db2360';
     } else {
         guestScoreCircle.textContent = 'N/A';
-        guestScoreCircle.style.borderColor = '#555'; // Default border color
+        guestScoreCircle.style.borderColor = '#555';
     }
     
-    // Check if there are any reviews at all to display the "No reviews yet" message
     const ratingSummaryContainer = document.getElementById('rating-summary');
     if (guestSummary.totalReviews === 0 && userSummary.totalReviews === 0) {
         ratingSummaryContainer.innerHTML = '<p>No reviews yet. Be the first!</p>';
         return;
     }
 
-    // This part builds the review breakdown specific to guest reviews
     let breakdownHtml = '';
     for (let i = 5; i >= 1; i--) {
         const count = guestSummary.ratingCounts[i];
@@ -160,17 +158,25 @@ function setupReviewForm(itemId, API_URL) {
     });
 }
 
-// Your old functions for populating the main page details (unchanged from last version)
+// Your old functions for populating the main page details (modified for API data)
 function populatePage(item) {
     document.getElementById('hero-title').textContent = item.title || 'Title not available';
     document.getElementById('details-title').textContent = item.title || 'Title not available';
     document.getElementById('details-overview').textContent = item.overview || 'No overview available.';
     let posterUrl = item.posterImage;
-    if ((item.type === 'movie' || item.type === 'tv') && posterUrl && !posterUrl.startsWith('http')) {
-        posterUrl = `https://image.tmdb.org/t/p/w500${posterUrl}`;
+    // No longer prepending TMDB path as D1 stores full URLs if provided, or direct paths.
+    // Ensure your D1 'posterImage' column contains full URLs or relative paths that your frontend can resolve.
+    // If it's a TMDB path, it needs to be modified here or in the data population script.
+    if (posterUrl && !posterUrl.startsWith('http') && (item.type === 'movie' || item.type === 'tv')) {
+        posterUrl = `https://image.tmdb.org/t/p/w500${posterUrl}`; // Re-add if D1 stores only paths
     }
+
     if (posterUrl) document.getElementById('details-poster-img').src = posterUrl;
-    startBackdropSlideshow(item.backdrops, item.posterImage, item.type);
+    // Backdrops and screenshots are not directly in D1 'media' table.
+    // If needed, the API /api/media/details/:itemId would need to fetch them
+    // from external APIs or a separate D1 table.
+    // For now, startBackdropSlideshow uses local/static data or a fallback.
+    startBackdropSlideshow([], posterUrl, item.type); // Pass empty array for backdrops
 
     if (item.releaseDate) {
         const releaseDate = new Date(item.releaseDate);
@@ -179,16 +185,11 @@ function populatePage(item) {
     } else { document.getElementById('hero-countdown').classList.add('hidden'); document.getElementById('hero-status').classList.remove('hidden'); }
     
     const userScoreCircle = document.getElementById('user-score-circle');
-    if (item.score) {
-        const score = Math.round(item.score || 0);
-        userScoreCircle.textContent = `${score}%`;
-        if (score >= 70) userScoreCircle.style.borderColor = '#21d07a';
-        else if (score >= 40) userScoreCircle.style.borderColor = '#d2d531';
-        else userScoreCircle.style.borderColor = '#db2360';
-    } else {
-        userScoreCircle.textContent = 'N/A';
-        userScoreCircle.style.borderColor = '#555';
-    }
+    // TMDB/RAWG score (from item.score) is not in D1 'media' table.
+    // If needed, extend D1 'media' table with a 'score' column and populate it.
+    // For now, userScoreCircle will likely show 'N/A'.
+    userScoreCircle.textContent = 'N/A'; // Default to N/A as score is not in D1 'media' table
+    userScoreCircle.style.borderColor = '#555';
 
     const movieTvInfo = document.getElementById('movie-tv-info');
     const gameInfo = document.getElementById('game-info');
@@ -196,14 +197,16 @@ function populatePage(item) {
         if (movieTvInfo) movieTvInfo.classList.remove('hidden');
         if (gameInfo) gameInfo.classList.add('hidden');
         document.getElementById('details-release-date').textContent = `Release: ${item.releaseDate || 'N/A'}`;
+        // Ensure genres from D1 are handled. If stored as comma-separated string, it will work.
         document.getElementById('details-genres').textContent = (item.genres && item.genres.length > 0) ? item.genres.join(', ') : '';
     } else if (item.type === 'game') {
         if (gameInfo) gameInfo.classList.remove('hidden');
         if (movieTvInfo) movieTvInfo.classList.add('hidden');
+        // System requirements are not in D1 'media' table.
+        // If needed, extend D1 'media' table or fetch from external APIs.
         const requirementsDiv = document.getElementById('system-requirements');
         if (requirementsDiv) {
-            if (item.systemRequirements) { requirementsDiv.innerHTML = item.systemRequirements; } 
-            else { requirementsDiv.textContent = 'No PC requirements available.'; }
+            requirementsDiv.textContent = 'No PC requirements available from API.';
         }
     }
 }
@@ -213,8 +216,9 @@ function startBackdropSlideshow(backdrops, posterImage, type) {
     const buildFullUrl = (path) => {
         if (!path) return null;
         if (path.startsWith('http')) return path;
+        // This logic assumes posterImage from D1 is either a full URL or a TMDB/RAWG relative path
         if (type === 'movie' || type === 'tv') return `https://image.tmdb.org/t/p/original${path}`;
-        return null;
+        return null; // Fallback for game poster if not a full URL
     };
     const imageUrls = (backdrops || []).map(buildFullUrl).filter(Boolean);
     const fallbackUrl = buildFullUrl(posterImage);

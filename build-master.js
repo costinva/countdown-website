@@ -1,43 +1,29 @@
-// build-master.js - FINAL ROBUST VERSION
+// build-master.js - FINAL ROBUST VERSION (NO PUBLIC database.json OR database/ FOLDER)
 const fs = require('fs');
 const path = require('path');
 
-/**
- * Safely reads and parses a JSON file.
- * @param {string} filePath The path to the JSON file.
- * @returns {Array} The parsed JSON data as an array, or an empty array if an error occurs.
- */
 function safeReadJson(filePath) {
-    if (!fs.existsSync(filePath)) {
-        console.warn(`--> WARNING: File not found: ${filePath}. Skipping.`);
-        return [];
-    }
+    if (!fs.existsSync(filePath)) { return []; }
     try {
         const fileContent = fs.readFileSync(filePath, 'utf8');
-        // Handle empty files, which are not valid JSON
-        if (fileContent.trim() === '') {
-            console.warn(`--> WARNING: File is empty: ${filePath}. Skipping.`);
-            return [];
-        }
+        if (fileContent.trim() === '') { return []; }
         return JSON.parse(fileContent);
     } catch (error) {
-        console.error(`\n!!! ERROR: Failed to parse JSON from ${filePath}. The file might be corrupt.`);
-        console.error("!!! Error Details:", error.message);
-        console.error("!!! The build will continue, but this data will be missing.\n");
-        return []; // Return an empty array to prevent the build from crashing
+        console.error(`\n!!! ERROR: Failed to parse JSON from ${filePath}. The build will continue, but this data will be missing.\n`);
+        return [];
     }
 }
 
-
 function buildMaster() {
-    console.log("Master Robot starting robust build...");
+    console.log("Master Robot starting robust build (no public database.json or database/ folder)...");
 
     // --- SETUP DIRECTORIES ---
-    const publicDatabaseDir = 'database';
-    fs.mkdirSync(publicDatabaseDir, { recursive: true });
-    
-    // --- STEP 1: SAFELY LOAD ALL DATA SOURCES ---
-    console.log("Loading data from all worker robots...");
+    // The 'database' folder is no longer created for deployment.
+    const localArchiveDir = 'full_archive'; // For local backup, ignored by Git
+    fs.mkdirSync(localArchiveDir, { recursive: true });
+
+    // --- SAFELY LOAD ALL DATA SOURCES ---
+    console.log("Safely loading data from all worker robots...");
     const moviesData = safeReadJson('movies.json');
     const tvUpcomingData = safeReadJson('tv-upcoming.json');
     const tvArchiveData = safeReadJson('tv-archive.json');
@@ -48,35 +34,30 @@ function buildMaster() {
     tvUpcomingData.forEach(item => combinedTvDataMap.set(item.id, item));
     const combinedTvData = Array.from(combinedTvDataMap.values());
 
-    const allMediaDetailed = [...moviesData, ...combinedTvData, ...gamesData];
-    console.log(`Master Robot successfully collected a total of ${allMediaDetailed.length} valid items.`);
+    const allMediaForLocalArchive = [...moviesData, ...combinedTvData, ...gamesData];
+    console.log(`Master Robot successfully collected a total of ${allMediaForLocalArchive.length} valid items for full archive.`);
 
-    // --- STEP 2: BUILD THE LIGHTWEIGHT MANIFEST & DETAIL FILES ---
-    const manifestData = allMediaDetailed.map(item => ({
-        id: item.id, type: item.type, title: item.title, releaseDate: item.releaseDate,
-        posterImage: item.posterImage, genres: item.genres, overview: item.overview
-    }));
 
-    fs.writeFileSync('database.json', JSON.stringify(manifestData, null, 2));
-    console.log(`Successfully created lightweight database.json with ${manifestData.length} items.`);
-
-    allMediaDetailed.forEach(item => {
+    // --- STEP 1: CREATE THE COMPLETE LOCAL ARCHIVE (IGNORED BY GIT) ---
+    allMediaForLocalArchive.forEach(item => {
         const fileName = `${item.type}-${item.id}.json`;
-        fs.writeFileSync(path.join(publicDatabaseDir, fileName), JSON.stringify(item, null, 2));
+        fs.writeFileSync(path.join(localArchiveDir, fileName), JSON.stringify(item, null, 2));
     });
-    console.log(`Successfully created ${allMediaDetailed.length} individual detail files.`);
+    console.log(`Successfully built complete local archive in '${localArchiveDir}/' with ${allMediaForLocalArchive.length} files.`);
 
-    // --- STEP 3: BUILD HTML PAGES ---
+
+    // --- STEP 2: BUILD HTML PAGES ONLY (NO DATA FILES IN DEPLOYMENT) ---
+    // All data will now be fetched by frontend scripts from the Cloudflare Worker API.
     fs.writeFileSync('index.html', generateFinalHtml('upcoming', 'movies'));
     fs.writeFileSync('upcoming-tv.html', generateFinalHtml('upcoming', 'tv'));
     fs.writeFileSync('upcoming-games.html', generateFinalHtml('upcoming', 'games'));
     fs.writeFileSync('launched-movies.html', generateFinalHtml('launched', 'movies'));
     fs.writeFileSync('launched-tv.html', generateFinalHtml('launched', 'tv'));
     fs.writeFileSync('launched-games.html', generateFinalHtml('launched', 'games'));
-    console.log("Successfully built all 6 pages.");
-    console.log("Master Robot's job is done.");
+    console.log("Successfully built all 6 pages. Master Robot's job is done.");
 }
 
+// generateFinalHtml function remains unchanged
 function generateFinalHtml(mainCategory, subCategory) {
     const moviesActive = subCategory === 'movies' ? 'class="active"' : '';
     const tvActive = subCategory === 'tv' ? 'class="active"' : '';

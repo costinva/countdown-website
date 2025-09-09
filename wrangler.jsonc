@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/dist/config.schema.json",
+  "d1_databases": [
+    {
+      "binding": "DB", // This is a placeholder binding, it doesn't strictly matter for `d1 execute`
+      "database_name": "countdown-db", // <--- MUST MATCH YOUR D1 DATABASE NAME
+      "database_id": "26aed731-2397-4f6a-b0a1-caa9cabb3320" // <--- MUST MATCH YOUR D1 DATABASE ID
+    }
+  ]
+}

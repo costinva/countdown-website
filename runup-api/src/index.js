@@ -1,4 +1,5 @@
-// runup-api/src/index.js - DEFINITIVE, DEPENDENCY-FREE VERSION WITH AUTH, MEDIA LISTING, AND INDIVIDUAL DETAILS
+// runup-api/src/index.js - DEFINITIVE, DEPENDENCY-FREE VERSION WITH AUTH AND MEDIA LISTING
+// AND CRITICAL FIX FOR RATING COUNTS
 
 // Helper for JSON responses with CORS headers
 function jsonResponse(data, status = 200) {
@@ -215,9 +216,7 @@ export default {
                     params.push(`%${searchQuery}%`);
                 }
 
-                // IMPORTANT: For genres, ensure your 'media' table's 'genres' column is text that can be LIKE'd.
-                // If genres are stored as JSON, you'd need a different approach (e.g., JSON_EXTRACT)
-                if (genre && genre !== 'all') { // 'all' is a frontend filter, not a DB filter
+                if (genre && genre !== 'all') {
                     whereClauses.push('genres LIKE ?');
                     params.push(`%${genre}%`);
                 }
@@ -245,7 +244,7 @@ export default {
                 });
             }
 
-            // --- NEW: INDIVIDUAL MEDIA DETAILS ROUTE ---
+            // --- INDIVIDUAL MEDIA DETAILS ROUTE ---
             // GET /api/media/details/:itemId
             if (request.method === 'GET' && url.pathname.startsWith('/api/media/details/')) {
                 const itemId = url.pathname.split('/').pop();
@@ -257,11 +256,6 @@ export default {
                 ).bind(itemId).first();
 
                 if (!item) return jsonResponse({ error: 'Item not found' }, 404);
-
-                // Note: Screenshots and backdrops are not in your current D1 media table schema.
-                // If you need them for the details page, you'd need to extend the 'media' table
-                // or fetch them from external APIs in a more complex worker setup.
-                // For now, this will return the basic details stored in D1.
 
                 return jsonResponse(item);
             }
@@ -302,7 +296,7 @@ export default {
                 const totalGuestReviews = guestReviews.length;
                 const averageGuestRating = totalGuestReviews > 0 ? guestReviews.reduce((acc, c) => acc + c.rating, 0) / totalGuestReviews : 0;
                 const guestRatingCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-                guestReviews.forEach(r => { ratingCounts[r.rating]++; });
+                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; }); // <--- CRITICAL FIX NEEDED HERE
 
                 const totalUserReviews = userReviews.length;
                 const averageUserRating = totalUserReviews > 0 ? userReviews.reduce((acc, c) => acc + c.rating, 0) / totalUserReviews : 0;
@@ -365,4 +359,31 @@ export default {
             return jsonResponse({ error: 'Internal Server Error' }, 500);
         }
     },
-};
+};--- START OF FILE wrangler.jsonc ---
+
+{
+  "$schema": "https://unpkg.com/wrangler@latest/dist/config.schema.json",
+  "d1_databases": [
+    {
+      "binding": "DB", // This is a placeholder binding, it doesn't strictly matter for `d1 execute`
+      "database_name": "countdown-db", // <--- MUST MATCH YOUR D1 DATABASE NAME
+      "database_id": "26aed731-2397-4f6a-b0a1-caa9cabb3320" // <--- MUST MATCH YOUR D1 DATABASE ID
+    }
+  ]
+}--- START OF FILE runup-api/wrangler.jsonc ---
+
+{
+  "name": "runup-api", // This MUST be "runup-api"
+  "main": "src/index.js",
+  "compatibility_date": "2023-10-30",
+  "vars": {
+    "JWT_SECRET": "YOUR_GENERATED_SECRET_HERE" 
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "countdown-db",
+      "database_id": "26aed731-2397-4f6a-b0a1-caa9cabb3320" // Double-check this is correct!
+    }
+  ]
+}

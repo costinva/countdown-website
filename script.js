@@ -1,7 +1,8 @@
-// script.js - FINAL VERSION WITH API-POWERED PAGINATION AND FILTERING
+// script.js - FINAL DEFINITIVE VERSION WITH API-POWERED PAGINATION AND FILTERING
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURATION & STATE MANAGEMENT ---
     const API_URL = 'https://runup-api.veronica-vero2vv.workers.dev'; // <--- VERIFY YOUR WORKER URL!
+    // Removed allMedia as it's no longer loaded as a single blob.
     let itemsCurrentlyRendered = 0;
     const ITEMS_PER_LOAD = 100;
     let currentPage = 1;
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let mediaCategory = '';
     let currentSearchQuery = '';
     let currentGenreFilter = 'all';
+    let originalPageTitle = ''; // Moved here to be accessible
 
     // --- ELEMENT SELECTORS ---
     const mainElement = document.querySelector('.grid-main');
@@ -33,11 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pageTitleText.includes('upcoming')) mediaCategory = 'upcoming';
         else if (pageTitleText.includes('launched')) mediaCategory = 'launched';
 
-        originalPageTitle = pageTitleElement.textContent;
+        originalPageTitle = pageTitleElement.textContent; // Set here correctly
         createSeeMoreButton();
         addGenresDropdownIfNeeded();
         setupEventListeners();
         
+        // --- CRITICAL FIX: Now fetches from API_URL, NOT 'database.json' ---
         await fetchAndRenderMedia(true); 
     }
 
@@ -61,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentGenreFilter !== 'all') apiUrl += `&genre=${currentGenreFilter}`;
 
             const response = await fetch(apiUrl);
-            if (!response.ok) throw new Error('Failed to fetch media from API');
+            if (!response.ok) throw new Error(`Failed to fetch media from API: ${response.status} ${response.statusText}`);
             const data = await response.json();
 
             if (reset) countdownGrid.innerHTML = ''; 

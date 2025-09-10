@@ -45,7 +45,7 @@
         </div>
     </section>
 
-    <main id="details-content-section" class="content-wrapper"> <!-- ADDED content-wrapper class -->
+    <main id="details-content-section" class="content-wrapper">
         <div class="details-poster">
             <img id="details-poster-img" src="" alt="Poster">
         </div>
@@ -55,14 +55,19 @@
                 <span id="details-release-date"></span>
                 <span id="details-genres"></span>
             </div>
+            <!-- UPDATED: Score circles grouped together with distinct IDs and labels -->
             <div class="details-score-group">
                 <div class="details-score">
-                    <div id="user-score-circle" class="score-circle">N/A</div>
-                    <span>User Score</span>
+                    <div id="original-score-circle" class="score-circle">N/A</div>
+                    <span class="score-label">Original Score</span>
                 </div>
                 <div class="details-score">
                     <div id="guest-score-circle" class="score-circle">N/A</div>
-                    <span>Guest Score</span>
+                    <span class="score-label">Guest Score</span>
+                </div>
+                <div class="details-score">
+                    <div id="user-reviews-score-circle" class="score-circle">N/A</div>
+                    <span class="score-label">User Reviews</span>
                 </div>
             </div>
             <h3>Overview</h3>
@@ -74,7 +79,7 @@
         </div>
     </main>
     
-    <section id="comments-section" class="content-wrapper"> <!-- ADDED content-wrapper class -->
+    <section id="comments-section" class="content-wrapper">
         <h3>Guest Reviews</h3>
         <div class="review-form-container">
             <h4>Leave a Review</h4>

@@ -28,3 +28,5 @@ Thumbs.db
 *.bak
 *.tmp
 .vscode/
+# Node.js executable (if accidentally tracked)
+node

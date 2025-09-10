@@ -1,18 +1,16 @@
-// build-archive-tv.js - The "Archivist" Robot for passively building the launched library
+// build-archive-tv.js - The "Archivist" Robot for passively building the launched library - ENRICHED DATA
 const fetch = require('node-fetch');
 const fs = require('fs');
 
 const SHOWS_API_URL = `https://api.tvmaze.com/shows`;
 const CACHE_FILE = '.cache/tv_archive_progress.json';
-const SHOWS_PER_RUN = 100; // How many new shows to process each time
+const SHOWS_PER_RUN = 100;
 
-// THE FIX: Ensure the cache directory exists before we try to write to it.
 fs.mkdirSync('.cache', { recursive: true });
 
 async function buildArchiveTvData() {
     console.log("TV Archivist starting...");
 
-    // 1. Load our memory of what we've already processed
     let progress = { lastPageProcessed: 0 };
     if (fs.existsSync(CACHE_FILE)) {
         progress = JSON.parse(fs.readFileSync(CACHE_FILE));
@@ -40,16 +38,22 @@ async function buildArchiveTvData() {
 
     const normalizedShows = newShows.map(show => {
         if (!show.premiered || !show.image?.original) return null;
+        // --- ENRICHED DATA EXTRACTION FOR ARCHIVED TV ---
         return {
-            id: show.id, type: 'tv', title: show.name, releaseDate: show.premiered,
-            posterImage: show.image.original, backdropImage: show.image.original,
+            id: show.id,
+            type: 'tv',
+            title: show.name,
+            releaseDate: show.premiered,
+            posterImage: show.image.original,
+            backdrops: show.image?.original ? [show.image.original] : [], // Use poster as a backdrop
             overview: (show.summary || "No summary available.").replace(/<[^>]*>?/gm, ''),
-            score: show.rating?.average ? show.rating.average * 10 : null,
-            genres: show.genres || [], screenshots: [], systemRequirements: null
+            score: show.rating?.average ? Math.round(show.rating.average * 10) : null, // Calculate score
+            genres: show.genres || [],
+            screenshots: show.image?.original ? [show.image.original] : [], // Use poster as a screenshot
+            systemRequirements: null
         };
     }).filter(Boolean);
 
-    // 2. Load the existing archive and add the new shows
     let existingArchive = [];
     if (fs.existsSync('tv-archive.json')) {
         existingArchive = JSON.parse(fs.readFileSync('tv-archive.json'));
@@ -61,7 +65,6 @@ async function buildArchiveTvData() {
     fs.writeFileSync('tv-archive.json', JSON.stringify(uniqueArchive, null, 2));
     console.log(`TV Archivist finished. Total launched shows in archive: ${uniqueArchive.length}.`);
 
-    // 3. Save our progress for next time
     progress.lastPageProcessed = endPage - 1;
     fs.writeFileSync(CACHE_FILE, JSON.stringify(progress));
     console.log(`Saved progress. Next run will start from page ${endPage}.`);

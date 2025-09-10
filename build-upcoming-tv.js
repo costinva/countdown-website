@@ -1,4 +1,4 @@
-// build-upcoming-tv.js - The "Scout" Robot for upcoming shows and episodes
+// build-upcoming-tv.js - The "Scout" Robot for upcoming shows and episodes - ENRICHED DATA
 const fetch = require('node-fetch');
 const fs = require('fs');
 
@@ -9,7 +9,6 @@ async function buildUpcomingTvData() {
     let allEpisodes = [];
     const today = new Date();
 
-    // Fetch the schedule for the next 60 days to find upcoming episodes
     for (let i = 0; i < 60; i++) {
         const targetDate = new Date(today);
         targetDate.setDate(today.getDate() + i);
@@ -26,25 +25,35 @@ async function buildUpcomingTvData() {
     }
 
     const uniqueShows = new Map();
-    allEpisodes.forEach(episode => {
+    for (const episode of allEpisodes) {
         const show = episode.show;
-        if (!show.premiered || !show.image?.original) return; // Skip shows with no data
+        if (!show.premiered || !show.image?.original) continue;
 
-        // Check if this is the very first episode (a new series launch)
+        // Fetch show details for better data (e.g., summary, full image) if needed
+        // For simplicity, we use what's available in the schedule endpoint
+
         const isNewSeries = episode.season === 1 && episode.number === 1;
         const title = isNewSeries ? show.name : `${show.name} (New Episode)`;
 
-        // Only add the EARLIEST upcoming episode for each show
+        // --- ENRICHED DATA EXTRACTION FOR UPCOMING TV ---
         if (!uniqueShows.has(show.id)) {
             uniqueShows.set(show.id, {
-                id: show.id, type: 'tv', title: title, releaseDate: episode.airdate,
-                posterImage: show.image.original, backdropImage: show.image.original,
+                id: show.id,
+                type: 'tv',
+                title: title,
+                releaseDate: episode.airdate,
+                posterImage: show.image.original,
+                // For TVmaze, backdropImage is often the same as poster or missing in schedule.
+                // We'll use a placeholder or the poster itself for backdrops if no specific backdrops are available.
+                backdrops: show.image?.original ? [show.image.original] : [], // Use poster as a backdrop
                 overview: (show.summary || "No summary available.").replace(/<[^>]*>?/gm, ''),
-                score: show.rating?.average ? show.rating.average * 10 : null,
-                genres: show.genres || [], screenshots: [], systemRequirements: null
+                score: show.rating?.average ? Math.round(show.rating.average * 10) : null, // Calculate score
+                genres: show.genres || [],
+                screenshots: show.image?.original ? [show.image.original] : [], // Use poster as a screenshot
+                systemRequirements: null
             });
         }
-    });
+    }
 
     const upcomingShows = Array.from(uniqueShows.values());
     fs.writeFileSync('tv-upcoming.json', JSON.stringify(upcomingShows, null, 2));

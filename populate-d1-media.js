@@ -1,21 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
-// IMPORTANT: This script will generate multiple .sql files into a new folder.
-// You will then execute them one by one using `wrangler d1 execute`.
-
-const DATABASE_DIR = 'database'; // <--- Confirm this matches your folder name (e.g., 'database' or 'full_archive')
-const OUTPUT_DIR = 'd1_sql_batches'; // Folder to save the SQL files
-const ITEMS_PER_SQL_BATCH = 15000; // <--- INCREASED: Number of items per SQL file.
+const DATABASE_DIR = 'full_archive'; // <--- Confirm this matches your folder name
+const OUTPUT_DIR = 'd1_sql_batches';
+const ITEMS_PER_SQL_BATCH = 15000;
 
 async function generateD1InsertSqlFiles() {
     console.log(`Generating D1 insert SQL files from '${DATABASE_DIR}' into '${OUTPUT_DIR}'...`);
-
-    // Create the output directory if it doesn't exist
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
     const files = fs.readdirSync(DATABASE_DIR)
-                    .filter(file => file.endsWith('.json') && file.includes('-')); // Ensures it's an item detail file
+                    .filter(file => file.endsWith('.json') && file.includes('-'));
 
     let currentSqlCommands = [];
     let batchFileIndex = 1;
@@ -33,10 +28,27 @@ async function generateD1InsertSqlFiles() {
 
         if (item && item.id && item.type && item.title) {
             const itemGenres = Array.isArray(item.genres) && item.genres.length > 0
-                             ? item.genres.join(', ')
-                             : null;
+                                 ? item.genres.join(', ')
+                                 : null;
+            
+            // Safely get score, converting to a number
+            const itemScore = (item.score !== undefined && item.score !== null && !isNaN(parseFloat(item.score)))
+                            ? parseFloat(item.score)
+                            : null;
 
-            const sql = `INSERT OR IGNORE INTO media (id, type, title, releaseDate, posterImage, overview, genres) VALUES ('${
+            // Safely get backdrops, ensure it's an array, then JSON.stringify
+            const itemBackdrops = Array.isArray(item.backdrops) && item.backdrops.length > 0
+                                 ? JSON.stringify(item.backdrops)
+                                 : null;
+            // Safely get screenshots, ensure it's an array, then JSON.stringify
+            const itemScreenshots = Array.isArray(item.screenshots) && item.screenshots.length > 0
+                                 ? JSON.stringify(item.screenshots)
+                                 : null;
+            
+            // Safely get systemRequirements (might be HTML string)
+            const itemSystemRequirements = item.systemRequirements || null;
+
+            const sql = `INSERT OR IGNORE INTO media (id, type, title, releaseDate, posterImage, overview, genres, score, backdrops, screenshots, systemRequirements) VALUES ('${
                 String(item.id).replace(/'/g, "''")
             }', '${
                 String(item.type).replace(/'/g, "''")
@@ -50,13 +62,20 @@ async function generateD1InsertSqlFiles() {
                 item.overview ? `'${String(item.overview).replace(/'/g, "''")}'` : 'NULL'
             }, ${
                 itemGenres ? `'${String(itemGenres).replace(/'/g, "''")}'` : 'NULL'
+            }, ${
+                itemScore !== null ? itemScore : 'NULL' // Use the parsed score
+            }, ${
+                itemBackdrops ? `'${String(itemBackdrops).replace(/'/g, "''")}'` : 'NULL'
+            }, ${
+                itemScreenshots ? `'${String(itemScreenshots).replace(/'/g, "''")}'` : 'NULL'
+            }, ${
+                itemSystemRequirements ? `'${String(itemSystemRequirements).replace(/'/g, "''")}'` : 'NULL'
             });`;
 
             currentSqlCommands.push(sql);
             totalItemsProcessed++;
 
             if (currentSqlCommands.length >= ITEMS_PER_SQL_BATCH) {
-                // Write the current batch to a file in the output directory
                 const outputFileName = path.join(OUTPUT_DIR, `d1_media_inserts_part${batchFileIndex}.sql`);
                 fs.writeFileSync(outputFileName, currentSqlCommands.join('\n') + '\n');
                 console.log(`Generated ${outputFileName} with ${currentSqlCommands.length} items.`);
@@ -69,7 +88,6 @@ async function generateD1InsertSqlFiles() {
         }
     }
 
-    // Write any remaining items to the last file
     if (currentSqlCommands.length > 0) {
         const outputFileName = path.join(OUTPUT_DIR, `d1_media_inserts_part${batchFileIndex}.sql`);
         fs.writeFileSync(outputFileName, currentSqlCommands.join('\n') + '\n');

@@ -1,4 +1,4 @@
-// build-rawg.js - REVERTED TO STRICT, STABLE VERSION
+// build-rawg.js - ENRICHED DATA EXTRACTION
 const fetch = require('node-fetch');
 const fs = require('fs');
 
@@ -27,20 +27,28 @@ async function buildRawgData() {
 
     const normalizedGames = [];
     for (const game of games) {
-        if (game.released && game.background_image) {
-            const detailResponse = await fetch(`https://api.rawg.io/api/games/${game.id}?key=${RAWG_API_KEY}`);
-            const detailData = await detailResponse.json();
-            normalizedGames.push({
-                id: game.id, type: 'game', title: game.name, releaseDate: game.released,
-                posterImage: game.background_image, backdropImage: game.background_image,
-                overview: detailData.description_raw || `A new game titled ${game.name}. More details to come.`,
-                score: game.metacritic, genres: game.genres.map(g => g.name),
-                screenshots: (game.short_screenshots || []).slice(0, 4).map(ss => ss.image),
-                systemRequirements: (detailData.platforms || []).find(p => p.platform.name === 'PC')?.requirements.html || null
-            });
-            await new Promise(resolve => setTimeout(resolve, 50));
-        }
+        if (!game.released || !game.background_image) continue;
+
+        const detailResponse = await fetch(`https://api.rawg.io/api/games/${game.id}?key=${RAWG_API_KEY}`);
+        const detailData = await detailResponse.json();
+        
+        // --- ENRICHED DATA EXTRACTION FOR GAMES ---
+        normalizedGames.push({
+            id: game.id,
+            type: 'game',
+            title: game.name,
+            releaseDate: game.released,
+            posterImage: game.background_image,
+            backdrops: (game.short_screenshots || []).map(ss => ss.image), // RAWG backdrops often come from screenshots
+            overview: detailData.description_raw || `A new game titled ${game.name}. More details to come.`,
+            score: game.metacritic || null, // Metacritic score
+            genres: game.genres.map(g => g.name),
+            screenshots: (game.short_screenshots || []).map(ss => ss.image), // Rawg screenshots are good
+            systemRequirements: (detailData.platforms || []).find(p => p.platform.name === 'PC')?.requirements.html || null
+        });
+        await new Promise(resolve => setTimeout(resolve, 50));
     }
+
     fs.writeFileSync('rawg-data.json', JSON.stringify(normalizedGames, null, 2));
     console.log(`RAWG Robot finished. Saved ${normalizedGames.length} valid games to rawg-data.json.`);
 }

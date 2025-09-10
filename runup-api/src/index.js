@@ -268,8 +268,8 @@ export default {
 
 
             // --- REVIEW ROUTES ---
-            if (request.method === 'GET' && url.pathname.startsWith('/api/reviews/')) {
-                const itemId = url.pathname.split('/').pop();
+            if (request.method === 'GET' && url.pathname === '/api/reviews/:itemId') { // Changed path to include :itemId
+                const itemId = url.pathname.split('/').pop(); // Extract itemId from URL path
                 if (!itemId) return jsonResponse({ error: 'Missing item ID in URL' }, 400);
 
                 const stmt = env.DB.prepare(
@@ -301,7 +301,7 @@ export default {
                 const totalGuestReviews = guestReviews.length;
                 const averageGuestRating = totalGuestReviews > 0 ? guestReviews.reduce((acc, c) => acc + c.rating, 0) / totalGuestReviews : 0;
                 const guestRatingCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; }); // FIX: Corrected variable here
+                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; });
 
                 const totalUserReviews = userReviews.length;
                 const averageUserRating = totalUserReviews > 0 ? userReviews.reduce((acc, c) => acc + c.rating, 0) / totalUserReviews : 0;

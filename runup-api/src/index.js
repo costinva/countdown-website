@@ -63,7 +63,8 @@ async function generateJwt(payload, secret) {
         .replace(/\//g, "_")
         .replace(/=/g, "");
 
-    return `${encodedHeader}.${encodedPayload}.${encodedSignature}`; // CRITICAL FIX: Removed duplicate encodedHeader
+    // CRITICAL FIX: Removed duplicate encodedHeader here
+    return `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
 }
 
 async function verifyJwt(token, secret) {
@@ -232,7 +233,7 @@ export default {
 
                 const items = (results || []).map(item => ({
                     ...item,
-                    genres: item.genres ? item.genres.split(', ') : [], // CRITICAL FIX: Convert genres from string to array
+                    genres: item.genres ? item.genres.split(', ') : [],
                 }));
 
                 return jsonResponse({
@@ -268,8 +269,8 @@ export default {
 
 
             // --- REVIEW ROUTES ---
-            if (request.method === 'GET' && url.pathname.startsWith('/api/reviews/')) { // Changed path to include :itemId
-                const itemId = url.pathname.split('/').pop(); // Extract itemId from URL path
+            if (request.method === 'GET' && url.pathname.startsWith('/api/reviews/')) { // Path was '/api/reviews/:itemId', fixed to startsWith
+                const itemId = url.pathname.split('/').pop();
                 if (!itemId) return jsonResponse({ error: 'Missing item ID in URL' }, 400);
 
                 const stmt = env.DB.prepare(
@@ -301,7 +302,7 @@ export default {
                 const totalGuestReviews = guestReviews.length;
                 const averageGuestRating = totalGuestReviews > 0 ? guestReviews.reduce((acc, c) => acc + c.rating, 0) / totalGuestReviews : 0;
                 const guestRatingCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; }); // FIX: Corrected variable here
+                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; }); // CRITICAL FIX: Corrected variable here
 
                 const totalUserReviews = userReviews.length;
                 const averageUserRating = totalUserReviews > 0 ? userReviews.reduce((acc, c) => acc + c.rating, 0) / totalUserReviews : 0;

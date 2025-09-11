@@ -1,4 +1,4 @@
-// details.js - FINAL VERSION WITH ALL CRITICAL FIXES AND DATA HANDLING
+// details.js - FINAL DEFINITIVE VERSION WITH ALL CRITICAL BUGS FIXED
 document.addEventListener('DOMContentLoaded', async () => {
     const heroTitle = document.getElementById('hero-title');
     const params = new URLSearchParams(window.location.search);
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch(`${API_URL}/api/media/details/${itemId}`);
         if (!response.ok) {
             heroTitle.textContent = `Error: Could not find item ${itemId}.`;
-            throw new Error(`Could not find item ${itemId} from API`);
+            throw new Error(`Could not find item ${itemId} from API (Status: ${response.status})`);
         }
         const item = await response.json();
         
@@ -83,47 +83,44 @@ function displayRatingSummary(guestSummary, userSummary) {
     }
 
     let breakdownHtml = '';
-    for (let i = 5; i >= 1; i--) {
-        const count = guestSummary.ratingCounts[i];
-        const barPercent = totalReviews > 0 ? (count / totalReviews) * 100 : 0;
+    
+    if (guestSummary.totalReviews > 0) {
         breakdownHtml += `
-            <div class="rating-bar-row">
-                <span>${i} ★</span>
-                <div class="rating-bar"><div style="width: ${barPercent}%"></div></div>
-                <span>${count}</span>
+            <div class="rating-average" id="guest-average-display">
+                <div class="average-score">${guestSummary.averageRating}</div>
+                <div>
+                    <div>Based on</div>
+                    <div>${guestSummary.totalReviews} Guest Reviews</div>
+                </div>
+            </div>
+            <div class="rating-breakdown-wrapper" id="guest-breakdown-wrapper">
+                <h4>Guest Rating Breakdown</h4>
+                <div class="rating-breakdown">
+                    ${generateBreakdownHtml(guestSummary.ratingCounts, guestSummary.totalReviews)}
+                </div>
             </div>
         `;
     }
-
-    ratingSummaryContainer.innerHTML = `
-        <div class="rating-average" id="guest-average-display">
-            <div class="average-score">${guestSummary.averageRating}</div>
-            <div>
-                <div>Based on</div>
-                <div>${guestSummary.totalReviews} Guest Reviews</div>
+    
+    if (userSummary.totalReviews > 0) {
+        breakdownHtml += `
+            <div class="rating-average ${guestSummary.totalReviews > 0 ? 'hidden' : ''}" id="user-average-display">
+                <div class="average-score">${userSummary.averageRating}</div>
+                <div>
+                    <div>Based on</div>
+                    <div>${userSummary.totalReviews} User Reviews</div>
+                </div>
             </div>
-        </div>
-        <div class="rating-breakdown-wrapper" id="guest-breakdown-wrapper">
-            <h4>Guest Rating Breakdown</h4>
-            <div class="rating-breakdown">
-                ${generateBreakdownHtml(guestSummary.ratingCounts, guestSummary.totalReviews)}
+            <div class="rating-breakdown-wrapper ${guestSummary.totalReviews > 0 ? 'hidden' : ''}" id="user-breakdown-wrapper">
+                <h4>User Rating Breakdown</h4>
+                <div class="rating-breakdown">
+                    ${generateBreakdownHtml(userSummary.ratingCounts, userSummary.totalReviews)}
+                </div>
             </div>
-        </div>
-
-        <div class="rating-average hidden" id="user-average-display">
-            <div class="average-score">${userSummary.averageRating}</div>
-            <div>
-                <div>Based on</div>
-                <div>${userSummary.totalReviews} User Reviews</div>
-            </div>
-        </div>
-        <div class="rating-breakdown-wrapper hidden" id="user-breakdown-wrapper">
-            <h4>User Rating Breakdown</h4>
-            <div class="rating-breakdown">
-                ${generateBreakdownHtml(userSummary.ratingCounts, userSummary.totalReviews)}
-            </div>
-        </div>
-    `;
+        `;
+    }
+    
+    ratingSummaryContainer.innerHTML = breakdownHtml;
 }
 
 function generateBreakdownHtml(ratingCounts, totalReviews) {
@@ -242,7 +239,8 @@ function populatePage(item) {
     }
     if (posterUrl) document.getElementById('details-poster-img').src = posterUrl;
     
-    const backdropsArray = item.backdrops ? JSON.parse(item.backdrops) : [];
+    // CRITICAL FIX: The API already sends backdrops as an array, no JSON.parse needed.
+    const backdropsArray = Array.isArray(item.backdrops) ? item.backdrops : [];
     startBackdropSlideshow(backdropsArray, posterUrl, item.type);
 
     if (item.releaseDate) {

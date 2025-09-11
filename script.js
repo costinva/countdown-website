@@ -1,8 +1,7 @@
 // script.js - FINAL DEFINITIVE VERSION WITH API-POWERED PAGINATION AND FILTERING
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // --- CONFIGURATION & STATE MANAGEMENT ---
     const API_URL = 'https://runup-api.veronica-vero2vv.workers.dev'; // <--- VERIFY YOUR WORKER URL!
-    // Removed allMedia as it's no longer loaded as a single blob.
     let itemsCurrentlyRendered = 0;
     const ITEMS_PER_LOAD = 100;
     let currentPage = 1;
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let mediaCategory = '';
     let currentSearchQuery = '';
     let currentGenreFilter = 'all';
-    let originalPageTitle = ''; // Moved here to be accessible
+    let originalPageTitle = '';
 
     // --- ELEMENT SELECTORS ---
     const mainElement = document.querySelector('.grid-main');
@@ -35,12 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pageTitleText.includes('upcoming')) mediaCategory = 'upcoming';
         else if (pageTitleText.includes('launched')) mediaCategory = 'launched';
 
-        originalPageTitle = pageTitleElement.textContent; // Set here correctly
+        originalPageTitle = pageTitleElement.textContent;
         createSeeMoreButton();
         addGenresDropdownIfNeeded();
         setupEventListeners();
         
-        // --- CRITICAL FIX: Now fetches from API_URL, NOT 'database.json' ---
         await fetchAndRenderMedia(true); 
     }
 
@@ -210,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function handleCardMouseEnter(event) {} // Removed screenshot hover, as data is not available directly
-    function handleCardMouseLeave(event) {} // Removed screenshot hover, as data is not available directly
+    function handleCardMouseEnter(event) {}
+    function handleCardMouseLeave(event) {}
     
     // --- KICK EVERYTHING OFF ---
     initializePage();

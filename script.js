@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const tagType = (item.type || 'MEDIA').toUpperCase();
         const timerOrStatusHtml = isLaunched ? `<div class="card-status"><h4>Launched</h4></div>` : `<div class="card-timer"><div><span class="days">0</span><p>Days</p></div><div><span class="hours">0</span><p>Hours</p></div><div><span class="mins">0</span><p>Mins</p></div><div><span class="secs">0</span><p>Secs</p></div></div>`;
         const cardLink = document.createElement('a');
-        cardLink.href = `details.html?id=${item.type}-${item.id}`;
+        cardLink.href = `details.html?id=${item.id}`;
         cardLink.className = 'countdown-card';
         cardLink.dataset.date = `${releaseDate}T12:00:00`;
         cardLink.dataset.poster = posterUrl;

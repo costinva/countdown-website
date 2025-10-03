@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { padding: 20px; }
+        .admin-container { max-width: 900px; margin: auto; }
+        .auth-box { margin-bottom: 20px; }
+        .review-item { background-color: #1a1a1a; padding: 15px; border-radius: 5px; margin-bottom: 10px; }
+        .review-item button { background-color: #db2360; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Review Moderation Panel</h1>
+        <div class="auth-box">
+            <input type="password" id="admin-key" placeholder="Enter Admin Key">
+            <button id="fetch-reviews-btn">Fetch Reviews</button>
+        </div>
+        <div id="reviews-list">
+            <!-- Reviews will be loaded here -->
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

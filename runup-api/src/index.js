@@ -1,4 +1,6 @@
-// runup-api/src/index.js - FINAL, DEPENDENCY-FREE VERSION WITH ALL CRITICAL BUGS FIXED
+// runup-api/src/index.js - MODIFIED WITH ADMIN MODERATION FEATURES
+
+const BANNED_WORDS = ['word1', 'word2', 'badword', 'etc']; // Banned words list for moderation
 
 // Helper for JSON responses with CORS headers
 function jsonResponse(data, status = 200) {
@@ -63,13 +65,12 @@ async function generateJwt(payload, secret) {
         .replace(/\//g, "_")
         .replace(/=/g, "");
 
-    // CRITICAL FIX: Removed duplicate encodedHeader here
     return `${encodedHeader}.${encodedPayload}.${encodedSignature}`;
 }
 
 async function verifyJwt(token, secret) {
     const parts = token.split('.');
-    if (parts.length !== 3) return null; // Invalid token format
+    if (parts.length !== 3) return null;
 
     const [encodedHeader, encodedPayload, encodedSignature] = parts;
 
@@ -83,12 +84,12 @@ async function verifyJwt(token, secret) {
             new TextEncoder().encode(`${encodedHeader}.${encodedPayload}`)
         );
 
-        if (!isValid) return null; // Signature doesn't match
+        if (!isValid) return null;
 
         const decodedPayload = JSON.parse(atob(encodedPayload.replace(/-/g, "+").replace(/_/g, "/")));
-        if (decodedPayload.exp < Math.floor(Date.now() / 1000)) return null; // Token expired
+        if (decodedPayload.exp < Math.floor(Date.now() / 1000)) return null;
 
-        return decodedPayload; // Return the payload if valid
+        return decodedPayload;
     } catch (e) {
         console.error("JWT verification error:", e);
         return null;
@@ -98,23 +99,32 @@ async function verifyJwt(token, secret) {
 async function authenticateRequest(request, env) {
     const authHeader = request.headers.get('Authorization');
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-        return null; // Not authenticated
+        return null;
     }
 
     const token = authHeader.split(' ')[1];
     const payload = await verifyJwt(token, env.JWT_SECRET);
 
     if (!payload || !payload.userId) {
-        return null; // Invalid or expired token
+        return null;
     }
-    return payload.userId; // Return user ID if authenticated
+    return payload.userId;
+}
+
+// Helper to verify if a request is from an authorized admin
+async function isAdmin(request, env) {
+    const authHeader = request.headers.get('Authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return false;
+    }
+    const key = authHeader.split(' ')[1];
+    return key === env.ADMIN_KEY;
 }
 
 
 // --- Main Fetch Handler ---
 export default {
     async fetch(request, env) {
-        // Handle CORS preflight requests
         if (request.method === 'OPTIONS') {
             return new Response(null, {
                 headers: {
@@ -128,6 +138,26 @@ export default {
         const url = new URL(request.url);
 
         try {
+            // --- ADMIN ROUTES ---
+            if (request.method === 'GET' && url.pathname === '/api/admin/reviews') {
+                if (!(await isAdmin(request, env))) {
+                    return jsonResponse({ error: 'Forbidden' }, 403);
+                }
+                const stmt = env.DB.prepare('SELECT id, author, comment, media_id, timestamp FROM comments ORDER BY timestamp DESC');
+                const { results } = await stmt.all();
+                return jsonResponse(results || []);
+            }
+
+            if (request.method === 'DELETE' && url.pathname.startsWith('/api/admin/reviews/')) {
+                if (!(await isAdmin(request, env))) {
+                    return jsonResponse({ error: 'Forbidden' }, 403);
+                }
+                const commentId = url.pathname.split('/').pop();
+                if (!commentId) return jsonResponse({ error: 'Missing comment ID' }, 400);
+                await env.DB.prepare('DELETE FROM comments WHERE id = ?').bind(commentId).run();
+                return jsonResponse({ success: true });
+            }
+
             // --- AUTHENTICATION ROUTES ---
             if (request.method === 'POST' && url.pathname === '/api/auth/register') {
                 const { username, password } = await request.json();
@@ -269,7 +299,7 @@ export default {
 
 
             // --- REVIEW ROUTES ---
-            if (request.method === 'GET' && url.pathname.startsWith('/api/reviews/')) { // Path was '/api/reviews/:itemId', fixed to startsWith
+            if (request.method === 'GET' && url.pathname.startsWith('/api/reviews/')) {
                 const itemId = url.pathname.split('/').pop();
                 if (!itemId) return jsonResponse({ error: 'Missing item ID in URL' }, 400);
 
@@ -302,7 +332,7 @@ export default {
                 const totalGuestReviews = guestReviews.length;
                 const averageGuestRating = totalGuestReviews > 0 ? guestReviews.reduce((acc, c) => acc + c.rating, 0) / totalGuestReviews : 0;
                 const guestRatingCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; }); // CRITICAL FIX: Corrected variable here
+                guestReviews.forEach(r => { guestRatingCounts[r.rating]++; });
 
                 const totalUserReviews = userReviews.length;
                 const averageUserRating = totalUserReviews > 0 ? userReviews.reduce((acc, c) => acc + c.rating, 0) / totalUserReviews : 0;
@@ -327,10 +357,16 @@ export default {
                 });
             }
 
-            // POST /api/reviews (Updated to handle authenticated users)
+            // POST /api/reviews (Updated to handle banned words and authenticated users)
             if (request.method === 'POST' && url.pathname === '/api/reviews') {
                 const requestBody = await request.json();
-                const { itemId, rating, comment } = requestBody;
+                let { itemId, rating, comment } = requestBody; // Use let for mutable comment
+                
+                // Banned Word Filter Logic
+                if (comment) {
+                    const regex = new RegExp(BANNED_WORDS.join('|'), 'gi');
+                    comment = comment.replace(regex, '***');
+                }
                 
                 const userId = await authenticateRequest(request, env);
                 let authorName = requestBody.author;

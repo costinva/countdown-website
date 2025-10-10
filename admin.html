@@ -8,18 +8,39 @@
     <style>
         body { padding: 20px; }
         .admin-container { max-width: 900px; margin: auto; }
-        .auth-box { margin-bottom: 20px; }
+        .auth-box, .bulk-delete-box { margin-bottom: 20px; background-color: #1a1a1a; padding: 20px; border-radius: 8px; }
         .review-item { background-color: #1a1a1a; padding: 15px; border-radius: 5px; margin-bottom: 10px; }
-        .review-item button { background-color: #db2360; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+        .review-item button, .auth-box button, .bulk-delete-box button { background-color: #4d88ff; color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 5px; }
+        .review-item button.delete-btn, #bulk-delete-btn { background-color: #db2360; }
+        input, select { padding: 8px; border-radius: 5px; border: 1px solid #333; background-color: #2a2a2a; color: #fff; }
     </style>
 </head>
 <body>
     <div class="admin-container">
         <h1>Review Moderation Panel</h1>
+        
         <div class="auth-box">
             <input type="password" id="admin-key" placeholder="Enter Admin Key">
             <button id="fetch-reviews-btn">Fetch Reviews</button>
         </div>
+
+        <hr style="margin: 30px 0; border-color: #333;">
+
+        <div class="bulk-delete-box">
+            <h2 style="color: #db2360;">Bulk Delete Operations (DANGEROUS)</h2>
+            <p>Use with extreme caution. This action cannot be undone.</p>
+            
+            <select id="delete-type-select">
+                <option value="">-- Select Criteria --</option>
+                <option value="byMediaId">All comments on a specific Media ID</option>
+                <option value="byAuthor">All comments by a Guest Author Name</option>
+                <option value="byContent">All comments containing specific text</option>
+            </select>
+            
+            <input type="text" id="delete-value-input" placeholder="Enter Media ID, Author Name, or Text">
+            <button id="bulk-delete-btn">Bulk Delete</button>
+        </div>
+        
         <div id="reviews-list">
             <!-- Reviews will be loaded here -->
         </div>

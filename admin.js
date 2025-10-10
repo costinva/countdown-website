@@ -1,10 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- ELEMENT SELECTORS ---
     const fetchBtn = document.getElementById('fetch-reviews-btn');
     const reviewsList = document.getElementById('reviews-list');
     const adminKeyInput = document.getElementById('admin-key');
+    const bulkDeleteBtn = document.getElementById('bulk-delete-btn');
+    const deleteTypeSelect = document.getElementById('delete-type-select');
+    const deleteValueInput = document.getElementById('delete-value-input');
+    
+    // --- CONFIG ---
     const API_URL = 'https://runup-api.veronica-vero2vv.workers.dev'; // Your worker URL
 
+    // --- EVENT LISTENERS ---
     fetchBtn.addEventListener('click', fetchReviews);
+    bulkDeleteBtn.addEventListener('click', handleBulkDelete);
 
     async function fetchReviews() {
         const key = adminKeyInput.value;
@@ -64,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (!response.ok) throw new Error('Failed to delete.');
 
-                // Remove the item from the UI
                 document.getElementById(`review-${commentId}`).remove();
 
             } catch (error) {
@@ -72,4 +79,44 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    async function handleBulkDelete() {
+        const key = adminKeyInput.value;
+        const deleteType = deleteTypeSelect.value;
+        const value = deleteValueInput.value.trim();
+
+        if (!key || !deleteType || !value) {
+            alert('Please provide the Admin Key, select a criteria, and enter a value.');
+            return;
+        }
+
+        const confirmation = prompt(`This is a destructive action. To confirm, please type "DELETE" in the box below.`);
+        if (confirmation !== 'DELETE') {
+            alert('Bulk delete cancelled.');
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API_URL}/api/admin/reviews/bulk-delete`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${key}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ deleteType, value })
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server responded with status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            alert(`Success! Deleted ${result.deletedCount} reviews.`);
+
+            fetchReviews(); // Refresh the reviews list
+
+        } catch (error) {
+            alert(`Error during bulk delete: ${error.message}`);
+        }
+    }
 });

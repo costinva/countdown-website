@@ -1,9 +1,9 @@
-// runup-api/index.js - FINAL VERSION WITH BULK DELETE + SINGLE ENGLISH PROFANITY FILTER
+// runup-api/index.js - YOUR FILE UPDATED WITH BULK DELETE
 
-import Filter from 'bad-words';
-import { wordList } from './banned-words.js';
+const Filter = require('bad-words');
+const { wordList } = require('./banned-words.js');
 
-// Initialize a single profanity filter
+// Initialize the profanity filter
 const filter = new Filter();
 // Add all the words from your custom list to the filter
 filter.addWords(...wordList); 
@@ -19,7 +19,6 @@ function jsonResponse(data, status = 200) {
     return new Response(JSON.stringify(data), { status, headers });
 }
 
-// ... (All other helper functions like hashPassword, verifyJwt, etc. remain exactly the same) ...
 async function hashPassword(password) {
     const textEncoder = new TextEncoder();
     const data = textEncoder.encode(password);
@@ -103,7 +102,6 @@ export default {
                 return jsonResponse({ success: true });
             }
 
-            // THIS IS THE NEW BLOCK YOU WERE MISSING
             if (request.method === 'POST' && url.pathname === '/api/admin/reviews/bulk-delete') {
                 if (!(await isAdmin(request, env))) { return jsonResponse({ error: 'Forbidden' }, 403); }
                 const { deleteType, value } = await request.json();

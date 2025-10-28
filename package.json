@@ -1,0 +1,6 @@
+{
+  "name": "countdown-website-robots",
+  "version": "1.0.0",
+  "description": "Local data pipeline for runup.live",
+  "private": true
+}

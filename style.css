@@ -72,6 +72,12 @@ header {
     font-size: 0.9rem;
 }
 
+/* --- Main Content Stacking Fix --- */
+main {
+    position: relative;
+    z-index: 1;
+}
+
 /* --- Main Grid Page Styles --- */
 .grid-main {
     padding: 40px;
@@ -772,7 +778,7 @@ footer .tmdb-logo:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);*
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 200;
     display: flex;
     justify-content: center;
@@ -860,4 +866,4 @@ footer .tmdb-logo:hover {
     text-align: center;
     margin-top: 15px;
     font-weight: 700;
-}```
+}
